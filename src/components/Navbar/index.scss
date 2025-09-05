@@ -1,0 +1,58 @@
+@import '../../index.scss';
+
+
+.navbar {
+    background-color: $primary;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: $navbar-padding;
+    color: $font-color-dark;
+    transition: top 0.3s ease;
+
+    &.with-headline-bar {
+        top: $headline-bar-height;
+    }
+
+    a {
+        color: unset;
+    }
+
+    a:hover {
+        color: $font-color-light;
+    }
+
+    button, .btn {
+        min-width: 80px !important;
+    }
+}
+
+.navbar-toggle-icon {
+    font-size: 20px;
+    color: $font-color-dark;
+}
+
+.navbar-collapse {
+    display: none;
+    flex-direction: column;
+    padding: $navbar-padding;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.navbar-collapse.menu-active {
+    display: block;
+    background-color: $primary;
+    border-top: $line-100;
+    height: 110vh;
+}
+
+@include media-breakpoint-down(md) {
+    .navbar {
+        a, .btn {
+            display: block;
+            margin: 0 0 1rem 0;
+        }
+    }
+}

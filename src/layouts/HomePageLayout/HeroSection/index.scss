@@ -1,0 +1,11 @@
+@import '../../../index.scss';
+
+
+.hero-section {
+    background-color: $primary;
+
+    img {
+        width: 90%;
+        max-width: 30rem;
+    }
+}

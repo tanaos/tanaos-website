@@ -1,0 +1,14 @@
+@import '../../index.scss'; 
+
+
+.get-started-bar {
+    background-color: $primary;
+
+    p {
+        color: $font-color-dark;
+    }
+
+    .link {
+        cursor: pointer;
+    }
+}

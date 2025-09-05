@@ -1,0 +1,8 @@
+@import '../../../index.scss';
+
+
+@include media-breakpoint-down(md) {
+    .pricing-cards-section {
+        padding: 2rem;
+    }
+}

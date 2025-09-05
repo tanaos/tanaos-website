@@ -1,0 +1,58 @@
+@import '../../index.scss';
+
+
+.headline-bar {
+    width: 100%;
+    background-color: $warning-color-700;
+    color: white;
+    height: $headline-bar-height;
+    font-size: $font-size-p-300;
+    font-weight: 500;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+        padding: 1px 5px 1px 5px;
+    }
+
+    .close-icon {
+        position: absolute; // Position it independently
+        right: 10px; // Add some spacing from the right edge
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: white;
+        -webkit-text-stroke: 0.8px;
+
+        &:hover {
+            color: $grey-100;
+        }
+    }
+
+    a {
+        margin: 0 5px;
+        color: white;
+        text-decoration: underline;
+
+        &:hover {
+            color: $grey-100;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .headline-bar {
+        display: inline-block;
+        text-align: center;
+        height: auto;
+        padding: 0 40px !important;
+    }
+
+    .close-icon {
+        right: 1px !important;
+    }
+}

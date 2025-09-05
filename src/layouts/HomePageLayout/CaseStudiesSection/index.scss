@@ -1,0 +1,8 @@
+@import '../../../index.scss';
+
+
+@include media-breakpoint-down(md) {
+    .case-studies-section {
+        padding: 2rem;
+    }
+}

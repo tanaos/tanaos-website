@@ -1,0 +1,40 @@
+@import '../../index.scss';
+
+
+.pricing-card {
+    padding: $object-padding-500;
+    box-shadow: $shadow-200;
+    border-radius: $border-radius;
+    border: $line-200;
+    max-width: 40rem;
+    
+    .btn {
+        width: 100%;
+    }
+
+    .feature {
+        color: $font-color-dark;
+
+        i {
+            color: $secondary;
+            -webkit-text-stroke: 1px;
+        }
+    }
+
+    .excluded-feature {
+        color: $font-color-extra-light;
+
+        i {
+            color: $font-color-extra-light;
+            -webkit-text-stroke: 1px;
+        }
+    }
+
+    h2 {
+        font-weight: 600 !important;
+    }
+
+    h6 {
+        font-weight: 400 !important;
+    }
+}

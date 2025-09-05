@@ -1,0 +1,12 @@
+@import '../../index.scss';
+
+
+.navigation {
+    .highlighted {
+        padding-bottom: 0.5rem;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $tertiary;
+        text-underline-offset: 0.5rem;
+    }
+}

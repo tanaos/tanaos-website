@@ -1,0 +1,81 @@
+@import '../../index.scss';
+
+
+.carousel {
+    .carousel-slide {
+        background: $secondary-300;
+        padding: $object-padding-500;
+        border-radius: $border-radius;
+        box-shadow: $shadow-100;
+
+        p {
+            color: $font-color-dark;
+        }
+
+        img {
+            width: 85%;
+        }
+    }
+
+    .carousel-inner {
+        width: 80%;
+        max-width: 80rem;
+        margin: 0 auto;
+
+        img {
+            max-height: 20rem;
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: auto;
+        opacity: unset;
+        height: fit-content;
+        margin: auto 0;
+
+        i {
+            font-size: 3rem;
+            color: $grey-300;
+            opacity: 1;
+        }
+
+        i:hover {
+            color: $grey-600;
+        }
+    }
+
+    .carousel-control-next:hover,
+    .carousel-control-prev:hover {
+        background-color: transparent;
+    }
+
+    .carousel-indicators {
+        position: relative;
+        bottom: 0;
+
+        button {
+            background-color: $grey-300;
+            width: 3rem;
+            height: 0.3rem;
+        }
+        button.active {
+            background-color: $grey-600;
+        }
+    }
+}
+
+
+@include media-breakpoint-down(md) {
+    .carousel {
+        .carousel-slide {
+            img {
+                width: 100%;
+            }
+        }
+
+        .carousel-inner {
+            width: 100%;
+        }
+    }
+}

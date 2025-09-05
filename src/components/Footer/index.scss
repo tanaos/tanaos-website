@@ -1,0 +1,29 @@
+@import '../../index.scss';
+
+
+.footer {
+    padding: $footer-padding;
+    background-color: $tertiary;
+    color: white;
+    
+    a {
+        color: unset;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $grey-200;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 5px;
+
+        a:not(:last-child)::after {
+            content: '|';
+            margin: 0 10px;
+        }
+    }
+}
