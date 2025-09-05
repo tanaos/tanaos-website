@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktanaos_website=self.webpackChunktanaos_website||[]).push([[342],{2342:(e,s,t)=>{e.exports=t.p+"static/media/platform_job_complete.e34c0e73d2395939e263.png"}}]);
