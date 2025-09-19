@@ -1,63 +1,79 @@
-import React from 'react';
-
 import './index.scss';
+
 import { Config } from '../../../config';
+import use_artifex_snippet from '../../../assets/use_artifex_snippet.png';
+import signup_image from '../../../assets/signup_image.png';
+import buy_credits_image from '../../../assets/buy_credits_image.png';
+import get_api_key_image from '../../../assets/get_api_key_image.png';
 
 
 export const WhyTanaosSection = () => {
 
-    const TryItNowLink = () => {
-        return <a href={Config.SYNTHEX_GITHUB_URL} target='_blank' rel='noreferrer'>Try it now ➔</a>
-    };
-
-    return <div id='why-tanaos' className='why-tanaos-section global-padding'>
-        <div className='row mb-4'>
-            <h2 className='mb-5'>Why Tanaos?</h2>
-            <div className='col-12 col-md-8'>
+    return <div id='quickstart' className='quickstart-section global-padding'>
+        <div className='row'>
+            <h2 className='mb-5'>🚀 Quick start</h2>
+            <div className='col-12 col-md-4 margin-end'>
+                <div>
+                    <h3 className='mb-5'>Casual usage → use for free</h3>
+                </div>
+                <h6>Use the Artifex library normally</h6>
                 <p>
-                    Finding large, high-quality, private and GDPR-compliant datasets on the Internet is difficult.
-                    Even if you do find them, they rarely have all the characteristics you need. Tanaos takes a 
-                    different approach to data gathering, allowing you to generate your own datasets by specifying 
-                    the characteristics they should have. The output data is virtually undistinguishable from real data,
-                    while maintaining high standards of privacy and anonymity.
+                    Install Artifex with <code>pip install artifex</code> and use
+                    it for free. <a href={Config.DOCS_TRAIN_GUARDRAIL_URL} rel='noreferrer' target='_blank'>
+                        Read the docs <i className='bi bi-box-arrow-up-right'></i>
+                    </a> to learn more
                 </p>
+                <img 
+                    className='mt-4'
+                    src={use_artifex_snippet}
+                    height='100px'
+                    alt='Snippet on how to use the Artifex library to create task-specific LLMs without training data' 
+                />
             </div>
-        </div>
-        <div className='row mt-5'>
-            <div className='col-12 col-md-4 pe-md-5'>
-                <div className='icon-container mb-5'>
-                    <i className='bi bi-stopwatch'></i>
+            <div className='col-12 col-md-8 ps-4'>
+                <div>
+                    <h3 className='mb-5'>Advanced usage → pay-as-you-go</h3>
                 </div>
-                <h5>Reduce times</h5>
-                <p className='mt-3'>
-                    Tired of waisting time looking for the right dataset on the internet? 
-                    Tanaos allows you to generate custom, large and accurate datasets in minutes, whatever your 
-                    use-case may be.
-                </p>
-                <TryItNowLink />
-            </div>
-            <div className='col-12 col-md-4 pe-md-5 mt-5 mt-md-0'>
-                <div className='icon-container mb-5'>
-                    <i className='bi bi-graph-up-arrow'></i>
+                <div className='row'>
+                    <div className='col-12 col-md-4'>
+                        <h6><span className='step-number'>1</span>Signup</h6>
+                        <p>
+                            Get started by creating an account <a href={Config.PLATFORM_BASE_URL} rel='noreferrer' target='_blank'>
+                                on our platform <i className='bi bi-box-arrow-up-right'></i>
+                            </a>
+                        </p>
+                        <img 
+                            className='mt-4'
+                            src={signup_image}
+                            height='100px'
+                            alt='Snippet on how to signup to the Tanaos platform to create task-specific LLMs without training data' 
+                        />
+                    </div>
+                    <div className='col-12 col-md-4'>
+                        <h6><span className='step-number'>2</span>Buy credits</h6>
+                        <p>
+                            Buy any amount of credits, starting from $5
+                        </p>
+                        <img 
+                            className='mt-4'
+                            src={buy_credits_image}
+                            height='100px'
+                            alt='Snippet on how to add credits to the Tanaos platform to create task-specific LLMs without training data' 
+                        />
+                    </div>
+                    <div className='col-12 col-md-4'>
+                        <h6><span className='step-number'>3</span>Get an API key</h6>
+                        <p>
+                            Create an api key and pass it to Artifex at initialization
+                        </p>
+                        <img 
+                            className='mt-4'
+                            src={get_api_key_image}
+                            height='100px'
+                            alt='Snippet on how to create an API key on the Tanaos platform to create task-specific LLMs without training data' 
+                        />
+                    </div>
                 </div>
-                <h5>Increase productivity</h5>
-                <p className='mt-3'>
-                    Your and your team's productivity heavily depends on the quality of the data you use. 
-                    Increase your app and team's performance by generating high-quality data customized for
-                    your use-case.
-                </p>
-                <TryItNowLink />
-            </div>
-            <div className='col-12 col-md-4 pe-md-5 mt-5 mt-md-0'>
-                <div className='icon-container mb-5'>
-                    <i className='bi bi-lock-fill'></i>
-                </div>
-                <h5>Be GDPR-compliant</h5>
-                <p className='mt-3'>
-                    Worried about whether the datasets you use are legal under EU regulations? We got you covered:
-                    the data generated by our tools is 100% private, anonymized and GDPR-compliant.
-                </p>
-                <TryItNowLink />
             </div>
         </div>
     </div>

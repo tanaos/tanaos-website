@@ -2,7 +2,8 @@
 // ------------------------------
 
 // Primary.
-$primary-300: #ff799b;
+$primary-100: #ffdae3;
+$primary-300: #ff7094;
 $primary-500: #FF3668;
 $primary-700: #D60035;
 $primary: $primary-500;
@@ -75,13 +76,11 @@ $font-color-warning: $warning-color-700;
 
 // Font size.
 $font-size-h1: 2.7rem;
-$font-size-h2: 2.2rem;
-$font-size-h3: 2rem;
-$font-size-h4: 1.8rem;
-$font-size-h5: 1.6rem;
-$font-size-h6: 1.5rem;
-$font-size-p-800: 1.4rem;
-$font-size-p-600: 1.2rem;
+$font-size-h2: 2.1rem;
+$font-size-h3: 1.6rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.4rem;
+$font-size-h6: 1.2rem;
 $font-size-p-500: 1.1rem;
 $font-size-p-400: 1rem;
 $font-size-p-300: 0.9rem;
@@ -92,7 +91,8 @@ $line-height-h1: 3.7rem;
 $line-height-h6: 2.3rem;
 $line-height-p-800: 2.2rem;
 $line-height-p-600: 2rem;
-$line-height-p-500: 2rem;
+$line-height-p-500: 1.8rem;
+$line-height-p-400: 1.6rem;
 
 // Border radius.
 $border-radius: 10px;
@@ -143,8 +143,8 @@ $button-warning-hover: $warning-color-700;
 $button-min-width: 150px;
 
 // Links.
-$link-color: $primary;
-$link-color-hover: $primary-700;
+$link-color: $font-color-dark;
+$link-color-hover: $grey-700;
 
 // Navbar and headline bar.
 $navbar-padding: 1vh 5vh 1vh 5vh;

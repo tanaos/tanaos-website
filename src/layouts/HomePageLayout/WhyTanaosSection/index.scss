@@ -1,17 +1,26 @@
 @import '../../../index.scss';
 
 
-.why-tanaos-section {
-    .icon-container {
-        background-color: $primary;
-        width: fit-content;
-        padding: 0.5rem 1rem;
-        border-radius: $border-radius;
-        box-shadow: $shadow-100;
-        
-        i {
-            color: white;
-            font-size: 3rem;
-        }
+.quickstart-section {
+    p, ul {
+        font-size: $font-size-p-400;
+        line-height: $line-height-p-400;
+    }
+
+    .margin-end {
+        border-right: $line-400;
+    }
+
+    .step-number {
+        opacity: 0.7;
+        background-color: $primary-100;
+        color: $primary;
+        border-radius: 50%;
+        width: 2.2rem;
+        height: 2.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5rem;
     }
 }
