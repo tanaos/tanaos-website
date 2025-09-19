@@ -211,52 +211,6 @@ label {
     margin-bottom: 10px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-
-    &::-webkit-scrollbar {
-        height: 6px;
-        width: 6px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: $grey-400;
-        border-radius: $border-radius;
-        border: 2px solid $secondary;
-    }
-
-    // Remove border top of first row, increase distance between table head and first row
-    tr:first-child td {
-        border-top: none;
-        padding-top: 20px;
-    }
-
-    // Round borders of first and last th element to give the appearance of a rounded th
-    th:first-child {
-        border-top-left-radius: $border-radius;
-        border-bottom-left-radius: $border-radius;
-    }
-
-    th:last-child {
-        border-top-right-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
-    }
-
-    th {
-        background-color: $secondary;
-        padding: $table-padding;
-        color: $font-color-dark;
-        font-weight: 500;
-    }
-
-    td {
-        padding: $table-padding;
-        border-top: $line-100; 
-    }
-}
-
 // Icons.
 .selectable-icon {
     cursor: pointer;
@@ -597,7 +551,7 @@ table {
 
 .badge-grey {
     @extend .badge;
-    color: $tertiary;
+    color: $grey-800;
     background-color: $grey-100;
 }
 

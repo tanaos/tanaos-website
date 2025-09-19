@@ -7,12 +7,6 @@ $primary-500: #FF3668;
 $primary-700: #D60035;
 $primary: $primary-500;
 
-// Secondary.
-$secondary: #F1F0E9;
-
-// Tertiary.
-$tertiary: #40454F;
-
 // White, grey, black.
 $grey-100: #F2F2F2;
 $grey-200: #e4e4ef;
@@ -71,7 +65,7 @@ $font-headlines: 'Poppins', sans-serif;
 $font-body: 'Poppins', sans-serif;
 
 // Font color.
-$font-color-dark: $tertiary;
+$font-color-dark: $grey-800;
 $font-color-semidark: $grey-700;
 $font-color-light: $grey-600;
 $font-color-extra-light: $grey-300;
@@ -138,7 +132,7 @@ $button-primary-hover: $primary-700;
 $button-disabled: $grey-200;
 $button-light: $grey-100;
 $button-light-hover: $grey-200;
-$button-dark: $tertiary;
+$button-dark: $grey-800;
 $button-dark-hover: $grey-600;
 $button-grey: $grey-300;
 $button-grey-hover: $grey-400;
