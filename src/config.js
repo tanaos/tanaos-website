@@ -5,6 +5,6 @@ export const Config = {
     SYNTHEX_GITHUB_URL: 'https://github.com/tanaos/synthex',
     ARTIFEX_GITHUB_URL: 'https://github.com/tanaos/artifex',
     TWITTER_URL: 'https://x.com/tanaosai',
-    DOCS_URL: 'https://docs.tanaos.com',
+    DOCS_URL: 'https://docs.tanaos.com/artifex',
     HUGGINGFACE_URL: 'https://huggingface.co/tanaos',
 };

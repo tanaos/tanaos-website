@@ -7,7 +7,7 @@ import { Config } from '../../../config';
 export const WhyTanaosSection = () => {
 
     const TryItNowLink = () => {
-        return <a href={Config.SYNTHEX_GITHUB_URL} target='_blank' rel='noopener'>Try it now ➔</a>
+        return <a href={Config.SYNTHEX_GITHUB_URL} target='_blank' rel='noreferrer'>Try it now ➔</a>
     };
 
     return <div id='why-tanaos' className='why-tanaos-section global-padding'>

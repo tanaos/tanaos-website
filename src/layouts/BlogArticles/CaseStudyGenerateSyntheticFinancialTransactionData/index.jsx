@@ -21,7 +21,7 @@ export const CaseStudyGenerateSyntheticFinancialData = () => {
         <p>
             In this case study, we will find out how to generate large amounts of synthetic financial data 
             with the Tanaos platform. First off, head 
-            to <a href={Config.PLATFORM_BASE_URL} target='_blank' rel='noopener'>platform.tanaos.com</a> and sign up for a free
+            to <a href={Config.PLATFORM_BASE_URL} target='_blank' rel='noreferrer'>platform.tanaos.com</a> and sign up for a free
             account, if you don't have one already. Once you are logged in, you will be taken to the dashboard.
         </p>
         <img src={platform_dashboard} alt='Dashboard of the Tanaos Platform' className='img-with-shadow' />
@@ -125,7 +125,7 @@ export const CaseStudyGenerateSyntheticFinancialData = () => {
             all you have to do is define the number of datapoints you want to generate. The number of datapoints is the number of 
             rows in the output dataset. The maximum number of datapoints you are allowed to generate on a single job depends on 
             your subscription plan. For more information on the available plans and the maximum number of datapoints per job associated
-            with each, please refer to the <a href={Config.WEBSITE_BASE_URL + '/pricing'} target='_blank' rel='noopener'>pricing page</a>.
+            with each, please refer to the <a href={Config.WEBSITE_BASE_URL + '/pricing'} target='_blank' rel='noreferrer'>pricing page</a>.
             Since this is a test, we will go ahead and generate just <b>1.000 datapoints</b>. Once you have entered the
             number of datapoints, click on the <b>Submit</b> button to create the job.
         </p>
@@ -231,9 +231,9 @@ export const CaseStudyGenerateSyntheticFinancialData = () => {
         </p>
         <p>
             Ready to generate your own dataset? Head 
-            to <a href={Config.PLATFORM_BASE_URL} target='_blank' rel='noopener'>platform.tanaos.com</a> and sign up for a free
+            to <a href={Config.PLATFORM_BASE_URL} target='_blank' rel='noreferrer'>platform.tanaos.com</a> and sign up for a free
             account. If you would like to learn more about our platform, check
-            out <a href={`${Config.WEBSITE_BASE_URL}/blog`} target='_blank' rel='noopener'>our blog</a> or <a href={Config.WEBSITE_BASE_URL} target='_blank' rel='noopener'>our website</a>.
+            out <a href={`${Config.WEBSITE_BASE_URL}/blog`} target='_blank' rel='noreferrer'>our blog</a> or <a href={Config.WEBSITE_BASE_URL} target='_blank' rel='noreferrer'>our website</a>.
         </p>
     </div>
 };

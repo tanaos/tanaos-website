@@ -11,15 +11,13 @@ export const Navigation = () => {
     return <div className='navigation'>
         <a 
             href={Config.DOCS_URL} 
-            rel='noopener'
+            rel='noreferrer'
             target='_blank'
             className={'nav-item mt-4 mt-md-0 ms-md-5'}
         >
             Docs
         </a>
         <a href='/blog' className={`nav-item mt-4 mt-md-0 ms-md-5 ${url === '/blog' && 'highlighted'}`}>Blog</a>
-        <a href='/pricing' className={`nav-item mt-4 mt-md-0 ms-md-5 ${url === '/pricing' && 'highlighted'}`}>Pricing</a>
-        <a href='/company' className={`nav-item mt-4 mt-md-0 ms-md-5 ${url === '/company' && 'highlighted'}`}>Company</a>
         <button 
             className='btn btn-dark mt-4 mt-md-0 ms-md-5' onClick={() => window.open(Config.SYNTHEX_GITHUB_URL, '_blank')}
         >

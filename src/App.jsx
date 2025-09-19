@@ -4,8 +4,6 @@ import { useLocation } from 'react-router-dom';
 
 import { HomePage } from './pages/HomePage';
 import { BlogPage } from './pages/BlogPage';
-import { CompanyPage } from './pages/CompanyPage';
-import { PricingPage } from './pages/PricingPage';
 import { BlogArticlePage } from './pages/BlogArticlePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { Navbar } from './components/Navbar';
@@ -21,8 +19,6 @@ const AppRouter = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/blog' element={<BlogPage />} />
         <Route path='/blog/:articleId' element={<BlogArticlePage />} />
-        <Route path='/company' element={<CompanyPage />} />
-        <Route path='/pricing' element={<PricingPage />} />
         {/* Fallback route for 404 Not Found */}
         <Route path='*' element={<NotFoundPage />} />
     </Routes>
@@ -63,7 +59,7 @@ const App = () => {
 
     return <>
         { displayBanner && <HeadlineBar onBannerDismiss={handleBannerDismiss}>
-            ⭐ Do you like Tanaos? Give us <a href={Config.ARTIFEX_GITHUB_URL} rel='noopener' target='_blank'>a star on GitHub</a> or <a href={Config.TWITTER_URL} rel='noopener' target='_blank'>follow us on Twitter</a>
+            ⭐ Do you like Tanaos? Give us <a href={Config.ARTIFEX_GITHUB_URL} rel='noreferrer' target='_blank'>a star on GitHub</a> or <a href={Config.TWITTER_URL} rel='noreferrer' target='_blank'>follow us on Twitter</a>
         </HeadlineBar> }
         <div className='app-wrapper'>
             { isInternalURL && <Navbar bannerVisible={displayBanner} /> }
