@@ -2,7 +2,7 @@
 // ------------------------------
 
 // Primary.
-$primary-300: #FF8AA7;
+$primary-300: #ff799b;
 $primary-500: #FF3668;
 $primary-700: #D60035;
 $primary: $primary-500;
@@ -12,7 +12,7 @@ $grey-100: #F2F2F2;
 $grey-200: #e4e4ef;
 $grey-300: #cecee0;
 $grey-400: #ABABBB;
-$grey-600: #787886;
+$grey-600: #60646c;
 $grey-700: #535559;
 $grey-800: #353535;
 
@@ -74,8 +74,7 @@ $font-color-success: $success-color-700;
 $font-color-warning: $warning-color-700;
 
 // Font size.
-$font-size-hero: 6rem;
-$font-size-h1: 2.5rem;
+$font-size-h1: 2.7rem;
 $font-size-h2: 2.2rem;
 $font-size-h3: 2rem;
 $font-size-h4: 1.8rem;
@@ -131,7 +130,6 @@ $button-primary: $primary;
 $button-primary-hover: $primary-700;
 $button-disabled: $grey-200;
 $button-light: $grey-100;
-$button-light-hover: $grey-200;
 $button-dark: $grey-800;
 $button-dark-hover: $grey-600;
 $button-grey: $grey-300;

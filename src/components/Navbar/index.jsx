@@ -37,7 +37,7 @@ export const Navbar = ({ bannerVisible }) => {
     return <div className={`row navbar m-0 ${bannerVisible && 'with-headline-bar'}`}>
         {/* Large devices. */}
         <div className='col-7 m-0 p-0 d-none d-md-block text-start'>
-            <span className='logo' onClick={() => window.location.href = '/'}>tanaos</span>
+            <span className='logo' onClick={() => window.location.href = '/'}>Tanaos</span>
         </div>
         <div className='col-5 d-none d-md-block m-0 p-0 text-end navigation-container'>
             <Navigation />

@@ -1,36 +1,51 @@
-import React from 'react';
-
+import { CodeSnippet } from '../../../components/CodeSnippet';
 import './index.scss';
-import { CTOCard } from '../../../components/CTOCard';
-import hero_image from '../../../assets/hero_image.png'
 import { Config } from '../../../config';
 
 
 export const HeroSection = () => {
+
+    const sampleCode = `# Don't forget to run 'pip install artifex'
+
+from artifex import Artifex
+
+guardrail = Artifex().guardrail
+
+guardrail.train(
+    instructions=[
+        "Soft medical advice is allowed, but it should be general and not specific to any individual.",
+        "Anything that is about cosmetic products, including available products or their usage, is allowed.",
+        "Anything else, including hard medical advice, is not allowed under any circumstances.",
+    ]
+)
+`;
+
     return <div className='row m-0 hero-section global-padding'>
-        <div className='col-12 col-md-7 m-0 p-0 mt-4'>
+        <div className='col-12 col-md-6 m-0 p-0 mt-4'>
             <h1>
-                Never be short on <span className='badge-primary'>data</span> again
+                Create task-specific LLMs without training data
             </h1>
-            <p className='mt-4 hero-subtitle'>
-                Generate synthetic, anonymized, GDPR-compliant datasets of any kind, that are undistinguishable 
-                from real data.
-            </p>
-            <div className='row mt-5'>
-                <div className='col-12 col-md-8'>
-                    <CTOCard 
-                        category='NEWS'
-                        title='Try Synthex, our free and open-source Python library'
-                        text="Use our free and open-source Python library to generate synthetic datasets for any use-case you may
-                        have. Check it out on GitHub."
-                        buttonText='Use Synthex for free'
-                        onClick={() => window.open(Config.SYNTHEX_GITHUB_URL, '_blank')}
-                    />
-                </div>
+            <h2 className='mt-4 hero-subtitle'>
+                Perform offline <b>NLP</b> and <b>Text Classification</b> tasks, such as Guardrail Models and
+                Intent Classification, <b>without data, GPUs or third-party APIs.</b>
+            </h2>
+            <div className='mt-5'>
+                <button 
+                    className='btn btn-white me-5'
+                    onClick={() => window.open(Config.ARTIFEX_GITHUB_URL, '_blank', 'noreferrer')}
+                >
+                    See on GitHub <i className='ms-1 bi bi-github'></i>
+                </button>
+                <button
+                    className='btn btn-white'
+                    onClick={() => window.open(Config.ARTIFEX_DEMO_URL, '_blank', 'noreferrer')}
+                >
+                    Try it out <i className='ms-1 bi bi-box-arrow-up-right'></i>
+                </button>
             </div>
         </div>
-        <div className='col-5 m-0 p-0 ps-5 mt-4 d-none d-md-block'>
-            <img src={ hero_image } alt='hero' />
+        <div className='col-6 m-0 p-0 ps-5 mt-4 d-none d-md-block'>
+            <CodeSnippet code={sampleCode} />
         </div>
     </div>
 };

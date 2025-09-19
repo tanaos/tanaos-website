@@ -362,23 +362,21 @@ label {
     }
 }
 
-.btn-light {
-    background-color: $button-light;
-    color: $font-color-dark;
-
-    &:hover, &:focus, &:active {
-        background-color: $button-light-hover !important;
-        color: $font-color-dark;
-    }
-}
-
 .btn-white {
     background-color: white;
     color: $font-color-dark;
+    border: $line-300;
+    box-shadow: $shadow-100;
 
-    &:hover, &:focus, &:active {
-        background-color: $button-light-hover !important;
+    &:hover {
+        background-color: $grey-100;
         color: $font-color-dark;
+        border: $line-300;
+    }
+
+    &:focus, &:active {
+        background-color: white;
+        border: $line-300;
     }
 }
 
@@ -389,16 +387,6 @@ label {
     &:hover, &:focus, &:active {
         background-color: $button-dark-hover !important;
         color: white;
-    }
-}
-
-.btn-grey {
-    background-color: $button-grey;
-    color: $font-color-dark;
-
-    &:hover, &:focus, &:active {
-        background-color: $button-grey-hover !important;
-        color: $font-color-dark;
     }
 }
 
@@ -486,6 +474,8 @@ label {
 .logo {
     font-size: $font-size-p-800;
     cursor: pointer;
+    font-weight: 400;
+    color: $primary;
 }
 
 // Misc.
@@ -525,30 +515,6 @@ label {
     border-radius: $border-radius;
 }
 
-.badge-primary {
-    @extend .badge;
-    color: white;
-    background-color: $primary;
-}
-
-.badge-success {
-    @extend .badge;
-    color: $success-color-700;
-    background-color: $success-color-100;
-}
-
-.badge-danger {
-    @extend .badge;
-    color: $danger-color-700;
-    background-color: $danger-color-100;
-}
-
-.badge-warning {
-    @extend .badge;
-    color: $warning-color-700;
-    background-color: $warning-color-100;
-}
-
 .badge-grey {
     @extend .badge;
     color: $grey-800;
@@ -580,9 +546,15 @@ label {
 
 // Misc.
 .hero-subtitle {
-    font-size: $font-size-p-800;
-    color: $font-color-dark;
-    line-height: $line-height-p-800;
+    font-size: $font-size-p-600;
+    line-height: $line-height-p-600;
+    font-weight: 400;
+    color: $font-color-light;
+
+    b {
+        font-weight: 400;
+        color: $primary-300;
+    }
 }
 
 .global-padding {
