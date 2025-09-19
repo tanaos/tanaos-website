@@ -30,7 +30,7 @@ export const CaseStudyGenerateSyntheticMedicalData = () => {
             assume you already have an understanding of how the Tanaos platform works. If that is not the case, we 
             suggest you check out the <a 
                 href='/blog/case-study-generate-synthetic-financial-transaction-data'
-                target='_blank' rel='noreferrer'
+                target='_blank' rel='noopener'
             >first case study of this series</a>.
         </p>
         <h3>The objective</h3>
@@ -42,7 +42,7 @@ export const CaseStudyGenerateSyntheticMedicalData = () => {
         </p>
         <h3>Step 1: create a new job, choose Title and Subtitle</h3>
         <p>
-            From the <a href={`${Config.PLATFORM_BASE_URL}/jobs`} target='_blank' rel='noreferrer'>dashboard of the 
+            From the <a href={`${Config.PLATFORM_BASE_URL}/jobs`} target='_blank' rel='noopener'>dashboard of the 
             Tanaos platform</a>, we will click on the "Create new job" button. This will open the first step of the job
             creation wizard, where we will enter the Title and Subtitle of our job. For this case study, we will use
             <i>Test Medical Dataset</i> for the Title and <i>A sample job to generate a medical dataset</i> for the 

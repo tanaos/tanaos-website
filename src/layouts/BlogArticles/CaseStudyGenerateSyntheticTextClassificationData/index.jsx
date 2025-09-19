@@ -25,7 +25,7 @@ export const CaseStudyGenerateSyntheticTextClassificationData = () => {
             an AI model (for instance a LLM or another NLP model) for sentiment analysis. Since we have already 
             covered the basics of how the platform works in a previous post, in this case study we will assume you 
             have some familiarity with it. If you are not familiar with the platform, we recommend you read our 
-            first case study on <a href={financialDatasetCaseStudyLink} target='_blank' rel='noreferrer'>how to 
+            first case study on <a href={financialDatasetCaseStudyLink} target='_blank' rel='noopener'>how to 
             create a synthetic financial transaction dataset</a>, which goes over the basics of how to use the 
             platform.
         </p>
@@ -38,7 +38,7 @@ export const CaseStudyGenerateSyntheticTextClassificationData = () => {
         </p>
         <h3>Step 1: Create a new job</h3>
         <p>
-            We are going to head over to the <a href={Config.PLATFORM_BASE_URL} target='blank' rel='noreferrer'>Dashboard 
+            We are going to head over to the <a href={Config.PLATFORM_BASE_URL} target='blank' rel='noopener'>Dashboard 
             section of the Tanaos platform</a> and open the job creation wizard by clicking on the "Create job" button. 
             We will then enter a descriptive title and, optionally, a subtitle for the job.
         </p>

@@ -63,7 +63,7 @@ const App = () => {
 
     return <>
         { displayBanner && <HeadlineBar onBannerDismiss={handleBannerDismiss}>
-            ⭐ Do you like Tanaos? Give us <a href={Config.SYNTHEX_GITHUB_URL} rel='noreferrer' target='_blank'>a star on GitHub</a> or <a href={Config.TWITTER_URL} rel='noreferrer' target='_blank'>follow us on Twitter</a>
+            ⭐ Do you like Tanaos? Give us <a href={Config.ARTIFEX_GITHUB_URL} rel='noopener' target='_blank'>a star on GitHub</a> or <a href={Config.TWITTER_URL} rel='noopener' target='_blank'>follow us on Twitter</a>
         </HeadlineBar> }
         <div className='app-wrapper'>
             { isInternalURL && <Navbar bannerVisible={displayBanner} /> }

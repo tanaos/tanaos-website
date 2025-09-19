@@ -11,7 +11,7 @@ export const Navigation = () => {
     return <div className='navigation'>
         <a 
             href={Config.DOCS_URL} 
-            rel='noreferrer'
+            rel='noopener'
             target='_blank'
             className={'nav-item mt-4 mt-md-0 ms-md-5'}
         >

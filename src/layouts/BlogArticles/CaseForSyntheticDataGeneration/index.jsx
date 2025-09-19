@@ -126,7 +126,7 @@ export const CaseForSyntheticDataGeneration = () => {
         </ul>
         <p>
             At Tanaos, we are addressing these challenges by developing <b>advanced synthetic data generation
-            techniques</b> that prioritize realism, diversity, and utility. <a href={platformLink} target='_blank' rel='noreferrer'>Our platform</a> enables
+            techniques</b> that prioritize realism, diversity, and utility. <a href={platformLink} target='_blank' rel='noopener'>Our platform</a> enables
             organizations to create high-quality synthetic data for a wide range of applications, from 
             AI training to privacy preservation and software testing. By leveraging cutting-edge technologies 
             such as GANs, VAEs and LLMs, we are driving innovation in the field of synthetic data and helping 

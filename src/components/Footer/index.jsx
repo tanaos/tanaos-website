@@ -14,7 +14,7 @@ export const Footer = () => {
         </div>
         <div className='col-12 col-md-4 text-md-end mt-4 mt-md-0 footer-links m-0 p-0'>
             <a href='/'>Home</a>
-            <a href={Config.DOCS_URL} rel='noreferrer' target='_blank'>Docs</a>
+            <a href={Config.DOCS_URL} rel='noopener' target='_blank'>Docs</a>
             <a href='/blog'>Blog</a>
             <a href='/pricing'>Pricing</a>
             <a href='/company'>Company</a>
