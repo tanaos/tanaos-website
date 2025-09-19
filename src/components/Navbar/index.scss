@@ -2,7 +2,7 @@
 
 
 .navbar {
-    background-color: $primary;
+    background-color: $secondary;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -43,7 +43,7 @@
 
 .navbar-collapse.menu-active {
     display: block;
-    background-color: $primary;
+    background-color: $secondary;
     border-top: $line-100;
     height: 110vh;
 }

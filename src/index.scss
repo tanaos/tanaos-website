@@ -187,7 +187,7 @@ input {
     }
 
     &:focus:not(.error) {
-        border-color: $secondary !important;
+        border-color: $primary !important;
     }
 }
 
@@ -224,7 +224,7 @@ table {
     &::-webkit-scrollbar-thumb {
         background-color: $grey-400;
         border-radius: $border-radius;
-        border: 2px solid $primary;
+        border: 2px solid $secondary;
     }
 
     // Remove border top of first row, increase distance between table head and first row
@@ -245,7 +245,7 @@ table {
     }
 
     th {
-        background-color: $primary;
+        background-color: $secondary;
         padding: $table-padding;
         color: $font-color-dark;
         font-weight: 500;
@@ -353,7 +353,7 @@ table {
 
 // Backgrounds.
 .bg-primary {
-    background-color: $secondary !important;
+    background-color: $primary !important;
 }
 
 .bg-info {
@@ -497,7 +497,7 @@ table {
         text-align: left;
 
         &:hover, &:focus, &:active {
-            border-color: $secondary;
+            border-color: $primary;
             color: $font-color-dark;
         }
 
@@ -506,7 +506,7 @@ table {
         }
     
         &:focus:not(.error) {
-            border-color: $secondary !important;
+            border-color: $primary !important;
         }
     }
 
@@ -536,7 +536,7 @@ table {
 
 // Misc.
 .link {
-    color: $secondary;
+    color: $primary;
     cursor: pointer;
 
     &:hover {
@@ -574,7 +574,7 @@ table {
 .badge-primary {
     @extend .badge;
     color: white;
-    background-color: $secondary;
+    background-color: $primary;
 }
 
 .badge-success {
@@ -636,6 +636,6 @@ table {
 }
 
 .highlight {
-    color: $secondary !important;
+    color: $primary !important;
     font-weight: 500;
 }

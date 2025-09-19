@@ -2,13 +2,13 @@
 // ------------------------------
 
 // Primary.
-$primary: #F1F0E9;
+$primary-300: #FF8AA7;
+$primary-500: #FF3668;
+$primary-700: #D60035;
+$primary: $primary-500;
 
 // Secondary.
-$secondary-300: #FF8AA7;
-$secondary-500: #FF3668;
-$secondary-700: #D60035;
-$secondary: $secondary-500;
+$secondary: #F1F0E9;
 
 // Tertiary.
 $tertiary: #40454F;
@@ -133,8 +133,8 @@ $shadow-200: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 $table-padding: 8px 20px 8px 20px;
 
 // Buttons.
-$button-primary: $secondary;
-$button-primary-hover: $secondary-700;
+$button-primary: $primary;
+$button-primary-hover: $primary-700;
 $button-disabled: $grey-200;
 $button-light: $grey-100;
 $button-light-hover: $grey-200;
@@ -151,8 +151,8 @@ $button-warning-hover: $warning-color-700;
 $button-min-width: 150px;
 
 // Links.
-$link-color: $secondary;
-$link-color-hover: $secondary-700;
+$link-color: $primary;
+$link-color-hover: $primary-700;
 
 // Navbar and headline bar.
 $navbar-padding: 1vh 5vh 1vh 5vh;
