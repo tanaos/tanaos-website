@@ -4,8 +4,6 @@ import './index.scss';
 import { HeroSection } from './HeroSection';
 import { GetStartedSection } from './GetStartedSection';
 import { WhyTanaosSection } from './WhyTanaosSection';
-import { CaseStudiesSection } from './CaseStudiesSection';
-import { GetStartedBar } from '../GetStartedBar';
 
 
 export const HomePageLayout = () => {
@@ -14,10 +12,5 @@ export const HomePageLayout = () => {
         <HeroSection />
         <GetStartedSection />
         <WhyTanaosSection />
-        <div className='px-5'>
-            <hr />
-        </div>
-        <CaseStudiesSection />
-        <GetStartedBar />
     </div>
 };

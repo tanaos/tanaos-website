@@ -19,9 +19,10 @@ export const Navigation = () => {
         </a>
         <a href='/blog' className={`nav-item mt-4 mt-md-0 ms-md-5 ${url === '/blog' && 'highlighted'}`}>Blog</a>
         <button 
-            className='btn btn-dark mt-4 mt-md-0 ms-md-5' onClick={() => window.open(Config.SYNTHEX_GITHUB_URL, '_blank')}
+            className='btn btn-white mt-4 mt-md-0 ms-md-5'
+            onClick={() => window.open(Config.ARTIFEX_GITHUB_URL, '_blank')}
         >
-            Try now
+            See on GitHub <i className='bi bi-github ms-2'></i>
         </button>
     </div>
 };
