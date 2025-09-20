@@ -7,7 +7,7 @@ import buy_credits_image from '../../../assets/buy_credits_image.png';
 import get_api_key_image from '../../../assets/get_api_key_image.png';
 
 
-export const WhyTanaosSection = () => {
+export const GetStartedSection = () => {
 
     return <div id='quickstart' className='quickstart-section global-padding'>
         <div className='row'>
@@ -79,4 +79,4 @@ export const WhyTanaosSection = () => {
     </div>
 };
 
-export default WhyTanaosSection;
+export default GetStartedSection;

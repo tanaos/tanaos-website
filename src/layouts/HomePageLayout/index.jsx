@@ -2,7 +2,7 @@ import React from 'react';
 
 import './index.scss';
 import { HeroSection } from './HeroSection';
-import { WhyTanaosSection } from './WhyTanaosSection';
+import { GetStartedSection } from './GetStartedSection';
 import { UseCasesSection } from './UseCasesSection';
 import { CaseStudiesSection } from './CaseStudiesSection';
 import { GetStartedBar } from '../GetStartedBar';
@@ -12,7 +12,7 @@ export const HomePageLayout = () => {
 
     return <div className='homepage-layout'>
         <HeroSection />
-        <WhyTanaosSection />
+        <GetStartedSection />
         <UseCasesSection />
         <div className='px-5'>
             <hr />
