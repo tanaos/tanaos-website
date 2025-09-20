@@ -60,11 +60,13 @@ h6 {
 p {
     font-family: $font-headlines !important;
     color: $font-color-light;
-    line-height: $line-height-p-500;
+    line-height: $line-height-p-300;
+    font-size: $font-size-p-300;
 }
 
 ul {
-    line-height: $line-height-p-500;
+    font-size: $font-size-p-300;
+    line-height: $line-height-p-300;
 }
 
 // Elements.

@@ -20,7 +20,7 @@ guardrail.train(
 )
 `;
 
-    return <div className='row m-0 hero-section global-padding'>
+    return <div className='row m-0 global-padding'>
         <div className='col-12 col-md-6 m-0 p-0 mt-4'>
             <h1>
                 Create task-specific LLMs without training data
