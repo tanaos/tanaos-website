@@ -16,6 +16,16 @@
 
     a {
         color: unset;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: $border-radius;
+        font-weight: 400;
+
+        &:hover {
+            background-color: $grey-100;
+            font-weight: 500;
+            color: black !important;
+        }
     }
 
     a:hover {

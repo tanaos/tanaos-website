@@ -10,7 +10,7 @@ export const HomePageLayout = () => {
 
     return <div className='homepage-layout'>
         <HeroSection />
-        <GetStartedSection />
         <WhyTanaosSection />
+        <GetStartedSection />
     </div>
 };

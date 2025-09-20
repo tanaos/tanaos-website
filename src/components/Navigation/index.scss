@@ -3,10 +3,7 @@
 
 .navigation {
     .highlighted {
-        padding-bottom: 0.5rem;
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
-        text-decoration-color: $grey-800;
-        text-underline-offset: 0.5rem;
+        color: black !important;
+        font-weight: 500;
     }
 }

@@ -12,7 +12,9 @@ export const GetStartedSection = () => {
                 <div>
                     <h3 className='mb-5'>Casual usage: free</h3>
                 </div>
-                <h6>Use the Artifex library normally</h6>
+                <h6>Use our <a href={Config.ARTIFEX_GITHUB_URL} rel='noreferrer' target='_blank'>
+                    Artifex library
+                </a></h6>
                 <p>
                     Install Artifex with <code>pip install artifex</code> and use
                     it for free. <a href={Config.DOCS_TRAIN_GUARDRAIL_URL} rel='noreferrer' target='_blank'>
@@ -42,7 +44,10 @@ export const GetStartedSection = () => {
                     <div className='col-12 col-md-4'>
                         <h6><span className='step-number'>3</span>Get an API key</h6>
                         <p>
-                            Create an api key and pass it to Artifex at initialization
+                            Create an api key and pass it to <a 
+                                href={Config.ARTIFEX_GITHUB_URL} 
+                                rel='noreferrer' target='_blank'
+                            >Artifex <i className='bi bi-box-arrow-up-right'></i></a> at initialization
                         </p>
                     </div>
                 </div>
