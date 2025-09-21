@@ -154,155 +154,6 @@ a {
     }
 }
 
-.modal-content {
-    padding: $object-padding-300;
-
-    .modal-title {
-        font-size: $font-size-h6;
-        color: $font-color-dark;
-        font-weight: 400;
-    }
-
-    .modal-header {
-        border-bottom: none;
-    }
-    .modal-footer {
-        border-top: none;
-    }
-}
-
-input {
-    width: 100%;
-    border-radius: $border-radius;
-    border: $line-200;
-    outline: none !important;
-    padding: $object-padding-300;
-
-    &:active, &:focus {
-        outline: none !important;
-        box-shadow: none !important;
-    }
-
-    &.error {
-        border: $line-danger !important;
-    }
-
-    &:focus:not(.error) {
-        border-color: $primary !important;
-    }
-}
-
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-::placeholder {
-    color: $grey-400 !important;
-}
-
-textarea {
-    @extend input;
-    overflow: hidden;
-    resize: none;
-}
-
-label {
-    color: $font-color-light !important;
-    font-weight: 300 !important;
-    margin-bottom: 10px;
-}
-
-// Icons.
-.selectable-icon {
-    cursor: pointer;
-    padding: $object-padding-200;
-    border-radius: $border-radius;
-}
-
-.check-icon {
-    color: $success-color-500 !important;
-}
-
-.download-icon {
-    @extend .selectable-icon;
-    color: $success-color-500;
-    -webkit-text-stroke: 0.5px;
-
-    &:hover {
-        background-color: $success-color-200;
-    }
-}
-
-.delete-icon {
-    @extend .selectable-icon;
-    color: $danger-color-500;
-
-    &:hover {
-        background-color: $danger-color-200;
-    }
-}
-
-.thin-delete-icon {
-    @extend .selectable-icon;
-    color: $danger-color-500;
-    font-size: $font-size-p-400;
-    -webkit-text-stroke: 1px;
-
-    &:hover {
-        color: $danger-color-200;
-    }
-}
-
-.start-icon {
-    @extend .selectable-icon;
-    color: $grey-800;
-    font-size: $font-size-h6;
-
-    &:hover {
-        background-color: $grey-200;
-    }
-}
-
-.three-dots-icon {
-    @extend .selectable-icon;
-    color: $grey-800;
-    font-size: $font-size-h6;
-
-    &:hover {
-        background-color: $grey-100;
-    }
-}
-
-.question-mark-icon {
-    @extend .selectable-icon;
-    color: $grey-800;
-    font-size: $font-size-h6;
-
-    &:hover {
-        background-color: $grey-100;
-    }
-}
-
-.close-icon {
-    @extend .selectable-icon;
-    color: $font-color-dark;
-    font-size: $font-size-h6;
-
-    &:hover {
-        color: $font-color-light;
-    }
-}
-
-.eye-icon {
-    @extend .selectable-icon;
-    color: $font-color-dark;
-    font-size: $font-size-h6;
-
-    &:hover {
-        background-color: $grey-100;
-    }
-}
-
 // Bootstrap overrides
 // -------------------
 
@@ -381,94 +232,6 @@ label {
     }
 }
 
-.btn-dark {
-    background-color: $button-dark;
-    color: white;
-
-    &:hover, &:focus, &:active {
-        background-color: $button-dark-hover !important;
-        color: white;
-    }
-}
-
-.btn-success {
-    background-color: $button-success;
-    color: white;
-
-    &:hover, &:focus, &:active {
-        background-color: $button-success-hover !important;
-        color: white;
-    }
-}
-
-.change-page-button {
-    @extend .btn;
-    min-width: fit-content;
-    background-color: unset;
-    border: $line-200;
-    cursor: pointer;
-
-    i {
-        color: $font-color-dark;
-        -webkit-text-stroke: 0.5px;
-    };
-
-    &:hover, &:focus, &:active {
-        background-color: $grey-100;
-        border: $line-200;
-    };
-
-    &:disabled {
-        background-color: unset;
-        color: white;
-        pointer-events: none;
-
-        i {
-            color: $grey-200;
-            -webkit-text-stroke: 0.1px;
-        };
-    }
-};
-
-// Dropdowns.
-.dropdown {
-    .btn {
-        width: 100%;
-        color: $font-color-dark;
-        background-color: white !important;
-        border: $line-200;
-        text-align: left;
-
-        &:hover, &:focus, &:active {
-            border-color: $primary;
-            color: $font-color-dark;
-        }
-
-        &.error {
-            border: $line-danger !important;
-        }
-    
-        &:focus:not(.error) {
-            border-color: $primary !important;
-        }
-    }
-
-    .dropdown-menu {
-        border: $line-200;
-        border-radius: $border-radius;
-        padding: $object-padding-200;
-        width: 100%;
-
-        a:hover {
-            background-color: $gray-200;
-        }
-    }
-
-    .dropdown-toggle::after {
-        display: none;
-    }
-}
-
 // ------------------
 
 // Logo
@@ -480,19 +243,6 @@ label {
 }
 
 // Misc.
-.link {
-    color: $primary;
-    cursor: pointer;
-
-    &:hover {
-        color: $link-color-hover;
-    }
-
-    &.disabled {
-        color: $button-disabled;
-        pointer-events: none;
-    }
-}
 
 .simple-page-container {
     display: flex;
@@ -503,46 +253,6 @@ label {
     .simple-page {
         max-width: 400px;
     }
-}
-
-.small-hero-section {
-    margin-top: 2rem;
-}
-
-// Badges.
-
-.badge {
-    padding: $badge-padding;
-    border-radius: $border-radius;
-}
-
-.badge-grey {
-    @extend .badge;
-    color: $grey-800;
-    background-color: $grey-100;
-}
-
-// Animations.
-@keyframes shake {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-5px);
-    }
-    50% {
-        transform: translateX(5px);
-    }
-    75% {
-        transform: translateX(-5px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.shake {
-    animation: shake 0.5s ease;
 }
 
 // Misc.
@@ -560,9 +270,4 @@ label {
 
 .global-padding {
     padding: $page-padding;
-}
-
-.highlight {
-    color: $primary !important;
-    font-weight: 500;
 }
