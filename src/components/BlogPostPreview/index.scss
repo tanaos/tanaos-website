@@ -1,0 +1,17 @@
+@import '../../index.scss';
+
+
+.blog-post-preview {
+    cursor: pointer;
+    background-color: $grey-100;
+    padding: $object-padding-400;
+
+    h1 {
+        font-size: $font-size-h5;
+        line-height: $line-height-h5;
+    }
+
+    .date, .read-more {
+        color: lighten($font-color-light, 30%);
+    }
+}

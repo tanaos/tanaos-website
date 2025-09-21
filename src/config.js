@@ -23,6 +23,7 @@ export const Config = {
     // Socials
     TWITTER_URL: 'https://x.com/tanaosai',
     HUGGINGFACE_URL: 'https://huggingface.co/tanaos',
+    LINKEDIN_URL: 'https://www.linkedin.com/company/tanaos',
 
     // Demo
     ARTIFEX_GUARDRAIL_DEMO_URL: 'https://colab.research.google.com/github/tanaos/tanaos-docs/blob/master/blueprints/artifex/guardrail.ipynb',
