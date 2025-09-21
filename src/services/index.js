@@ -7,4 +7,3 @@ axios.defaults.baseURL = Config.API_BASE_URL;
 
 export { axios };
 export * from './blogArticles';
-export * from './email';
