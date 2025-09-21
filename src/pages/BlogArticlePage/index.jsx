@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import { BlogArticlePageLayout } from '../../layouts/BlogArticlePageLayout';
-import { getBlogArticleInfo  } from '../../services';
+import blogArticleMapping from '../../services/blogArticleMapping.json';
 
 
 export const BlogArticlePage = () => {

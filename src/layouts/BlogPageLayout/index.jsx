@@ -17,7 +17,7 @@ export const BlogPageLayout = () => {
         <div className='text-center'>
             <h3>See what's new at Tanaos</h3>
             <p className='mt-4'>
-                Stay updated with the latest features and improvements.
+                Stay up to date with the latest features and improvements.
                 <br />
                 Find more stories on our <a 
                     href={Config.LINKEDIN_URL}
