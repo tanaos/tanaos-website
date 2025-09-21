@@ -38,7 +38,7 @@ guardrail.train(
                 </button>
                 <button
                     className='btn btn-white'
-                    onClick={() => window.open(Config.ARTIFEX_DEMO_URL, '_blank', 'noreferrer')}
+                    onClick={() => window.open(Config.ARTIFEX_GUARDRAIL_DEMO_URL, '_blank', 'noreferrer')}
                 >
                     Try it out <i className='ms-1 bi bi-box-arrow-up-right'></i>
                 </button>
