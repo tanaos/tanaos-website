@@ -39,8 +39,8 @@ export const WhyTanaos = () => {
                 <div className='col-12 col-md-3'>
                     <h3>Drastically reduce your LLM API bill</h3>
                     <p>
-                        Offload tasks to offline task-specific models and reduce the number of 
-                        paid API calls to general-purpose LLMs.
+                        Offload tasks to local task-specific models and reduce the number of 
+                        paid calls to LLM APIs.
                     </p>
                     <a href={Config.DOCS_URL} rel='noreferrer' target='_blank'>
                         Learn more <i className='bi bi-box-arrow-up-right'></i>

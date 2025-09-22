@@ -1,7 +1,7 @@
 @use '../../styles/variables.scss' as vars;
 
 .model-card {
-    a {
+    a:not(:global(.btn)) {
         color: vars.$primary;
     }
 }

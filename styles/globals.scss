@@ -230,6 +230,7 @@ a {
         background-color: vars.$grey-100;
         color: vars.$font-color-dark;
         border: vars.$line-300;
+        box-shadow: vars.$shadow-200;
     }
 
     &:focus, &:active {

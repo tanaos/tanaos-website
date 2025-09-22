@@ -8,13 +8,12 @@ export const AvailableModels = () => {
         <div className='row'>
             <h2 className='mb-5'>Available Task-Specific Models</h2>
             <div className='col-12 col-md-4 margin-end'>
-                <div className='model-card'>
+                <div className={`${styles['model-card']}`}>
                     <h3 className='mb-3'>🛡️ Guardrail Model</h3>
                     <p>
                         Typically used to flag unsafe, harmful or off-topic messages in chatbots
-                        and virtual assistants.
-                        Create your local Guardrail Model and reduce the number of paid API calls
-                        you make to third-party APIs.
+                        and virtual assistants. Create your local Guardrail Model and reduce the
+                        number of paid calls to third-party APIs.
                     </p>
                     <div className='mt-4'>
                         <a 
@@ -38,10 +37,9 @@ export const AvailableModels = () => {
                 <div className={`${styles['model-card']}`}>
                     <h3 className='mb-3'>🗣️ Intent Classification</h3>
                     <p>
-                        Typically used in chatbots and virtual assistants to classify user intents 
-                        based on their messages.
-                        Create your local Intent Classification Model and reduce the number of paid
-                        API calls you make to third-party APIs.
+                        Typically used in chatbots and virtual assistants to classify user intents.
+                        Create your local Intent Classification Model and reduce the number of paid 
+                        calls to third-party APIs.
                     </p>
                     <div className='mt-4'>
                         <a 
@@ -62,7 +60,7 @@ export const AvailableModels = () => {
                 </div>
             </div>
             <div className='col-12 col-md-4'>
-                <div className='model-card'>
+                <div className={`${styles['model-card']}`}>
                     <h3 className='mb-3'>💡 <ins>Tell us what you need!</ins></h3>
                     <p>
                         We are actively working on creating new task-specific models based on user 
