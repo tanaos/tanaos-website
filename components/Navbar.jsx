@@ -19,7 +19,7 @@ const NavbarCollapse = ({ isOpen }) => {
     return <div className={
         `d-md-none ${styles['navbar-collapse']} text-start ${isOpen && styles['menu-active']}`
     }>
-        <div className='navigation-container mt-4'>
+        <div className='mt-4'>
             <Navigation />
         </div>
     </div>
@@ -38,10 +38,10 @@ export const Navbar = ({ bannerVisible }) => {
 
     return <div className={`row ${styles['navbar']} m-0 ${bannerVisible && styles['with-headline-bar']}`}>
         {/* Large devices. */}
-        <div className='col-7 m-0 p-0 d-none d-md-block text-start'>
+        <div className='col m-0 p-0 text-start'>
             <span className='logo' onClick={() => router.push('/')}>Tanaos</span>
         </div>
-        <div className='col-5 d-none d-md-block m-0 p-0 text-end navigation-container'>
+        <div className='col m-0 p-0 text-end'>
             <Navigation />
         </div>
     

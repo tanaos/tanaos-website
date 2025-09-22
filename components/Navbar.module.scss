@@ -17,7 +17,7 @@
         top: vars.$headline-bar-height;
     }
 
-    a {
+    a:not(:global(.btn)) {
         color: unset;
         text-decoration: none;
         padding: 5px 10px;
@@ -25,7 +25,7 @@
         font-weight: 400;
 
         &:hover {
-            background-color: vars.$grey-100;
+            background-color: vars.$grey-200;
             font-weight: 500;
             color: black !important;
         }
@@ -33,10 +33,6 @@
 
     a:hover {
         color: vars.$font-color-light;
-    }
-
-    button, .btn {
-        min-width: 80px !important;
     }
 }
 

@@ -247,6 +247,9 @@ a {
     cursor: pointer;
     font-weight: 400;
     color: vars.$primary;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 // Misc.

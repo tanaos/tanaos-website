@@ -3,5 +3,9 @@
 .model-card {
     a:not(:global(.btn)) {
         color: vars.$primary;
+
+        &:hover {
+            color: darken(vars.$primary, 20%);
+        }
     }
 }
