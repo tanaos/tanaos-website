@@ -1,4 +1,4 @@
-//import { CodeSnippet } from '../../components/CodeSnippet';
+import { CodeSnippet } from '../../components/CodeSnippet';
 import { Config } from '../../config';
 
 
@@ -46,8 +46,7 @@ guardrail.train(
             </div>
         </div>
         <div className='col-6 m-0 p-0 ps-5 mt-4 d-none d-md-block'>
-            {/* <CodeSnippet code={sampleCode} /> */}
-            test
+            <CodeSnippet code={sampleCode} />
         </div>
     </div>
 };
