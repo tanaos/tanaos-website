@@ -1,12 +1,17 @@
+import '../styles/globals.scss'
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Poppins } from 'next/font/google';
+
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-import '../styles/globals.scss'
+
+const poppins = Poppins({ weight: ['100', '300', '400', '700', '800', '900'], subsets: ['latin'] });
 
 
 export const RootLayout = ({ children }) => {
     return (
         <html lang="en">
-            <body>
+            <body className={poppins.className}>
                 <Navbar />
                 <main>
                     {children}
