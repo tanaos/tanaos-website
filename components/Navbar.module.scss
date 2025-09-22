@@ -1,0 +1,71 @@
+@use '../styles/variables.scss' as vars;
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+
+.navbar {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: vars.$navbar-padding;
+    color: vars.$font-color-dark;
+    transition: top 0.3s ease;
+
+    &.with-headline-bar {
+        top: vars.$headline-bar-height;
+    }
+
+    a {
+        color: unset;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: vars.$border-radius;
+        font-weight: 400;
+
+        &:hover {
+            background-color: vars.$grey-100;
+            font-weight: 500;
+            color: black !important;
+        }
+    }
+
+    a:hover {
+        color: vars.$font-color-light;
+    }
+
+    button, .btn {
+        min-width: 80px !important;
+    }
+}
+
+.navbar-toggle-icon {
+    font-size: 20px;
+    color: vars.$font-color-dark;
+}
+
+.navbar-collapse {
+    display: none;
+    flex-direction: column;
+    padding: vars.$navbar-padding;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.navbar-collapse.menu-active {
+    display: block;
+    background-color: white;
+    border-top: vars.$line-100;
+    height: 110vh;
+}
+
+@include media-breakpoint-down(md) {
+    .navbar {
+        a, .btn {
+            display: block;
+            margin: 0 0 1rem 0;
+        }
+    }
+}

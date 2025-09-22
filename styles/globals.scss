@@ -1,0 +1,279 @@
+@use '../styles/variables.scss' as vars;
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/bootstrap";
+
+
+// Body.
+body {
+    font-family: vars.$font-body !important;
+    color: vars.$font-color-light;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    font-size: vars.$font-size-p-500;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+// Text.
+h1 {
+    font-size: vars.$font-size-h1;
+    font-family: vars.$font-headlines !important;
+    color: vars.$font-color-dark;
+    line-height: vars.$line-height-h1;
+}
+
+h2 {
+    font-size: vars.$font-size-h2;
+    font-family: vars.$font-headlines !important;
+    color: vars.$font-color-dark;
+}
+
+h3 {
+    font-size: vars.$font-size-h3;
+    font-family: vars.$font-headlines !important;
+    color: vars.$font-color-dark;
+}
+
+h4 {
+    font-size: vars.$font-size-h4;
+    font-family: vars.$font-headlines !important;
+    color: vars.$font-color-dark;
+}
+
+h5 {
+    font-size: vars.$font-size-h5;
+    font-family: vars.$font-headlines !important;
+    color: vars.$font-color-dark;
+}
+
+h6 {
+    font-size: vars.$font-size-h6;
+    font-family: vars.$font-headlines !important;
+    color: vars.$font-color-dark;
+    line-height: vars.$line-height-h6;
+}
+
+p {
+    font-family: vars.$font-headlines !important;
+    color: vars.$font-color-light;
+    line-height: vars.$line-height-p-400;
+    font-size: vars.$font-size-p-400;
+}
+
+span {
+    font-size: vars.$font-size-p-400;
+    line-height: vars.$line-height-p-400;
+}
+
+ul {
+    font-size: vars.$font-size-p-400;
+    line-height: vars.$line-height-p-400;
+}
+
+// Elements.
+a {
+    color: vars.$link-color;
+
+    &:hover {
+        color: vars.$link-color-hover;
+    }
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.toast-container {
+    z-index: 10000;
+    position: fixed;
+    bottom: 50px !important;
+    left: 50px !important;
+}
+
+.toast {
+    width: fit-content;
+    color: vars.$font-color-dark;
+    background-color: white;
+    font-size: vars.$font-size-p-300;
+    padding: vars.$object-padding-200;
+
+    .toast-title {
+        font-size: vars.$font-size-p-500;
+        font-weight: 500;
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: vars.$font-size-p-300;
+    }
+
+    .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .toast-content {
+        display: flex;
+    }
+
+    .toast-icon {
+        font-size: 30px;
+    }
+
+    &.success {
+        border-left: 10px solid vars.$success-color-500;
+        .toast-icon {
+            color: vars.$success-color-500;
+        }
+    }
+    &.danger {
+        border-left: 10px solid vars.$danger-color-500;
+        .toast-icon {
+            color: vars.$danger-color-500;
+        }
+    }
+    &.warning {
+        border-left: 10px solid vars.$warning-color-500;
+        .toast-icon {
+            color: vars.$warning-color-500;
+        }
+    }
+    &.info {
+        border-left: 10px solid vars.$info-color-500;
+        .toast-icon {
+            color: vars.$info-color-500;
+        }
+    }
+}
+
+// Bootstrap overrides
+// -------------------
+
+// Backgrounds.
+.bg-primary {
+    background-color: vars.$primary !important;
+}
+
+.bg-info {
+    background-color: vars.$blue-500 !important;
+}
+
+.bg-success {
+    background-color: vars.$success-color-500 !important;
+}
+
+.bg-danger {
+    background-color: vars.$danger-color-500 !important;
+}
+
+.bg-warning {
+    background-color: vars.$warning-color-500 !important;
+}
+
+.text-danger {
+    color: vars.$danger-color-500 !important;
+}
+
+.text-dark {
+    color: vars.$font-color-dark !important;
+}
+
+// Buttons.
+.btn {
+    border: none;
+    border-radius: vars.$border-radius;
+    padding: vars.$object-padding-300;
+    min-width: vars.$button-min-width;
+    font-weight: 500;
+
+    &:hover, &:focus, &:active {
+        border: none;
+    }
+
+    &:disabled {
+        background-color: vars.$button-disabled;
+        color: white;
+    }
+}
+
+.btn-primary {
+    background-color: vars.$button-primary;
+    color: white;
+
+    &:hover, &:focus, &:active {
+        background-color: vars.$button-primary-hover !important;
+        color: white;
+    }
+}
+
+.btn-white {
+    background-color: white;
+    color: vars.$font-color-dark;
+    border: vars.$line-300;
+    box-shadow: vars.$shadow-100;
+
+    &:hover {
+        background-color: vars.$grey-100;
+        color: vars.$font-color-dark;
+        border: vars.$line-300;
+    }
+
+    &:focus, &:active {
+        background-color: white;
+        border: vars.$line-300;
+    }
+}
+
+// ------------------
+
+// Logo
+.logo {
+    font-size: vars.$font-size-h5;
+    cursor: pointer;
+    font-weight: 400;
+    color: vars.$primary;
+}
+
+// Misc.
+
+.simple-page-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    text-align: center;
+
+    .simple-page {
+        max-width: 400px;
+    }
+}
+
+// Misc.
+.hero-subtitle {
+    font-size: vars.$font-size-h6;
+    line-height: vars.$line-height-p-600;
+    font-weight: 400;
+    color: vars.$font-color-light;
+
+    b {
+        font-weight: 400;
+        color: vars.$primary-300;
+    }
+}
+
+.global-padding {
+    padding: vars.$page-padding;
+}

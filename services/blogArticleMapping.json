@@ -1,0 +1,32 @@
+{
+    "case-for-synthetic-data-generation": {
+        "component": "CaseForSyntheticDataGeneration",
+        "author": 1,
+        "date": "20 March 2025"
+    },
+    "case-study-generate-synthetic-financial-transaction-data": {
+        "component": "CaseStudyGenerateSyntheticFinancialTransactionData",
+        "author": 1,
+        "date": "27 March 2025"
+    },
+    "case-study-generate-synthetic-text-classification-data": {
+        "component": "CaseStudyGenerateSyntheticTextClassificationData",
+        "author": 1,
+        "date": "31 March 2025"
+    },
+    "how-synthetic-data-can-improve-machine-learning-model-training": {
+        "component": "HowSyntheticDataCanImproveMachineLearningModelTraining",
+        "author": 1,
+        "date": "3 April 2025"
+    },
+    "case-study-generate-synthetic-medical-data": {
+        "component": "CaseStudyGenerateSyntheticMedicalData",
+        "author": 1,
+        "date": "7 April 2025"
+    },
+    "introducing-synthex-library": {
+        "component": "IntroducingSynthexPythonLibrary",
+        "author": 1,
+        "date": "15 May 2025"
+    }
+}

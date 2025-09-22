@@ -1,0 +1,12 @@
+@use '../../styles/variables.scss' as vars;
+
+
+.why-tanaos-section {
+    a {
+        color: vars.$primary;
+
+        &:hover {
+            color: darken(vars.$primary, 20%);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@use '../../styles/variables.scss' as vars;
+
+
+.blog-post-preview {
+    cursor: pointer;
+    background-color: vars.$grey-100;
+    padding: vars.$object-padding-400;
+    border: vars.$line-300;
+    border-radius: vars.$border-radius;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: vars.$shadow-100;
+
+        .read-more {
+            color: vars.$primary;
+        }
+    }
+
+    h1 {
+        font-size: vars.$font-size-h5;
+        line-height: vars.$line-height-h5;
+    }
+
+    .date, .read-more {
+        color: lighten(vars.$font-color-light, 30%);
+    }
+}

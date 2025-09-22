@@ -1,0 +1,7 @@
+@use '../../styles/variables.scss' as vars;
+
+.model-card {
+    a {
+        color: vars.$primary;
+    }
+}
