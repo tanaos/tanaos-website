@@ -9,7 +9,7 @@ export const Navigation = () => {
     const url = usePathname();
 
     return <div className={`${styles['navigation']}`}>
-        <Link href='/blog' className={`mt-4 mt-md-0 ms-md-5 ${url === '/blog' && styles['highlighted']}`}>Blog</Link>
+        {/* <Link href='/blog' className={`mt-4 mt-md-0 ms-md-5 ${url === '/blog' && styles['highlighted']}`}>Blog</Link> */}
         <a 
             href={Config.DOCS_URL} 
             rel='noreferrer'

@@ -28,4 +28,7 @@ export const Config = {
     // Demo
     ARTIFEX_GUARDRAIL_DEMO_URL: 'https://colab.research.google.com/github/tanaos/tanaos-docs/blob/master/blueprints/artifex/guardrail.ipynb',
     ARTIFEX_INTENT_CLASSIFIER_DEMO_URL: 'https://colab.research.google.com/github/tanaos/tanaos-docs/blob/master/blueprints/artifex/intent_classifier.ipynb',
+
+    // Session Storage
+    DISPLAY_BANNER_SESSION_STORAGE_FLAG: 'displayBanner',
 };
