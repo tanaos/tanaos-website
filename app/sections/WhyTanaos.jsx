@@ -16,7 +16,7 @@ export const WhyTanaos = () => {
                         Learn more <i className='bi bi-box-arrow-up-right'></i>
                     </a>
                 </div>
-                <div className='col-12 col-md-3'>
+                <div className='col-12 col-md-3 mt-4 mt-md-0'>
                     <h3>No training data needed</h3>
                     <p>
                         Perform Text Classification without training data, as training is done
@@ -26,7 +26,7 @@ export const WhyTanaos = () => {
                         Learn more <i className='bi bi-box-arrow-up-right'></i>
                     </a>
                 </div>
-                <div className='col-12 col-md-3'>
+                <div className='col-12 col-md-3 mt-4 mt-md-0'>
                     <h3>Perform offline NLP tasks</h3>
                     <p>
                         None of the created models require a GPU, so you can run everything 
@@ -36,7 +36,7 @@ export const WhyTanaos = () => {
                         Learn more <i className='bi bi-box-arrow-up-right'></i>
                     </a>
                 </div>
-                <div className='col-12 col-md-3'>
+                <div className='col-12 col-md-3 mt-4 mt-md-0'>
                     <h3>Drastically reduce your LLM API bill</h3>
                     <p>
                         Offload tasks to local task-specific models and reduce the number of 

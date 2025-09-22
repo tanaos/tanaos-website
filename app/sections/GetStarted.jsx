@@ -8,9 +8,7 @@ export const GetStarted = () => {
         <div className='row'>
             <h2 className='mb-5'>🚀 Quick start</h2>
             <div className={`col-12 col-md-4 ${styles['margin-end']}`}>
-                <div>
-                    <h3 className='mb-5'>Casual usage: free</h3>
-                </div>
+                <h3 className='mb-5'>Casual usage: free</h3>
                 <h6>Use our <a href={Config.ARTIFEX_GITHUB_URL} rel='noreferrer' target='_blank'>
                     Artifex library
                 </a></h6>
@@ -21,10 +19,8 @@ export const GetStarted = () => {
                     </a> to learn more
                 </p>
             </div>
-            <div className='col-12 col-md-8 ps-4'>
-                <div>
-                    <h3 className='mb-5'>Advanced usage: pay-as-you-go</h3>
-                </div>
+            <div className='col-12 col-md-8 ps-md-4 mt-4 mt-md-0'>
+                <h3 className='mb-5'>Advanced usage: pay-as-you-go</h3>
                 <div className='row'>
                     <div className='col-12 col-md-4'>
                         <h6><span className={`${styles['step-number']}`}>1</span>Signup</h6>

@@ -1,5 +1,7 @@
 @use '../../styles/variables.scss' as vars;
-
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
 
 .quickstart-section {
 
@@ -30,5 +32,11 @@
         align-items: center;
         justify-content: center;
         margin-right: 0.5rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .margin-end {
+        border-right: none !important;
     }
 }

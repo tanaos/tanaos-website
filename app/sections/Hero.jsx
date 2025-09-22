@@ -45,7 +45,7 @@ guardrail.train(
                 </a>
             </div>
         </div>
-        <div className='col-6 m-0 p-0 ps-5 mt-4 d-none d-md-block'>
+        <div className='col-12 col-md-6 col-6 m-0 p-0 ps-md-5 mt-4'>
             <CodeSnippet code={sampleCode} />
         </div>
     </div>

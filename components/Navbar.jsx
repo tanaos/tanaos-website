@@ -38,19 +38,23 @@ export const Navbar = ({ bannerVisible }) => {
 
     return <div className={`row ${styles['navbar']} m-0 ${bannerVisible && styles['with-headline-bar']}`}>
         {/* Large devices. */}
-        <div className='col m-0 p-0 text-start'>
-            <span className='logo' onClick={() => router.push('/')}>Tanaos</span>
-        </div>
-        <div className='col m-0 p-0 text-end'>
-            <Navigation />
+        <div className={`${styles['navbar-large-devices']}`}>
+            <div className='col m-0 p-0 text-start'>
+                <span className='logo' onClick={() => router.push('/')}>Tanaos</span>
+            </div>
+            <div className='col m-0 p-0 text-end'>
+                <Navigation />
+            </div>
         </div>
     
         {/* Small devices. */}
-        <div className='col-10 m-0 p-0 text-start d-md-none'>
-            <span className='logo' onClick={() => router.push('/')}>tanaos</span>
-        </div>
-        <div className='col-2 d-md-none m-0 p-0 text-end'>
-            <NavbarToggle onClick={toggleMenu} isMenuOpen={isMenuOpen} />
+        <div className={`${styles['navbar-small-devices']} d-md-none m-0 p-0 d-flex align-items-center`}>
+            <div className='col-10 m-0 p-0 text-start'>
+                <span className='logo' onClick={() => router.push('/')}>tanaos</span>
+            </div>
+            <div className='col-2 m-0 p-0 text-end'>
+                <NavbarToggle onClick={toggleMenu} isMenuOpen={isMenuOpen} />
+            </div>
         </div>
         {/* Display the collapsible navbar component. */}
         <NavbarCollapse isOpen={isMenuOpen} />

@@ -34,7 +34,7 @@ export const AvailableModels = () => {
                 </div>
             </div>
             <div className='col-12 col-md-4 margin-end'>
-                <div className={`${styles['model-card']}`}>
+                <div className={`${styles['model-card']} mt-4 mt-md-0`}>
                     <h3 className='mb-3'>🗣️ Intent Classification</h3>
                     <p>
                         Typically used in chatbots and virtual assistants to classify user intents.
@@ -60,7 +60,7 @@ export const AvailableModels = () => {
                 </div>
             </div>
             <div className='col-12 col-md-4'>
-                <div className={`${styles['model-card']}`}>
+                <div className={`${styles['model-card']} mt-4 mt-md-0`}>
                     <h3 className='mb-3'>💡 <ins>Tell us what you need!</ins></h3>
                     <p>
                         We are actively working on creating new task-specific models based on user 

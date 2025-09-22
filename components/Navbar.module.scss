@@ -57,11 +57,24 @@
     height: 110vh;
 }
 
+.navbar-large-devices {
+    display: flex;
+}
+
 @include media-breakpoint-down(md) {
     .navbar {
         a, .btn {
             display: block;
             margin: 0 0 1rem 0;
         }
+    }
+
+    .navbar-large-devices {
+        display: none;
+    }
+
+    .navbar-small-devices {
+        height: 50px;
+        display: flex;
     }
 }
