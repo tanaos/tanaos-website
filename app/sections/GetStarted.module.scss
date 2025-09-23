@@ -12,7 +12,7 @@
 
             &:hover {
                 text-decoration: underline;
-                color: darken(vars.$primary, 20%);
+                color: vars.$primary-700;
             }
         }
     }

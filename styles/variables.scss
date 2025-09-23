@@ -2,10 +2,10 @@
 // ------------------------------
 
 // Primary.
-$primary-100: #ffdae3;
-$primary-300: #ff7094;
 $primary-500: #FF3668;
-$primary-700: #D60035;
+$primary-100: lighten($primary-500, 35%);
+$primary-300: lighten($primary-500, 15%);
+$primary-700: darken($primary-500, 20%);
 $primary: $primary-500;
 
 // White, grey, black.
@@ -158,3 +158,6 @@ $footer-padding: 2vw 4vw;
 // Blog articles.
 $blog-article-padding: 5vh;
 $blog-article-section-spacing: 3vh;
+
+// Icons.
+$icon-size: 2rem;

@@ -6,7 +6,12 @@
         color: vars.$primary;
 
         &:hover {
-            color: darken(vars.$primary, 20%);
+            color: vars.$primary-700;
         }
+    }
+
+    i {
+        color: vars.$primary-300;
+        font-size: vars.$icon-size;
     }
 }

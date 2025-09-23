@@ -5,7 +5,14 @@
         color: vars.$primary;
 
         &:hover {
-            color: darken(vars.$primary, 20%);
+            color: vars.$primary-700;
         }
+    }
+
+    h3 i {
+        font-size: vars.$icon-size;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        color: vars.$font-color-light;
     }
 }
