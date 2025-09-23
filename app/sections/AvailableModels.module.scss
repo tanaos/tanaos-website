@@ -1,0 +1,18 @@
+@use '../../styles/variables.scss' as vars;
+
+.model-card {
+    a:not(:global(.btn)) {
+        color: vars.$primary;
+
+        &:hover {
+            color: vars.$primary-700;
+        }
+    }
+
+    h3 i {
+        font-size: vars.$icon-size;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        color: vars.$font-color-light;
+    }
+}

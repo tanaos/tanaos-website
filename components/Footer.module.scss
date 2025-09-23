@@ -1,0 +1,29 @@
+@use '../styles/variables.scss' as vars;
+
+
+.footer {
+    padding: vars.$footer-padding;
+    background-color: vars.$grey-800;
+    color: white;
+    
+    a {
+        color: unset;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: vars.$grey-200;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 5px;
+
+        a:not(:last-child)::after {
+            content: '|';
+            margin: 0 10px;
+        }
+    }
+}
