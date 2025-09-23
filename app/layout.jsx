@@ -1,6 +1,7 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../styles/globals.scss';
 import { Poppins } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
@@ -18,6 +19,7 @@ export const RootLayout = ({ children }) => {
                 </main>
                 <Footer />
             </body>
+            <GoogleAnalytics gaId='G-HRQ77GT2C8' />
         </html>
     );
 }
