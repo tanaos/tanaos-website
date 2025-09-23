@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktanaos_website=self.webpackChunktanaos_website||[]).push([[944],{4944:(e,s,t)=>{e.exports=t.p+"static/media/platform_job_refinement_chat_second_message.e2d062f1c3ecdc85d75f.png"}}]);

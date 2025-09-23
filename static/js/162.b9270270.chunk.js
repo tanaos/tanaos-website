@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktanaos_website=self.webpackChunktanaos_website||[]).push([[162],{6162:(e,s,a)=>{e.exports=a.p+"static/media/platform_job_wizard_step1.99e88a67d7348f8e4c51.png"}}]);
