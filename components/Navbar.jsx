@@ -92,7 +92,7 @@ export const Navbar = () => {
             {/* Small devices. */}
             <div className={`${styles['navbar-small-devices']} d-md-none m-0 p-0 d-flex align-items-center`}>
                 <div className='col-10 m-0 p-0 text-start'>
-                    <span className='logo' onClick={() => router.push('/')}>tanaos</span>
+                    <span className='logo' onClick={() => router.push('/')}>Tanaos</span>
                 </div>
                 <div className='col-2 m-0 p-0 text-end'>
                     <NavbarToggle onClick={toggleMenu} isMenuOpen={isMenuOpen} />

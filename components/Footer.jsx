@@ -9,7 +9,7 @@ export const Footer = () => {
             Copyright © {new Date().getFullYear()} Tanaos
         </div>
         <div className='col-md-4 text-md-center d-none d-md-block'>
-            tanaos
+            Tanaos
         </div>
         <div className={`col-12 col-md-4 text-md-end mt-4 mt-md-0 ${styles['footer-links']} m-0 p-0`}>
             <Link href='/'>Home</Link>
