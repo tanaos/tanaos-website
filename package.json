@@ -27,7 +27,8 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "postbuild": "next-sitemap"
+    "export": "next export",
+    "postexport": "next-sitemap"
   },
   "eslintConfig": {
     "extends": [
