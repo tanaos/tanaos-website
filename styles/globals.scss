@@ -61,18 +61,18 @@ h6 {
 p {
     font-family: vars.$font-headlines !important;
     color: vars.$font-color-light;
-    line-height: vars.$line-height-p-400;
-    font-size: vars.$font-size-p-400;
+    line-height: vars.$line-height-p-500;
+    font-size: vars.$font-size-p-500;
 }
 
 span {
-    font-size: vars.$font-size-p-400;
-    line-height: vars.$line-height-p-400;
+    font-size: vars.$font-size-p-500;
+    line-height: vars.$line-height-p-500;
 }
 
 ul {
-    font-size: vars.$font-size-p-400;
-    line-height: vars.$line-height-p-400;
+    font-size: vars.$font-size-p-500;
+    line-height: vars.$line-height-p-500;
 }
 
 // Elements.
@@ -265,19 +265,7 @@ a {
     }
 }
 
-// Misc.
-.hero-subtitle {
-    font-size: vars.$font-size-h6;
-    line-height: vars.$line-height-p-600;
-    font-weight: 400;
-    color: vars.$font-color-light;
-
-    b {
-        font-weight: 400;
-        color: vars.$primary-300;
-    }
-}
-
+// Padding.
 .global-padding {
     padding: vars.$page-padding;
 }

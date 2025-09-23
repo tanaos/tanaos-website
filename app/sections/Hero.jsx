@@ -1,3 +1,4 @@
+import styles from './Hero.module.scss';
 import { CodeSnippet } from '../../components/CodeSnippet';
 import { Config } from '../../config';
 
@@ -22,11 +23,11 @@ guardrail.train(
     return <div className='row m-0 global-padding'>
         <div className='col-12 col-md-6 m-0 p-0 mt-4'>
             <h1>
-                Create task-specific LLMs without training data
+                Create task-specific LLMs for NLP and Text Classification
             </h1>
-            <h2 className='mt-4 hero-subtitle'>
+            <h2 className={`mt-4 ${styles['hero-subtitle']}`}>
                 Perform offline <b>NLP</b> and <b>Text Classification</b> tasks, such as Guardrail Models and
-                Intent Classification, <b>without data, GPUs or third-party APIs.</b>
+                Intent Classification, <b>without training data, GPUs or third-party APIs.</b>
             </h2>
             <div className='mt-5'>
                 <a 
