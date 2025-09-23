@@ -26,7 +26,7 @@ export const GetStarted = () => {
                     Start for free <i className='bi bi-github ms-1'></i>
                 </a>
             </div>
-            <div className='col-12 col-md-8 ps-md-4 mt-4 mt-md-0'>
+            <div className='col-12 col-md-8 ps-md-4 mt-5 mt-md-0 mb-5 mb-md-0'>
                 <h3 className='mb-5'>Advanced usage: pay-as-you-go</h3>
                 <div className='row'>
                     <div className='col-12 col-md-4'>
