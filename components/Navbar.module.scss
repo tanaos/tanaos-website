@@ -13,10 +13,6 @@
     color: vars.$font-color-dark;
     transition: top 0.3s ease;
 
-    &.with-headline-bar {
-        top: vars.$headline-bar-height;
-    }
-
     a:not(:global(.btn)) {
         color: unset;
         text-decoration: none;
@@ -34,6 +30,10 @@
     a:hover {
         color: vars.$font-color-light;
     }
+}
+
+.with-headline-bar {
+    top: vars.$headline-bar-height !important;
 }
 
 .navbar-toggle-icon {
