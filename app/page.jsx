@@ -11,10 +11,10 @@ export const HomePage = () => {
 
     return <>
         <Head>
-            <title>Tanaos | Task-specific LLMs for NLP and Text Classification</title>
+            <title>Task-specific LLMs for NLP and Text Classification | Tanaos</title>
             <meta name='description' content='Train task-specific LLMs without training data, for offline NLP and Text Classification tasks, such as Guardrail Models and Intent Classification.' />
             <meta name='robots' content='index, follow' />
-            <meta property='og:title' content='Tanaos | Task-specific LLMs for NLP and Text Classification' />
+            <meta property='og:title' content='Task-specific LLMs for NLP and Text Classification | Tanaos' />
             <meta property='og:description' content='Train task-specific LLMs without training data, for offline NLP and Text Classification tasks, such as Guardrail Models and Intent Classification.' />
             <meta property='og:type' content='website' />
             <meta property='og:url' content={Config.WEBSITE_BASE_URL} />
