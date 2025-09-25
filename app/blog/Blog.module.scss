@@ -1,0 +1,48 @@
+@use '../../styles/variables.scss' as vars;
+
+
+.blog-page {
+    p {
+        font-size: vars.$font-size-h6;
+        line-height: vars.$line-height-h6;
+    }
+
+    .post-preview {
+        max-width: 700px;
+        background-color: vars.$grey-100;
+        border-radius: vars.$border-radius;
+        padding: vars.$object-padding-400;
+        border: vars.$line-300;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-align: start;
+
+        &:hover {
+            box-shadow: vars.$shadow-100;
+
+            .read-more {
+                color: vars.$primary;
+            }
+        }
+
+        h2 {
+            font-size: vars.$font-size-h4;
+            line-height: vars.$line-height-h4;
+        }
+        
+        h3 {
+            font-size: vars.$font-size-p-500;
+            line-height: vars.$line-height-p-500;
+            color: vars.$font-color-light;
+            font-weight: 400;
+        }
+
+        .post-date {
+            color: vars.$grey-400;
+        }
+
+        .read-more {
+            color: vars.$grey-400;
+        }
+    }
+}

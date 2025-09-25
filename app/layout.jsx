@@ -13,11 +13,13 @@ export const RootLayout = ({ children }) => {
     return (
         <html lang='en'>
             <body className={poppins.className}>
-                <Navbar />
-                <main>
-                    {children}
-                </main>
-                <Footer />
+                <div className='app'>
+                    <Navbar />
+                    <main className='content'>
+                        {children}
+                    </main>
+                    <Footer />
+                </div>
             </body>
             <GoogleAnalytics gaId='G-HRQ77GT2C8' />
         </html>

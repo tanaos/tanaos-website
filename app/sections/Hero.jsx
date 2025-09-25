@@ -22,7 +22,7 @@ guardrail.train(
 
     return <div className='row m-0 global-padding'>
         <div className='col-12 col-md-6 m-0 p-0 pt-md-5 mt-4'>
-            <h1>
+            <h1 className='hero-title'>
                 Create task-specific LLMs for NLP and Text Classification
             </h1>
             <h2 className={`mt-4 ${styles['hero-subtitle']}`}>

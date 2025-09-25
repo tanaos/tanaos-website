@@ -6,7 +6,7 @@
 
 
 // Body.
-body {
+html, body, #root {
     font-family: vars.$font-body !important;
     color: vars.$font-color-light;
     overflow-x: hidden;
@@ -19,7 +19,24 @@ body {
     padding: 0;
 }
 
+.app {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
 // Text.
+.hero-title {
+    font-size: vars.$font-size-hero;
+    font-family: vars.$font-headlines !important;
+    color: vars.$font-color-dark;
+    line-height: vars.$line-height-hero;
+}
+
 h1 {
     font-size: vars.$font-size-h1;
     font-family: vars.$font-headlines !important;

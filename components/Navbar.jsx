@@ -51,7 +51,7 @@ export const Navbar = () => {
         if (bannerDisplayed === null) {
             bannerDisplayed = 'true';
         }
-        console.log('bannerDisplayed: ', bannerDisplayed)
+
         if (bannerDisplayed === 'true') {
             setDisplayBanner(true);
         }

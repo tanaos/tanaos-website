@@ -75,7 +75,8 @@ $font-color-success: $success-color-700;
 $font-color-warning: $warning-color-700;
 
 // Font size.
-$font-size-h1: 2.7rem;
+$font-size-hero: 2.7rem;
+$font-size-h1: 2.2rem;
 $font-size-h2: 2.0rem;
 $font-size-h3: 1.5rem;
 $font-size-h4: 1.2rem;
@@ -87,9 +88,11 @@ $font-size-p-300: 0.7rem;
 $font-size-p-200: 0.6rem;
 
 // Line height.
-$line-height-h1: 3.7rem;
+$line-height-hero: 3.7rem;
+$line-height-h1: 3.2rem;
 $line-height-h5: 2.5rem;
-$line-height-h6: 2.3rem;
+$line-height-h4: 2.2rem;
+$line-height-h6: 2rem;
 $line-height-p-800: 2.2rem;
 $line-height-p-600: 2rem;
 $line-height-p-500: 1.8rem;
