@@ -81,7 +81,7 @@ export const Navbar = () => {
             className={`row ${styles['navbar']} m-0 ${displayBanner && styles['with-headline-bar']}`}
         >
             {/* Large devices. */}
-            <div className={`${styles['navbar-large-devices']}`}>
+            <div className={`m-0 p-0 ${styles['navbar-large-devices']}`}>
                 <div className='col m-0 p-0 text-start'>
                     <span className='logo' onClick={() => router.push('/')}>Tanaos</span>
                 </div>

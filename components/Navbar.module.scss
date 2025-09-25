@@ -16,13 +16,13 @@
     a:not(:global(.btn)) {
         color: unset;
         text-decoration: none;
-        padding: 5px 10px;
+        padding: 10px;
         border-radius: vars.$border-radius;
         font-weight: 400;
+        font-size: vars.$font-size-h6 !important;
 
         &:hover {
             background-color: vars.$grey-200;
-            font-weight: 500;
             color: black !important;
         }
     }
