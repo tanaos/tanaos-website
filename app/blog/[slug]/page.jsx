@@ -1,5 +1,7 @@
-import { getPost, getAllPosts } from '../../../lib/posts';
 import { marked } from 'marked';
+import Link from 'next/link';
+
+import { getPost, getAllPosts } from '../../../lib/posts';
 import { Config } from '../../../config';
 import styles from './BlogPage.module.scss';
 
@@ -9,7 +11,8 @@ export async function generateStaticParams() {
     return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+    const params = await props.params;
     const { slug } = await params;
     const { frontmatter } = getPost(slug);
 
@@ -34,16 +37,18 @@ export async function generateMetadata({ params }) {
     };
 }
 
-export const PostPage = ({ params }) => {
-  const { frontmatter, content } = getPost(params.slug);
+export const PostPage = async props => {
+    const params = await props.params;
+    const { frontmatter, content } = getPost(params.slug);
 
-  return (
-        <article className={styles.article}>
-            <h1>{frontmatter.title}</h1>
-            <p>{frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
-        </article>
-  );
+    return <article className={styles.article}>
+        <Link href='/blog' className={`${styles.back}`}>
+            <i className='bi bi-arrow-left'></i> Back to blog
+        </Link>
+        <h1 className='mt-4'>{frontmatter.title}</h1>
+        <p className={styles['date']}>{frontmatter.date}</p>
+        <div className='mt-4' dangerouslySetInnerHTML={{ __html: marked(content) }} />
+    </article>
 }
 
 export default PostPage;

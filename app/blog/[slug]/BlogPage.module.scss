@@ -1,5 +1,32 @@
+@use '../../../styles/variables.scss' as vars;
+
+
 .article {
     max-width: 800px;
     margin: 7rem auto;
     padding: 0 1rem;
+
+    h1 {
+        font-size: vars.$font-size-hero;
+    }
+
+    a {
+        font-size: vars.$font-size-h6;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: vars.$primary;
+            transform: translateX(-3px);
+        }
+    }
+
+    p, span {
+        font-size: vars.$font-size-h6;
+    }
+
+    .date {
+        color: vars.$grey-400;
+    }
 }
