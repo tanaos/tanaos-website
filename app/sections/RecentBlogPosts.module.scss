@@ -1,0 +1,22 @@
+@use '../../styles/variables.scss' as vars;
+
+
+.recent-blog-posts {
+    max-width: 600px;
+
+    a {
+        text-decoration: none;
+
+        i {
+            display: inline-block;
+            transition: transform vars.$transition-default;
+        }
+
+        &:hover {
+            color: vars.$primary;
+            i {
+                transform: vars.$transform-translate-right;
+            }
+        }
+    }
+}

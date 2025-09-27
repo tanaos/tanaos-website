@@ -22,7 +22,7 @@
         &:hover {
             color: vars.$primary;
             i {
-                transform: vars.$transform-left;
+                transform: vars.$transform-translate-left;
             }
         }
     }
