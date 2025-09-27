@@ -10,7 +10,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-        box-shadow: vars.$shadow-100;
+        box-shadow: vars.$shadow-300;
 
         .read-more {
             color: vars.$primary;

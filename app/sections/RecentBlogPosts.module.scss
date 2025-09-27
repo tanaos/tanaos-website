@@ -2,8 +2,6 @@
 
 
 .recent-blog-posts {
-    max-width: 600px;
-
     a {
         text-decoration: none;
 
@@ -17,6 +15,45 @@
             i {
                 transform: vars.$transform-translate-right;
             }
+        }
+    }
+
+    .section-header {
+        max-width: 500px;
+    }
+
+    .post-preview {
+        border: vars.$line-300;
+        border-radius: vars.$border-radius;
+        padding: vars.$object-padding-400;
+        box-shadow: vars.$shadow-100;
+        transition: box-shadow vars.$transition-default;
+
+        &:hover {
+            box-shadow: vars.$shadow-300;
+            .read-more {
+                color: vars.$primary;
+            }
+        }
+
+        h3 {
+            font-size: vars.$font-size-h4;
+            line-height: vars.$line-height-h5;
+        }
+
+        h4 {
+            font-size: vars.$font-size-p-500;
+            line-height: vars.$line-height-p-500;
+            color: vars.$font-color-light;
+            font-weight: 400;
+        }
+
+        .post-date {
+            color: vars.$grey-400;
+        }
+
+        .read-more {
+            color: vars.$grey-400;
         }
     }
 }

@@ -82,7 +82,7 @@ $font-size-h3: 1.5rem;
 $font-size-h4: 1.2rem;
 $font-size-h5: 1.1rem;
 $font-size-h6: 1rem;
-$font-size-p-500: 0.9rem;
+$font-size-p-500: 0.95rem;
 $font-size-p-400: 0.8rem;
 $font-size-p-300: 0.7rem;
 $font-size-p-200: 0.6rem;
@@ -124,8 +124,9 @@ $line-danger: 2px solid $danger-color-500;
 $line-warning: 2px solid $warning-color-500;
 
 // Shadows.
-$shadow-100: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-$shadow-200: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+$shadow-100: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+$shadow-300: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+$shadow-500: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
 // Tables.
 $table-padding: 8px 20px 8px 20px;

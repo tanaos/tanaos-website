@@ -241,13 +241,13 @@ a {
     background-color: white;
     color: vars.$font-color-dark;
     border: vars.$line-300;
-    box-shadow: vars.$shadow-100;
+    box-shadow: vars.$shadow-300;
 
     &:hover {
         background-color: vars.$grey-100;
         color: vars.$font-color-dark;
         border: vars.$line-300;
-        box-shadow: vars.$shadow-200;
+        box-shadow: vars.$shadow-500;
     }
 
     &:focus, &:active {

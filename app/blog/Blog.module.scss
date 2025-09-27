@@ -15,6 +15,8 @@
         border: vars.$line-300;
         cursor: pointer;
         text-align: start;
+        box-shadow: vars.$shadow-100;
+        transition: box-shadow vars.$transition-default;
 
         i {
             display: inline-block;
@@ -22,7 +24,7 @@
         }
 
         &:hover {
-            box-shadow: vars.$shadow-100;
+            box-shadow: vars.$shadow-300;
 
             .read-more {
                 color: vars.$primary;
