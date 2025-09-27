@@ -13,12 +13,17 @@
     a {
         font-size: vars.$font-size-h6;
         text-decoration: none;
-        display: inline-block;
-        transition: all 0.2s ease;
+
+        i {
+            display: inline-block;
+            transition: transform vars.$transition-default, color vars.$transition-default;
+        }
 
         &:hover {
             color: vars.$primary;
-            transform: translateX(-3px);
+            i {
+                transform: vars.$transform-left;
+            }
         }
     }
 

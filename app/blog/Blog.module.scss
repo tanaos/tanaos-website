@@ -13,15 +13,23 @@
         border-radius: vars.$border-radius;
         padding: vars.$object-padding-400;
         border: vars.$line-300;
-        transition: all 0.3s ease;
         cursor: pointer;
         text-align: start;
+
+        i {
+            display: inline-block;
+            transition: transform vars.$transition-default;
+        }
 
         &:hover {
             box-shadow: vars.$shadow-100;
 
             .read-more {
                 color: vars.$primary;
+            }
+
+            i {
+                transform: vars.$transform-right;
             }
         }
 
