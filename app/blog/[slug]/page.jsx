@@ -46,8 +46,9 @@ export const PostPage = async props => {
             <i className='bi bi-arrow-left'></i> Back to blog
         </Link>
         <h1 className='mt-4'>{frontmatter.title}</h1>
-        <p className={styles['date']}>{frontmatter.date}</p>
-        <div className='mt-4' dangerouslySetInnerHTML={{ __html: marked(content) }} />
+        <h2 className={`mt-3 ${styles.subtitle}`}>{frontmatter.subtitle}</h2>
+        <p className={`mt-4 ${styles['date']}`}>{frontmatter.date}</p>
+        <div className='mt-5' dangerouslySetInnerHTML={{ __html: marked(content) }} />
     </article>
 }
 

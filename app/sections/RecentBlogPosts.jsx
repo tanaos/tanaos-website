@@ -14,7 +14,7 @@ export const RecentBlogPosts = () => {
                 View all <i className='bi bi-arrow-right'></i>
             </Link>
         </div>
-        <div className='row mt-5'>
+        <div className='row mt-4'>
             {posts.slice(0, 3).map((post) => (
                 <Link 
                     href={`/blog/${post.slug}`} 

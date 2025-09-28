@@ -10,6 +10,13 @@
         font-size: vars.$font-size-hero;
     }
 
+    .subtitle {
+        font-size: vars.$font-size-h3;
+        line-height: vars.$line-height-h3;
+        color: vars.$font-color-light;
+        font-weight: 400;
+    }
+
     a {
         font-size: vars.$font-size-h6;
         text-decoration: none;
@@ -27,8 +34,13 @@
         }
     }
 
-    p, span {
-        font-size: vars.$font-size-h6;
+    p, span, li {
+        font-size: vars.$font-size-h5;
+        line-height: vars.$line-height-h5;
+    }
+
+    p {
+        margin: 2rem 0;
     }
 
     .date {

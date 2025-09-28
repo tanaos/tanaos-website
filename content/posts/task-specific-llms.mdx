@@ -1,10 +1,52 @@
 ---
-title: 'Task-Specific LLMs: The Future of AI'
-subtitle: 'Exploring the rise of task-specific large language models and their impact on AI applications.'
+title: 'Working on text classification? Use a task-specific LLM.'
+subtitle: 'Here is why you should really stop using general-purpose LLMs for narrow tasks like text classification.'
 date: 'September 15, 2025'
-tags: ['Task-Specific LLM', 'AI', 'Text Classification', 'NLP', 'Machine Learning']
+tags: ['task-specific LLM', 'AI', 'text classification', 'without training data', 'NLP', 'machine learning']
 ---
 
-This is a test post for checking recent edits.
 
-## Test
+General-purpose LLMs are trained to be versatile across as wide a range of tasks as possible. They 
+handle themselves well in scenarios extending from code generation to creative writing. While this is very quickly
+turning them into an irreplaceable tool for many, it also means that they come with two main limitations:
+
+1. **Cost**: as their very name suggests, LLMs are *extremely large*. This means that they are expensive to run, and 
+their use requires either specialized hardware, or access to a paid third-party API.
+2. **Non-specificity**: because they are trained to be general-purpose, LLMs are not particularly good at
+tasks that require domain knowledge, or being trained on a specific dataset.
+
+In practice, this means that, when working on many narrow, well-defined tasks, general-purpose LLMs are often not
+just **overkill**, but also **underperforming**. 
+
+## Text classification 
+
+Text classification is a prime example of this. While their formulation and objective are straightforward, many
+text classification tasks such as **topic categorization**, **intent classification** or **safety filtering**
+require understanding of the specific domain they are applied to, which LLMs can only obtain through **fine-tuning
+on a relevant dataset**.
+
+Think, for instance, of a **safety filtering** task, where the goal is to flag text that contains unwanted content
+as *unsafe*. Since the definition of *unwanted content* really depends on the user's requirements, the only way 
+to get a general-purpose LLM to perform well on this task is through thorough and **meticulous prompt engineering**.
+Even then, the results are often subpar, and the cost of running a general-purpose LLM for this relatively simple
+task is non-trivial (especially at scale).
+
+The same applies to a number of other text classification tasks, such as **intent classification**, where the LLM
+needs to be provided with a list of possible intents and examples for each, **slot filling**, where the LLM needs
+to be told what slots to fill and how, and so on.
+
+## Task-specific LLMs
+
+Task-specific LLMs are smaller, more focused LLMs that are trained to perform very well on a specific task, and not
+necessarily on anything else. Due to their smaller size, they are **much cheaper to run** than general-purpose LLMs,
+and they can be deployed on more modest hardware.
+
+More importantly, task-specific LLMs are **trained on datasets that are relevant to the task at hand**. This means
+that they can leverage domain knowledge and perform much better than general-purpose LLMs on narrow tasks.
+For instance, a task-specific LLM for **safety filtering** would be trained on a dataset of safe and unsafe
+messages, as per the user's definition of safety, and would learn to identify patterns and features that are 
+indicative of unwanted content.
+
+## How Tanaos can help
+
+Our Artifex Python library provides a simple and efficient way to create and use task-specific LLMs.
