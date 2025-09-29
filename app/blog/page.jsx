@@ -20,8 +20,8 @@ export default function BlogPage() {
                 ecosystem updates.
             </p>
             <div className='mt-5 justify-content-center d-flex'>
-                {posts.map((post) => (
-                    <Link 
+                {posts.map((post) => {
+                    return <Link 
                         href={`/blog/${post.slug}`} 
                         key={post.slug} 
                         className='text-decoration-none'
@@ -41,7 +41,7 @@ export default function BlogPage() {
                             </div>
                         </div>
                     </Link>
-                ))}
+                })}
             </div>
         </div>
     </div>

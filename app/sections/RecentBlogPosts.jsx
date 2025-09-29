@@ -15,8 +15,8 @@ export const RecentBlogPosts = () => {
             </Link>
         </div>
         <div className='row mt-4'>
-            {posts.slice(0, 3).map((post) => (
-                <Link 
+            {posts.slice(0, 3).map((post) => {
+                return <Link 
                     href={`/blog/${post.slug}`} 
                     key={post.slug} 
                     className={`text-decoration-none ${styles['article']}`}
@@ -36,7 +36,7 @@ export const RecentBlogPosts = () => {
                         </div>
                     </div>
                 </Link>
-            ))}
+            })}
         </div>
     </div>
 };
