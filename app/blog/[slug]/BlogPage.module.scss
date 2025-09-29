@@ -17,7 +17,7 @@
         font-weight: 400;
     }
 
-    a {
+    a:not(:global(.btn)) {
         color: vars.$primary;
         text-decoration: none;
         transition: text-decoration vars.$transition-default;
