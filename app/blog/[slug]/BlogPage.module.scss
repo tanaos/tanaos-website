@@ -18,8 +18,19 @@
     }
 
     a {
+        color: vars.$primary;
+        text-decoration: none;
+        transition: text-decoration vars.$transition-default;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .back-link {
         font-size: vars.$font-size-h6;
         text-decoration: none;
+        color: vars.$font-color-dark;
 
         i {
             display: inline-block;
