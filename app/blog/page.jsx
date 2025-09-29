@@ -9,8 +9,8 @@ export const metadata = {
   description: 'Read the latest articles about task-specific LLMs, new models and ecosystem updates.',
 };
 
-export default function BlogPage() {
-    const posts = getAllPosts();
+export default async function BlogPage() {
+    const posts = await getAllPosts();
 
     return <div className={`global-padding ${styles['blog-page']}`}>
         <div className='text-center'>

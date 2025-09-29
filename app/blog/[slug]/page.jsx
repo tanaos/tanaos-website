@@ -3,13 +3,7 @@ import Link from 'next/link';
 import { getPost, getAllPosts } from '../../../lib/posts';
 import { Config } from '../../../config';
 import styles from './BlogPage.module.scss';
-import { MDXContent } from '../../../components/MDXContent';
 
-
-export async function generateStaticParams() {
-    const posts = getAllPosts();
-    return posts.map((post) => ({ slug: post.slug }));
-}
 
 export async function generateMetadata(props) {
     const params = await props.params;
@@ -37,9 +31,9 @@ export async function generateMetadata(props) {
     };
 }
 
-export const PostPage = async (props) => {
-    const params = await props.params;
-    const { frontmatter, mdxSource } = await getPost(params.slug);
+export default async function Page({ params }) {
+    const { slug } = await params;
+    const { default: Post, frontmatter } = await import(`../../../content/posts/${slug}.mdx`);
 
     return (
         <article className={styles.article}>
@@ -49,9 +43,12 @@ export const PostPage = async (props) => {
             <h1 className='mt-4'>{frontmatter.title}</h1>
             <p className={styles.subtitle}>{frontmatter.subtitle}</p>
             <p className={styles.date}>{frontmatter.date}</p>
-            <MDXContent mdxSource={mdxSource} />
+            <Post />
         </article>
     );
 };
 
-export default PostPage;
+export async function generateStaticParams() {
+    const posts = await getAllPosts();
+    return posts.map((post) => ({ slug: post.slug }));
+}

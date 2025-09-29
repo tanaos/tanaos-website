@@ -4,8 +4,8 @@ import styles from './RecentBlogPosts.module.scss';
 import { getAllPosts } from '../../lib/posts';
 
 
-export const RecentBlogPosts = () => {
-    const posts = getAllPosts();
+export const RecentBlogPosts = async () => {
+    const posts = await getAllPosts();
 
     return <div className={`global-padding ${styles['recent-blog-posts']} mb-5`}>
         <div className={`d-flex align-items-center justify-content-between ${styles['section-header']}`}>
