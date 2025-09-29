@@ -1,0 +1,22 @@
+@use '../styles/variables.scss' as vars;
+
+
+.tldr-box {
+    border: vars.$line-300;
+    border-left: 6px solid vars.$grey-600;
+    border-radius: vars.$border-radius;
+    padding: vars.$object-padding-500;
+    background-color: vars.$grey-200;
+    box-shadow: vars.$shadow-100;
+
+    .tldr-title {
+        font-size: vars.$font-size-h4;
+        color: vars.$font-color-dark;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        margin: 0 !important;
+    }
+}
