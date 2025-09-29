@@ -6,6 +6,10 @@ import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    // Enable static export for GitHub Pages
+    output: 'export',
+    // Add trailing slash to avoid 404s
+    trailingSlash: true,
     pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 };
 
