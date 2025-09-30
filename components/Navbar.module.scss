@@ -12,6 +12,7 @@
     padding: vars.$navbar-padding;
     color: vars.$font-color-dark;
     transition: top 0.3s ease;
+    min-height: vars.$navbar-height;
 
     a:not(:global(.btn)) {
         color: unset;

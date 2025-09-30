@@ -107,10 +107,6 @@ a {
     min-height: 100vh;
 }
 
-.main-content {
-    flex: 1;
-}
-
 .toast-container {
     z-index: 10000;
     position: fixed;
@@ -285,4 +281,5 @@ a {
 // Padding.
 .global-padding {
     padding: vars.$page-padding;
+    padding-top: calc(#{vars.$headline-bar-height} + 1rem);
 }
