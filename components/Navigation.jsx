@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 
-export const Navigation = () => {
+export const Navigation = ({ onLinkClick }) => {
 
     const url = usePathname();
 
@@ -12,6 +12,7 @@ export const Navigation = () => {
         <Link 
             href={Config.BLOG_ROUTE} 
             className={`mt-4 mt-md-0 ms-md-5 ${url === '/blog/' && styles['highlighted']}`}
+            onClick={onLinkClick}
         >
             Blog
         </Link>
@@ -20,6 +21,7 @@ export const Navigation = () => {
             rel='noreferrer'
             target='_blank'
             className={'mt-4 mt-md-0 ms-md-4'}
+            onClick={onLinkClick}
         >
             Docs
         </a>
@@ -28,6 +30,7 @@ export const Navigation = () => {
             rel='noreferrer'
             target='_blank'
             className={'mt-4 mt-md-0 ms-md-4'}
+            onClick={onLinkClick}
         >
             Platform
         </a>
@@ -35,6 +38,7 @@ export const Navigation = () => {
             className='btn btn-white mt-4 mt-md-0 ms-md-4'
             href={Config.ARTIFEX_GITHUB_URL}
             target='_blank' rel='noreferrer'
+            onClick={onLinkClick}
         >
             See on GitHub <i className='bi bi-github ms-2'></i>
         </a>

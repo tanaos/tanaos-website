@@ -17,12 +17,12 @@ const NavbarToggle = ({ onClick, isMenuOpen }) => {
 };
 
 // Collapsible navbar component which contains the navbar links.
-const NavbarCollapse = ({ isOpen }) => {
+const NavbarCollapse = ({ isOpen, setOpen }) => {
     return <div className={
         `d-md-none ${styles['navbar-collapse']} text-start ${isOpen && styles['menu-active']}`
     }>
         <div className='mt-4'>
-            <Navigation />
+            <Navigation onLinkClick={() => setOpen(false)}/>
         </div>
     </div>
 };
@@ -99,7 +99,7 @@ export const Navbar = () => {
                 </div>
             </div>
             {/* Display the collapsible navbar component. */}
-            <NavbarCollapse isOpen={isMenuOpen} />
+            <NavbarCollapse isOpen={isMenuOpen} setOpen={setMenuOpen} />
         </div>
     </>
 };
