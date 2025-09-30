@@ -1,6 +1,6 @@
 export const Config = {
     // Website
-    WEBSITE_BASE_URL: 'https://tanaos.com',
+    WEBSITE_BASE_URL: 'https://tanaos.com/',
 
     // API
     API_BASE_URL: 'https://compute.tanaos.com',
@@ -9,10 +9,10 @@ export const Config = {
     PLATFORM_BASE_URL: 'https://platform.tanaos.com',
 
     // Docs
-    DOCS_URL: 'https://docs.tanaos.com/artifex',
-    DOCS_TRAIN_GUARDRAIL_URL: 'https://docs.tanaos.com/artifex/guardrail/train',
-    DOCS_GUARDRAIL_INTRO_URL: 'https://docs.tanaos.com/artifex/guardrail/intro',
-    DOCS_INTENT_CLASSIFICATION_INTRO_URL: 'https://docs.tanaos.com/artifex/intent-classifier/intro',
+    DOCS_URL: 'https://docs.tanaos.com/artifex/',
+    DOCS_TRAIN_GUARDRAIL_URL: 'https://docs.tanaos.com/artifex/guardrail/train/',
+    DOCS_GUARDRAIL_INTRO_URL: 'https://docs.tanaos.com/artifex/guardrail/intro/',
+    DOCS_INTENT_CLASSIFICATION_INTRO_URL: 'https://docs.tanaos.com/artifex/intent-classifier/intro/',
 
     // Github
     SYNTHEX_GITHUB_URL: 'https://github.com/tanaos/synthex',
@@ -31,4 +31,9 @@ export const Config = {
 
     // Session Storage
     DISPLAY_BANNER_SESSION_STORAGE_FLAG: 'displayBanner',
+
+    // Routes
+    HOME_ROUTE: '/',
+    BLOG_ROUTE: '/blog/',
+    BLOG_POST_ROUTE: (slug) => `/blog/${slug}/`,
 };

@@ -9,18 +9,21 @@ import { Config } from '../config';
 const title = 'Task-specific LLMs for NLP and Text Classification | Tanaos'
 const description = 'Train task-specific LLMs without training data, for offline NLP and Text Classification tasks, such as Guardrail Models and Intent Classification.'
 const applicationName = 'Tanaos Website'
+const url = Config.WEBSITE_BASE_URL
 
 export const metadata = {
     title: title,
     description: description,
     keywords: [],
+    alternates: {
+        canonical: url,
+    },
     applicationName: applicationName,
-    canonical: Config.WEBSITE_BASE_URL,
     openGraph: {
         title: title,
         description: description,
         type: 'website',
-        url: Config.WEBSITE_BASE_URL,
+        url: url,
     },
     robots: {
         index: true,

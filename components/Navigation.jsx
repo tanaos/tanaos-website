@@ -10,8 +10,8 @@ export const Navigation = () => {
 
     return <div className={`${styles['navigation']}`}>
         <Link 
-            href='/blog' 
-            className={`mt-4 mt-md-0 ms-md-5 ${url === '/blog' && styles['highlighted']}`}
+            href={Config.BLOG_ROUTE} 
+            className={`mt-4 mt-md-0 ms-md-5 ${url === '/blog/' && styles['highlighted']}`}
         >
             Blog
         </Link>

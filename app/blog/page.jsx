@@ -2,11 +2,15 @@ import Link from 'next/link';
 
 import { getAllPosts } from '../../lib/posts';
 import styles from './Blog.module.scss';
+import { Config } from '../../config';
 
 
 export const metadata = {
-  title: 'Blog | Tanaos',
-  description: 'Read the latest articles about task-specific LLMs, new models and ecosystem updates.',
+    title: 'Blog | Tanaos',
+    description: 'Read the latest articles about task-specific LLMs, new models and ecosystem updates.',
+    alternates: {
+        canonical: Config.WEBSITE_BASE_URL
+    },
 };
 
 export default async function BlogPage() {
@@ -22,7 +26,7 @@ export default async function BlogPage() {
             <div className='mt-5 justify-content-center d-flex'>
                 {posts.map((post) => {
                     return <Link 
-                        href={`/blog/${post.slug}`} 
+                        href={Config.BLOG_POST_ROUTE(post.slug)} 
                         key={post.slug} 
                         className='text-decoration-none'
                     >

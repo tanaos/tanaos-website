@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import styles from './RecentBlogPosts.module.scss';
 import { getAllPosts } from '../../lib/posts';
+import { Config } from '../../config';
 
 
 export const RecentBlogPosts = async () => {
@@ -10,14 +11,14 @@ export const RecentBlogPosts = async () => {
     return <div className={`global-padding ${styles['recent-blog-posts']} mb-5`}>
         <div className={`d-flex align-items-center justify-content-between ${styles['section-header']}`}>
             <h2>Recent Blog Posts</h2>
-            <Link href='/blog'>
+            <Link href={Config.BLOG_ROUTE}>
                 View all <i className='bi bi-arrow-right'></i>
             </Link>
         </div>
         <div className='row mt-4'>
             {posts.slice(0, 3).map((post) => {
                 return <Link 
-                    href={`/blog/${post.slug}`} 
+                    href={Config.BLOG_POST_ROUTE(post.slug)} 
                     key={post.slug} 
                     className={`text-decoration-none ${styles['article']}`}
                 >
