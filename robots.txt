@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://tanaos.com
+Host: https://tanaos.com/
 
 # Sitemaps
 Sitemap: https://tanaos.com/sitemap.xml
