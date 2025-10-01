@@ -1,13 +1,13 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../styles/globals.scss';
 import { Poppins } from 'next/font/google';
-import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script';
 
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
 
-const poppins = Poppins({ weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], subsets: ['latin'] });
+const poppins = Poppins({ weight: ['400', '500', '600'], subsets: ['latin'], display: 'swap' });
 
 export const RootLayout = ({ children }) => {
     return (
@@ -20,8 +20,21 @@ export const RootLayout = ({ children }) => {
                     </main>
                     <Footer />
                 </div>
+                {/* Google Analytics - loads after page is interactive. Only load it 
+                in production, so that dev metrics aren't tracked. */}
+                { process.env.NODE_ENV === 'production' && <> <Script
+                    src={`https://www.googletagmanager.com/gtag/js?id=G-HRQ77GT2C8`}
+                    strategy='afterInteractive'
+                />
+                <Script id='ga-init' strategy='afterInteractive'>
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-HRQ77GT2C8');
+                    `}
+                </Script> </>}
             </body>
-            <GoogleAnalytics gaId='G-HRQ77GT2C8' />
         </html>
     );
 }
