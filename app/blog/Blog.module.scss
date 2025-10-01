@@ -8,15 +8,8 @@
     }
 
     .post-preview {
-        max-width: 700px;
-        background-color: vars.$grey-100;
-        border-radius: vars.$border-radius;
-        padding: vars.$object-padding-400;
-        border: vars.$line-300;
         cursor: pointer;
         text-align: start;
-        box-shadow: vars.$shadow-100;
-        transition: box-shadow vars.$transition-default;
 
         i {
             display: inline-block;
@@ -24,14 +17,16 @@
         }
 
         &:hover {
-            box-shadow: vars.$shadow-300;
-
             .read-more {
                 color: vars.$primary;
             }
 
             i {
                 transform: vars.$transform-translate-right;
+            }
+
+            .zoom-img {
+                transform: scale(1.05);
             }
         }
 
@@ -53,6 +48,19 @@
 
         .read-more {
             color: vars.$grey-400;
+        }
+
+        .zoom-container {
+            overflow: hidden;
+            border-radius: vars.$border-radius;
+            display: inline-block;
+        }
+
+        .zoom-img {
+            transition: transform vars.$transition-default;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
     }
 }

@@ -24,14 +24,24 @@ export default async function BlogPage() {
                 Read articles about task-specific LLMs, new models and
                 ecosystem updates.
             </p>
-            <div className='mt-5 justify-content-center d-flex'>
+            <div className='mt-5 justify-content-center row'>
                 {posts.map((post) => {
                     return <Link 
                         href={Config.BLOG_POST_ROUTE(post.slug)} 
                         key={post.slug} 
                         className='text-decoration-none'
                     >
-                        <div className={`mt-4 ${styles['post-preview']}`}>
+                        <div className={`mt-4 ${styles['post-preview']} col-12 col-md-4`}>
+                            <div className={`${styles['zoom-container']} mb-4`}>
+                                <Image
+                                    src={`/images/blog/${post.imageName}`}
+                                    alt={post.title}
+                                    width={1200}
+                                    height={630}
+                                    unoptimized // required for static export
+                                    className={`${styles['zoom-img']}`}
+                                />
+                            </div>
                             <h2>{post.title}</h2>
                             <h3 className='mt-3'>{post.subtitle}</h3>
                             <div className='row mt-3'>

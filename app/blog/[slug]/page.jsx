@@ -54,11 +54,11 @@ export default async function Page({ params }) {
             <p className={styles.subtitle}>{frontmatter.subtitle}</p>
             <p className={styles.date}>{frontmatter.date}</p>
             <Image
-                className='mt-5 mb-5'
+                className={`mt-5 mb-5 ${styles['post-image']}`}
                 src={`/images/blog/${frontmatter.imageName}`}
                 alt={frontmatter.title}
-                width={770}
-                height={404}
+                width={1200}
+                height={630}
                 unoptimized // required for static export
             />
             <Post />
