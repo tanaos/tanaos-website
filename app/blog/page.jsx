@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { getAllPosts } from '../../lib/posts';
 import styles from './Blog.module.scss';
@@ -10,7 +11,7 @@ export const metadata = {
     description: 'Read the latest articles about task-specific LLMs, new models and ecosystem updates.',
     alternates: {
         canonical: Config.WEBSITE_BASE_URL
-    },
+    }
 };
 
 export default async function BlogPage() {

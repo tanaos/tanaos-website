@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { getPost, getAllPosts } from '../../../lib/posts';
 import { Config } from '../../../config';
@@ -10,6 +11,7 @@ export async function generateMetadata(props) {
     const { slug } = params;
     const { frontmatter } = await getPost(slug);
     const url = `${Config.BASE_URL}/blog/${slug}/`;
+    const imageUrl = `${Config.WEBSITE_BASE_URL}images/blog/${frontmatter.imageName}`;
 
     return {
         title: `${frontmatter.title} | Tanaos Blog`,
@@ -23,11 +25,18 @@ export async function generateMetadata(props) {
             description: frontmatter.description,
             type: 'article',
             url: url,
+            images: [{
+                url: imageUrl,
+                width: 1200,
+                height: 630,
+                alt: frontmatter.title,
+            }]
         },
         twitter: {
             card: 'summary_large_image',
             title: frontmatter.title,
             description: frontmatter.description,
+            images: [imageUrl],
         },
     };
 }
@@ -44,6 +53,14 @@ export default async function Page({ params }) {
             <h1 className='mt-4'>{frontmatter.title}</h1>
             <p className={styles.subtitle}>{frontmatter.subtitle}</p>
             <p className={styles.date}>{frontmatter.date}</p>
+            <Image
+                className='mt-5 mb-5'
+                src={`/images/blog/${frontmatter.imageName}`}
+                alt={frontmatter.title}
+                width={770}
+                height={404}
+                unoptimized // required for static export
+            />
             <Post />
         </article>
     );
