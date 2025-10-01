@@ -40,6 +40,7 @@ export const CodeSnippet = ({ code, language = 'python' }) => {
         <button
             className={`${copied ? styles['copied'] : ''}`}
             onClick={copyToClipboard}
+            id="buttonTitle" title="Copy to clipboard"
         >
             {copied ? <i className='bi bi-check2'></i> : <i className='bi bi-clipboard'></i>}
         </button>

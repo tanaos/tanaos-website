@@ -21,7 +21,7 @@ export const AvailableModels = () => {
                             target='_blank' rel='noreferrer'
                             className='btn btn-white me-4'
                         >
-                            Learn more <i className='ms-1 bi bi-box-arrow-up-right'></i>
+                            Read the docs <i className='ms-1 bi bi-box-arrow-up-right'></i>
                         </a>
                         <a 
                             href={Config.ARTIFEX_GUARDRAIL_DEMO_URL}
@@ -47,7 +47,7 @@ export const AvailableModels = () => {
                             className='btn btn-white me-4'
                             target='_blank' rel='noreferrer'
                         >
-                            Learn more <i className='ms-1 bi bi-box-arrow-up-right'></i>
+                            Read the docs <i className='ms-1 bi bi-box-arrow-up-right'></i>
                         </a>
                         <a
                             href={Config.ARTIFEX_INTENT_CLASSIFIER_DEMO_URL}
