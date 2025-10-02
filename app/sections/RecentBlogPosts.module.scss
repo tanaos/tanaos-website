@@ -9,6 +9,11 @@
 
         &:hover {
             color: $primary;
+        }
+    }
+
+    .view-all {
+        &:hover {
             svg {
                 transform: $transform-translate-right;
             }
@@ -30,6 +35,9 @@
             box-shadow: $shadow-300;
             .read-more {
                 color: $primary;
+            }
+            svg {
+                transform: $transform-translate-right;
             }
         }
 

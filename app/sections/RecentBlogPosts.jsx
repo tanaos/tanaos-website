@@ -12,7 +12,7 @@ export const RecentBlogPosts = async () => {
     return <div className={`global-padding ${styles['recent-blog-posts']} mb-5`}>
         <div className={`d-flex align-items-center justify-content-between ${styles['section-header']}`}>
             <h2>Recent Blog Posts</h2>
-            <Link href={Config.BLOG_ROUTE}>
+            <Link href={Config.BLOG_ROUTE} className={`${styles['view-all']}`}>
                 View all <ArrowRight />
             </Link>
         </div>
