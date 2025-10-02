@@ -11,7 +11,7 @@ export const AvailableModels = () => {
             <h2 className='mb-5'>Available Task-Specific Models</h2>
             <div className='col-12 col-md-4 margin-end'>
                 <div className={`${styles['model-card']}`}>
-                    <h3 className='mb-3'><BoxArrowUpRight className='ms-1' /> Guardrail Model</h3>
+                    <h3 className='mb-3'><ShieldCheck className='ms-1' /> Guardrail Model</h3>
                     <p>
                         Typically used to flag unsafe, harmful or off-topic messages in chatbots
                         and virtual assistants. Create your local Guardrail Model and reduce the
