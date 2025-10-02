@@ -1,7 +1,9 @@
-import { Config } from '../config';
-import styles from './Navigation.module.scss';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { Github } from 'react-bootstrap-icons';
+
+import { Config } from '../config';
+import styles from './Navigation.module.scss';
 
 
 export const Navigation = ({ onLinkClick }) => {
@@ -40,7 +42,7 @@ export const Navigation = ({ onLinkClick }) => {
             target='_blank' rel='noreferrer'
             onClick={onLinkClick}
         >
-            See on GitHub <i className='bi bi-github ms-2'></i>
+            See on GitHub <Github className='ms-1' />
         </a>
     </div>
 };

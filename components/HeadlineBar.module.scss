@@ -24,15 +24,14 @@
     }
 
     .close-icon {
-        position: absolute; // Position it independently
-        right: 10px; // Add some spacing from the right edge
+        position: absolute;
+        right: 10px;
         cursor: pointer;
         font-size: 0.9rem;
         color: white;
-        -webkit-text-stroke: 0.8px;
 
         &:hover {
-            color: vars.$grey-100;
+            color: vars.$grey-200;
         }
     }
 

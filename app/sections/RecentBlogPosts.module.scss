@@ -5,14 +5,14 @@
     a {
         text-decoration: none;
 
-        i {
+        svg {
             display: inline-block;
             transition: transform vars.$transition-default;
         }
 
         &:hover {
             color: vars.$primary;
-            i {
+            svg {
                 transform: vars.$transform-translate-right;
             }
         }

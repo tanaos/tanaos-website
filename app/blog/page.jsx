@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowRight } from 'react-bootstrap-icons';
 
 import { getAllPosts } from '../../lib/posts';
 import styles from './Blog.module.scss';
@@ -50,7 +51,7 @@ export default async function BlogPage() {
                                 </div>
                                 <div className='text-end col'>
                                     <span className={styles['read-more']}>
-                                        Read more <i className='bi bi-arrow-right'></i>
+                                        Read more <ArrowRight />
                                     </span>
                                 </div>
                             </div>

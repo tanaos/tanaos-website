@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowLeft } from 'react-bootstrap-icons';
 
 import { getPost, getAllPosts } from '../../../lib/posts';
 import { Config } from '../../../config';
@@ -48,7 +49,7 @@ export default async function Page({ params }) {
     return (
         <article className={styles.article}>
             <Link href={Config.BLOG_ROUTE} className={`${styles['back-link']}`}>
-                <i className='bi bi-arrow-left'></i> Back to blog
+                <ArrowLeft /> Back to blog
             </Link>
             <h1 className='mt-4'>{frontmatter.title}</h1>
             <p className={styles.subtitle}>{frontmatter.subtitle}</p>

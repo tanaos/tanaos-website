@@ -1,3 +1,5 @@
+import { Github, BoxArrowUpRight } from 'react-bootstrap-icons';
+
 import styles from './Hero.module.scss';
 import { CodeSnippet } from '../../components/CodeSnippet';
 import { Config } from '../../config';
@@ -35,14 +37,14 @@ guardrail.train(
                     href={Config.ARTIFEX_GITHUB_URL}
                     target='_blank' rel='noreferrer'
                 >
-                    See on GitHub <i className='ms-1 bi bi-github'></i>
+                    See on GitHub <Github className='ms-1' />
                 </a>
                 <a
                     className='btn btn-white'
                     href={Config.ARTIFEX_GUARDRAIL_DEMO_URL}
                     target='_blank' rel='noreferrer'
                 >
-                    Try it out <i className='ms-1 bi bi-box-arrow-up-right'></i>
+                    Try it out <BoxArrowUpRight className='ms-1' />
                 </a>
             </div>
         </div>

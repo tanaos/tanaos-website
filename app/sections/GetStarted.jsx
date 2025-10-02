@@ -1,3 +1,5 @@
+import { BoxArrowUpRight, Github, ArrowRight } from 'react-bootstrap-icons';
+
 import { Config } from '../../config';
 import styles from './GetStarted.module.scss';
 
@@ -15,7 +17,7 @@ export const GetStarted = () => {
                 <p>
                     Install Artifex with <code>pip install artifex</code> and use
                     it for free. <a href={Config.DOCS_TRAIN_GUARDRAIL_URL} rel='noreferrer' target='_blank'>
-                        Read the docs <i className='bi bi-box-arrow-up-right'></i>
+                        Read the docs <BoxArrowUpRight />
                     </a> to learn more.
                 </p>
                 <a 
@@ -23,7 +25,7 @@ export const GetStarted = () => {
                     href={Config.ARTIFEX_GITHUB_URL}
                     rel='noreferrer' target='_blank'
                 >
-                    Start for free <i className='bi bi-github ms-1'></i>
+                    Start for free <Github className='ms-1' />
                 </a>
             </div>
             <div className='col-12 col-md-8 ps-md-4 mt-5 mt-md-0 mb-5 mb-md-0'>
@@ -47,7 +49,7 @@ export const GetStarted = () => {
                             Create an api key and pass it to <a 
                                 href={Config.ARTIFEX_GITHUB_URL} 
                                 rel='noreferrer' target='_blank'
-                            >Artifex <i className='bi bi-box-arrow-up-right'></i></a> at initialization.
+                            >Artifex <BoxArrowUpRight /></a> at initialization.
                         </p>
                     </div>
                 </div>
@@ -56,7 +58,7 @@ export const GetStarted = () => {
                     href={Config.PLATFORM_BASE_URL}
                     rel='noreferrer' target='_blank'
                 >
-                    Signup <i className='bi bi-arrow-right ms-1'></i>
+                    Signup <ArrowRight className='ms-1' />
                 </a>
             </div>
         </div>

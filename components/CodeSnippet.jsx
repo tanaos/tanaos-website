@@ -1,5 +1,7 @@
 'use client';
 
+import { Check2, Clipboard } from 'react-bootstrap-icons';
+
 import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -42,7 +44,7 @@ export const CodeSnippet = ({ code, language = 'python' }) => {
             onClick={copyToClipboard}
             id="buttonTitle" title="Copy to clipboard"
         >
-            {copied ? <i className='bi bi-check2'></i> : <i className='bi bi-clipboard'></i>}
+            {copied ? <Check2 /> : <Clipboard />}
         </button>
     </div>
 }

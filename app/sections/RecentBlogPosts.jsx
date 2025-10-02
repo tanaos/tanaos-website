@@ -1,3 +1,4 @@
+import { ArrowRight } from 'react-bootstrap-icons';
 import Link from 'next/link';
 
 import styles from './RecentBlogPosts.module.scss';
@@ -12,7 +13,7 @@ export const RecentBlogPosts = async () => {
         <div className={`d-flex align-items-center justify-content-between ${styles['section-header']}`}>
             <h2>Recent Blog Posts</h2>
             <Link href={Config.BLOG_ROUTE}>
-                View all <i className='bi bi-arrow-right'></i>
+                View all <ArrowRight />
             </Link>
         </div>
         <div className='row mt-4'>
@@ -31,7 +32,7 @@ export const RecentBlogPosts = async () => {
                             </div>
                             <div className='text-end col'>
                                 <span className={styles['read-more']}>
-                                    Read more <i className='bi bi-arrow-right'></i>
+                                    Read more <ArrowRight />
                                 </span>
                             </div>
                         </div>

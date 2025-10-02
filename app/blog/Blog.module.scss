@@ -11,7 +11,7 @@
         cursor: pointer;
         text-align: start;
 
-        i {
+        svg {
             display: inline-block;
             transition: transform vars.$transition-default;
         }
@@ -21,7 +21,7 @@
                 color: vars.$primary;
             }
 
-            i {
+            svg {
                 transform: vars.$transform-translate-right;
             }
 

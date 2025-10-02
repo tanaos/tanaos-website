@@ -6,6 +6,8 @@ tags: ['task-specific LLM', 'AI', 'text classification', 'without training data'
 imageName: 'task-specific-llm-for-text-classification.png'
 ---
 
+import { BoxArrowUpRight, Github } from 'react-bootstrap-icons';
+
 import { Config } from '../../config';
 import { TLDRBox } from '../../components/TLDRBox';
 
@@ -13,7 +15,7 @@ import { TLDRBox } from '../../components/TLDRBox';
     When working on narrow, well-defined text classification tasks, general-purpose LLMs are typically overkill,
     overpriced and underperforming. Task-specific LLMs are smaller, cheaper (often free) to run and perform
     better on these tasks. Our <a href={Config.ARTIFEX_GITHUB_URL} rel='noreferrer' target='_blank'>
-        Artifex Python library <i className='bi bi-box-arrow-up-right'></i>
+        Artifex Python library <BoxArrowUpRight />
     </a> makes it easy to create and use task-specific LLMs
     without the need for any training data, so you can reduce the number of paid API calls to third-party
     LLM APIs.
@@ -75,4 +77,4 @@ without a GPU**, offloading simple tasks and reducing reliance on third-party LL
 
 Artifex is free and open-source. Check it out on GitHub!
 
-<a className='btn btn-primary' href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>See Artifex on GitHub <i className='bi bi-github ms-2'></i></a>
+<a className='btn btn-primary' href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>See Artifex on GitHub <Github className='ms-2' /></a>
