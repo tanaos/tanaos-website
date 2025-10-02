@@ -1,26 +1,23 @@
-@use '../../../styles/variables.scss' as vars;
-
-
 .article {
     max-width: 800px;
     margin: 5rem auto;
     padding: 0 1rem;
 
     h1 {
-        font-size: vars.$font-size-hero;
+        font-size: $font-size-hero;
     }
 
     .subtitle {
-        font-size: vars.$font-size-h3;
-        line-height: vars.$line-height-h3;
-        color: vars.$font-color-light;
+        font-size: $font-size-h3;
+        line-height: $line-height-h3;
+        color: $font-color-light;
         font-weight: 400;
     }
 
     a:not(:global(.btn)) {
-        color: vars.$primary;
+        color: $primary;
         text-decoration: none;
-        transition: text-decoration vars.$transition-default;
+        transition: text-decoration $transition-default;
 
         &:hover {
             text-decoration: underline;
@@ -28,26 +25,26 @@
     }
 
     .back-link {
-        font-size: vars.$font-size-h6;
+        font-size: $font-size-h6;
         text-decoration: none;
-        color: vars.$font-color-dark;
+        color: $font-color-dark;
 
         svg {
             display: inline-block;
-            transition: transform vars.$transition-default, color vars.$transition-default;
+            transition: transform $transition-default, color $transition-default;
         }
 
         &:hover {
-            color: vars.$primary;
+            color: $primary;
             svg {
-                transform: vars.$transform-translate-left;
+                transform: $transform-translate-left;
             }
         }
     }
 
     p, span, li {
-        font-size: vars.$font-size-h5;
-        line-height: vars.$line-height-h5;
+        font-size: $font-size-h5;
+        line-height: $line-height-h5;
     }
 
     p {
@@ -55,12 +52,12 @@
     }
 
     .date {
-        color: vars.$grey-400;
+        color: $grey-400;
     }
 
     .post-image {
-        box-shadow: vars.$shadow-100;
-        border-radius: vars.$border-radius;
+        box-shadow: $shadow-100;
+        border-radius: $border-radius;
         width: 100%;
         height: auto;
         object-fit: cover;

@@ -1,18 +1,15 @@
-@use '../../styles/variables.scss' as vars;
-
-
 .why-tanaos-section {
     a {
-        color: vars.$primary;
+        color: $primary;
 
         &:hover {
-            color: vars.$primary-700;
+            color: $primary-700;
         }
     }
 
     svg {
-        color: vars.$primary-300;
-        font-size: vars.$icon-size;
+        color: $primary-300;
+        font-size: $icon-size;
         margin-bottom: 15px;
     }
 }

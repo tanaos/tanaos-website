@@ -1,14 +1,11 @@
-@use '../../styles/variables.scss' as vars;
-
-
 .hero-subtitle {
-    font-size: vars.$font-size-h5;
-    line-height: vars.$line-height-p-600;
+    font-size: $font-size-h5;
+    line-height: $line-height-p-600;
     font-weight: 400;
-    color: vars.$font-color-light;
+    color: $font-color-light;
 
     b {
         font-weight: 600;
-        color: vars.$primary-500;
+        color: $primary-500;
     }
 }

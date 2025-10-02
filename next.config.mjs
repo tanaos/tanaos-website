@@ -11,6 +11,14 @@ const nextConfig = {
     // Add trailing slash to avoid 404s
     trailingSlash: true,
     pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+    sassOptions: {
+        additionalData: `
+            @import "bootstrap/scss/functions";
+            @import "bootstrap/scss/variables";
+            @import "bootstrap/scss/mixins";
+            @import "styles/variables.scss";
+        `,
+    }
 };
 
 const withMDX = createMDX({

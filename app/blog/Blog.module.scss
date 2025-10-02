@@ -1,10 +1,7 @@
-@use '../../styles/variables.scss' as vars;
-
-
 .blog-page {
     p {
-        font-size: vars.$font-size-h6;
-        line-height: vars.$line-height-h6;
+        font-size: $font-size-h6;
+        line-height: $line-height-h6;
     }
 
     .post-preview {
@@ -13,16 +10,16 @@
 
         svg {
             display: inline-block;
-            transition: transform vars.$transition-default;
+            transition: transform $transition-default;
         }
 
         &:hover {
             .read-more {
-                color: vars.$primary;
+                color: $primary;
             }
 
             svg {
-                transform: vars.$transform-translate-right;
+                transform: $transform-translate-right;
             }
 
             .zoom-img {
@@ -31,33 +28,33 @@
         }
 
         h2 {
-            font-size: vars.$font-size-h4;
-            line-height: vars.$line-height-h4;
+            font-size: $font-size-h4;
+            line-height: $line-height-h4;
         }
         
         h3 {
-            font-size: vars.$font-size-p-500;
-            line-height: vars.$line-height-p-500;
-            color: vars.$font-color-light;
+            font-size: $font-size-p-500;
+            line-height: $line-height-p-500;
+            color: $font-color-light;
             font-weight: 400;
         }
 
         .post-date {
-            color: vars.$grey-400;
+            color: $grey-400;
         }
 
         .read-more {
-            color: vars.$grey-400;
+            color: $grey-400;
         }
 
         .zoom-container {
             overflow: hidden;
-            border-radius: vars.$border-radius;
+            border-radius: $border-radius;
             display: inline-block;
         }
 
         .zoom-img {
-            transition: transform vars.$transition-default;
+            transition: transform $transition-default;
             width: 100%;
             height: auto;
             object-fit: cover;

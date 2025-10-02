@@ -21,10 +21,7 @@ export const RootLayout = ({ children }) => {
                 </div>
                 {/* Google Analytics - loads after page is interactive. Only load it 
                 in production, so that dev metrics aren't tracked. */}
-                { process.env.NODE_ENV === 'production' && <> <Script
-                    src={`https://www.googletagmanager.com/gtag/js?id=G-HRQ77GT2C8`}
-                    strategy='afterInteractive'
-                />
+                { process.env.NODE_ENV === 'production' &&
                 <Script id='ga-init' strategy='afterInteractive'>
                     {`
                         window.dataLayer = window.dataLayer || [];
@@ -32,7 +29,7 @@ export const RootLayout = ({ children }) => {
                         gtag('js', new Date());
                         gtag('config', 'G-HRQ77GT2C8');
                     `}
-                </Script> </>}
+                </Script>}
             </body>
         </html>
     );

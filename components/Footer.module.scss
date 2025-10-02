@@ -1,9 +1,6 @@
-@use '../styles/variables.scss' as vars;
-
-
 .footer {
-    padding: vars.$footer-padding;
-    background-color: vars.$grey-800;
+    padding: $footer-padding;
+    background-color: $grey-800;
     color: white;
     
     a {
@@ -12,7 +9,7 @@
     }
 
     a:hover {
-        color: vars.$grey-200;
+        color: $grey-200;
     }
 
     .footer-links {

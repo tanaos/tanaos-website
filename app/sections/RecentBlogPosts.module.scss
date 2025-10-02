@@ -1,19 +1,16 @@
-@use '../../styles/variables.scss' as vars;
-
-
 .recent-blog-posts {
     a {
         text-decoration: none;
 
         svg {
             display: inline-block;
-            transition: transform vars.$transition-default;
+            transition: transform $transition-default;
         }
 
         &:hover {
-            color: vars.$primary;
+            color: $primary;
             svg {
-                transform: vars.$transform-translate-right;
+                transform: $transform-translate-right;
             }
         }
     }
@@ -23,37 +20,37 @@
     }
 
     .post-preview {
-        border: vars.$line-300;
-        border-radius: vars.$border-radius;
-        padding: vars.$object-padding-400;
-        box-shadow: vars.$shadow-100;
-        transition: box-shadow vars.$transition-default;
+        border: $line-300;
+        border-radius: $border-radius;
+        padding: $object-padding-400;
+        box-shadow: $shadow-100;
+        transition: box-shadow $transition-default;
 
         &:hover {
-            box-shadow: vars.$shadow-300;
+            box-shadow: $shadow-300;
             .read-more {
-                color: vars.$primary;
+                color: $primary;
             }
         }
 
         h3 {
-            font-size: vars.$font-size-h4;
-            line-height: vars.$line-height-h5;
+            font-size: $font-size-h4;
+            line-height: $line-height-h5;
         }
 
         h4 {
-            font-size: vars.$font-size-p-500;
-            line-height: vars.$line-height-p-500;
-            color: vars.$font-color-light;
+            font-size: $font-size-p-500;
+            line-height: $line-height-p-500;
+            color: $font-color-light;
             font-weight: 400;
         }
 
         .post-date {
-            color: vars.$grey-400;
+            color: $grey-400;
         }
 
         .read-more {
-            color: vars.$grey-400;
+            color: $grey-400;
         }
     }
 }
