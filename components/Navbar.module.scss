@@ -27,6 +27,16 @@
     }
 }
 
+.logo {
+    font-size: $font-size-h3;
+    cursor: pointer;
+    font-weight: 400;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .with-headline-bar {
     top: $headline-bar-height !important;
 }

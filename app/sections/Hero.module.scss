@@ -1,3 +1,11 @@
+.hero-title {
+    font-size: $font-size-hero;
+    font-family: $font-headlines !important;
+    color: $font-color-dark;
+    line-height: $line-height-hero;
+    font-weight: 500;
+}
+
 .hero-subtitle {
     font-size: $font-size-h5;
     line-height: $line-height-p-600;

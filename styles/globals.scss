@@ -29,14 +29,6 @@ html, body, #root {
 }
 
 // Text.
-.hero-title {
-    font-size: $font-size-hero;
-    font-family: $font-headlines !important;
-    color: $font-color-dark;
-    line-height: $line-height-hero;
-    font-weight: 500;
-}
-
 h1 {
     font-size: $font-size-h1;
     font-family: $font-headlines !important;
@@ -101,105 +93,8 @@ a {
     }
 }
 
-.app-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.toast-container {
-    z-index: 10000;
-    position: fixed;
-    bottom: 50px !important;
-    left: 50px !important;
-}
-
-.toast {
-    width: fit-content;
-    color: $font-color-dark;
-    background-color: white;
-    font-size: $font-size-p-300;
-    padding: $object-padding-200;
-
-    .toast-title {
-        font-size: $font-size-p-500;
-        font-weight: 500;
-    }
-
-    .close-icon {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        font-size: $font-size-p-300;
-    }
-
-    .icon-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .toast-content {
-        display: flex;
-    }
-
-    .toast-icon {
-        font-size: 30px;
-    }
-
-    &.success {
-        border-left: 10px solid $success-color-500;
-        .toast-icon {
-            color: $success-color-500;
-        }
-    }
-    &.danger {
-        border-left: 10px solid $danger-color-500;
-        .toast-icon {
-            color: $danger-color-500;
-        }
-    }
-    &.warning {
-        border-left: 10px solid $warning-color-500;
-        .toast-icon {
-            color: $warning-color-500;
-        }
-    }
-    &.info {
-        border-left: 10px solid $info-color-500;
-        .toast-icon {
-            color: $info-color-500;
-        }
-    }
-}
-
 // Bootstrap overrides
-// -------------------
-
-// Backgrounds.
-.bg-primary {
-    background-color: $primary !important;
-}
-
-.bg-info {
-    background-color: $blue-500 !important;
-}
-
-.bg-success {
-    background-color: $success-color-500 !important;
-}
-
-.bg-danger {
-    background-color: $danger-color-500 !important;
-}
-
-.bg-warning {
-    background-color: $warning-color-500 !important;
-}
-
-.text-danger {
-    color: $danger-color-500 !important;
-}
+// -------------------``
 
 .text-dark {
     color: $font-color-dark !important;
@@ -253,17 +148,6 @@ a {
 }
 
 // ------------------
-
-// Logo
-.logo {
-    font-size: $font-size-h3;
-    cursor: pointer;
-    font-weight: 400;
-    color: $primary;
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
 
 // Misc.
 
