@@ -6,7 +6,9 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
 
-const poppins = Poppins({ weight: ['400', '500', '600'], subsets: ['latin'], display: 'swap' });
+const poppins = Poppins({ 
+    weight: ['400', '500', '600'], subsets: ['latin'], display: 'swap', preload: true
+});
 
 export const RootLayout = ({ children }) => {
     return (
