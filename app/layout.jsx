@@ -2,7 +2,7 @@ import '../styles/globals.scss';
 import { Poppins } from 'next/font/google';
 import Script from 'next/script';
 
-import { Navbar } from '../components/Navbar';
+// import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
 
@@ -15,7 +15,7 @@ export const RootLayout = ({ children }) => {
         <html lang='en'>
             <body className={poppins.className}>
                 <div className='app'>
-                    <Navbar />
+                    {/* <Navbar /> */}
                     <main className='content'>
                         {children}
                     </main>
