@@ -1,6 +1,6 @@
 export default {
   plugins:
-    process.env.NODE_ENV === 'production' ? [
+    [
         'postcss-flexbugs-fixes',
         [
             'postcss-preset-env',
@@ -23,8 +23,7 @@ export default {
                 ],
                 css: ['./styles/*.css'],
                 defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-                safelist: ['html', 'body']
             }
         ],
-    ] : [],
+    ]
 }
