@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from './RecentBlogPosts.module.scss';
 import { getAllPosts } from '../../lib/posts';
 import { Config } from '../../config';
+import BlogPostPreview from '../../components/BlogPostPreview';
 
 
 export const RecentBlogPosts = async () => {
@@ -18,26 +19,9 @@ export const RecentBlogPosts = async () => {
         </div>
         <div className='row mt-4'>
             {posts.slice(0, 3).map((post) => {
-                return <Link 
-                    href={Config.BLOG_POST_ROUTE(post.slug)} 
-                    key={post.slug} 
-                    className={`text-decoration-none ${styles['article']}`}
-                >
-                    <div className={`col-12 col-md-4 mt-4 ${styles['post-preview']}`}>
-                        <h3>{post.title}</h3>
-                        <h4 className='mt-3'>{post.subtitle}</h4>
-                        <div className='row mt-3'>
-                            <div className='text-start col'>
-                                <span className={styles['post-date']}>{post.date}</span>
-                            </div>
-                            <div className='text-end col'>
-                                <span className={styles['read-more']}>
-                                    Read more <ArrowRight />
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
+                return <div className='col-12 col-md-4 mt-4' key={post.slug}>
+                    <BlogPostPreview post={post} />
+                </div>
             })}
         </div>
     </div>

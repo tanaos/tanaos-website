@@ -25,11 +25,9 @@
     }
 
     .post-preview {
-        border: $line-300;
-        border-radius: $border-radius;
-        padding: $object-padding-400;
-        box-shadow: $shadow-100;
         transition: box-shadow $transition-default;
+        min-height: 230px;
+        position: relative;
 
         &:hover {
             box-shadow: $shadow-300;
@@ -53,12 +51,18 @@
             font-weight: 400;
         }
 
-        .post-date {
-            color: $grey-400;
-        }
+        .bottom-row {
 
-        .read-more {
-            color: $grey-400;
+            position: absolute;
+            bottom: $object-padding-400;
+
+            .post-date {
+                color: $grey-400;
+            }
+
+            .read-more {
+                color: $grey-400;
+            }
         }
     }
 }

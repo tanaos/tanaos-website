@@ -1,10 +1,7 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { ArrowRight } from 'react-bootstrap-icons';
-
 import { getAllPosts } from '../../lib/posts';
 import styles from './Blog.module.scss';
 import { Config } from '../../config';
+import BlogPostPreview from '../../components/BlogPostPreview';
 
 
 export const metadata = {
@@ -25,38 +22,11 @@ export default async function BlogPage() {
                 Read articles about task-specific LLMs, new models and
                 ecosystem updates.
             </p>
-            <div className='mt-5 justify-content-center row'>
+            <div className='mt-5 row'>
                 {posts.map((post) => {
-                    return <Link 
-                        href={Config.BLOG_POST_ROUTE(post.slug)} 
-                        key={post.slug} 
-                        className='text-decoration-none'
-                    >
-                        <div className={`mt-4 ${styles['post-preview']} col-12 col-md-4`}>
-                            <div className={`${styles['zoom-container']} mb-4`}>
-                                <Image
-                                    src={`/images/blog/${post.imageName}`}
-                                    alt={post.title}
-                                    width={1200}
-                                    height={630}
-                                    unoptimized // required for static export
-                                    className={`${styles['zoom-img']}`}
-                                />
-                            </div>
-                            <h2>{post.title}</h2>
-                            <h3 className='mt-3'>{post.subtitle}</h3>
-                            <div className='row mt-3'>
-                                <div className='text-start col'>
-                                    <span className={styles['post-date']}>{post.date}</span>
-                                </div>
-                                <div className='text-end col'>
-                                    <span className={styles['read-more']}>
-                                        Read more <ArrowRight />
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
+                    return <div className='col-12 col-md-4 px-4' key={post.slug}>
+                        <BlogPostPreview post={post} />
+                    </div>
                 })}
             </div>
         </div>
