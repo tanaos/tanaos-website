@@ -1,7 +1,7 @@
 import { Github, BoxArrowUpRight } from 'react-bootstrap-icons';
 
 import styles from './Hero.module.scss';
-import { CodeSnippet } from '../../components/CodeSnippet';
+// import { CodeSnippet } from '../../components/CodeSnippet';
 import { Config } from '../../config';
 
 
@@ -49,7 +49,7 @@ guardrail.train(
             </div>
         </div>
         <div className='col-12 col-md-6 col-6 m-0 p-0 ps-md-5 mt-4'>
-            <CodeSnippet code={sampleCode} />
+            {/* <CodeSnippet code={sampleCode} /> */}
         </div>
     </div>
 };
