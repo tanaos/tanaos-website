@@ -36,4 +36,7 @@ export const Config = {
     HOME_ROUTE: '/',
     BLOG_ROUTE: '/blog/',
     BLOG_POST_ROUTE: (slug) => `/blog/${slug}/`,
+
+    // Blog posts
+    TASK_SPECIFIC_LLMS_POST: '/blog/task-specific-llms/',
 };

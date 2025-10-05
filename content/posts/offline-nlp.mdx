@@ -3,8 +3,63 @@ title: 'In an era of cloud-based AI, consider offline NLP.'
 subtitle: 'Online Natural Language Processing (NLP) has been dominating the conversation since GPT-3. But is it always the best option?'
 date: 'October 3, 2025'
 tags: ['task-specific LLM', 'offline NLP', 'text classification', 'without training data', 'NLP', 'machine learning']
-imageName: 'task-specific-llm-for-text-classification.png'
+imageName: 'offline-nlp.png'
 ---
 
-We are so used to the idea of performing AI tasks through cloud-based APIs that we often forget
-that there are alternatives.
+import { Github } from 'react-bootstrap-icons';
+import Link from 'next/link';
+
+import { Config } from '../../config';
+
+
+The field of Natural Language Processing mostly consists of **two broad categories** of tasks: text **generation** and 
+text **understanding/processing**. Computation-heavy tasks that cannot realistically be performed without resorting to 
+LLMs hosted in the cloud are mostly limited to the first category, that is text generation. The large majority of 
+tasks belonging to the second category, such as text classification, entity recognition, sentiment analysis, etc. are
+**simple enough to be performed offline** on a local device, without needing an internet connection.
+
+We are so used to the idea of performing any kind of NLP task through cloud-based APIs (OpenAI's, Google's...) that 
+we often employ them even when offline alternatives would make more sense. In fact, offline NLP offers **several
+advantages** over its API-based counterpart.
+
+## 💵 Cost-effectiveness
+
+Even though the per-token cost of AI APIs might seem low, pricing can quickly become an issue at scale. As the number
+of requests increases, so does the overall cost, which can hit the **tens of thousands of dollars per month** for 
+businesses with medium to high volumes of text to processed.
+
+Offline NLP solutions, on the other hand, involve **minimal to no recurring costs** after the initial setup, making
+them a more cost-effective option for businesses with high-volume text processing needs.
+
+## 🔒 Privacy by Design
+
+With cloud-based NLP, your data, including potentially sensitive information, is **sent to third-party servers** for
+processing, and can be subsequently used for model training or other purposes, often **without your explicit consent**
+or knowledge.
+
+With local NLP, your **data never leaves your device**. Whether you are processing personal notes, customer conversations
+or confidential documents, information is processed locally, ensuring that private data remains private.
+
+## 🎨 Customization
+
+API-based NLP solutions are designed to be **general-purpose** and cannot be easily tailored to specific use cases. This
+can lead to suboptimal performances when dealing with <Link href={Config.TASK_SPECIFIC_LLMS_POST}>
+    domain-specific applications or specialized vocabularies.</Link>.
+
+Offline NLP solutions can be fine-tuned, pruned, quantized or even built from scratch to **meet business-specific
+requirements**, avoiding the limitations of one-size-fits-all models and resulting in better performances.
+
+## ⚡ Lower Latency
+
+No round-trip to servers that are potentially located on the other side of the world means that offline NLP
+solutions can offer **faster response times**. This is particularly important for applications that require real-time
+processing, such as chatbots, virtual assistants or autocompletes, where even the slightest difference in speed
+can **significantly impact user experience**.
+
+## Create your own offline NLP model
+
+At Tanaos, we developed <a href={Config.ARTIFEX_GITHUB_URL} rel='noreferrer' target='_blank'>Artifex</a>, an open-source
+Python library that allows you to create your own <Link href={Config.TASK_SPECIFIC_LLMS_POST}>task-specific NLP models</Link> that can be run offline on your local
+machine, without needing any training data or GPUs. Try it out!
+
+<a className='btn btn-primary' href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>See Artifex on GitHub <Github className='ms-2' /></a>
