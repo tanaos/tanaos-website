@@ -40,4 +40,5 @@ export const Config = {
     // Blog posts
     TASK_SPECIFIC_LLMS_POST: '/blog/task-specific-llms/',
     OFFLINE_NLP_POST: '/blog/offline-nlp/',
+    GUARDRAIL_MODELS_POST: '/blog/guardrail-models/',
 };

@@ -7,6 +7,7 @@ imageName: 'task-specific-llm-for-text-classification.png'
 ---
 
 import { BoxArrowUpRight, Github } from 'react-bootstrap-icons';
+import Link from 'next/link';
 
 import { Config } from '../../config';
 
@@ -30,11 +31,11 @@ text classification tasks such as **topic categorization**, **intent classificat
 require understanding of the specific domain they are applied to, which LLMs can only obtain through **fine-tuning
 on a relevant dataset**.
 
-Think, for instance, of a **safety filtering** task, where the goal is to flag text that contains unwanted content
-as *unsafe*. Since the definition of *unwanted content* really depends on the user's requirements, the only way 
-to get a general-purpose LLM to perform well on this task is through thorough and **meticulous prompt engineering**.
-Even then, the results are often subpar, and the cost of running a general-purpose LLM for this relatively simple
-task is non-trivial (especially at scale).
+Think, for instance, of a <Link href={Config.GUARDRAIL_MODELS_POST}>safety filtering (or *guardrailing*)</Link> task,
+where the goal is to flag text that contains unwanted content as *unsafe*. Since the definition of *unwanted content* 
+really depends on the user's requirements, the only way to get a general-purpose LLM to perform well on this task is 
+through thorough and **meticulous prompt engineering**. Even then, the results are often subpar, and the cost of 
+running a general-purpose LLM for this relatively simple task is non-trivial (especially at scale).
 
 The same applies to a number of other text classification tasks, such as **intent classification**, where the LLM
 needs to be provided with a list of possible intents and examples for each, **slot filling**, where the LLM needs
