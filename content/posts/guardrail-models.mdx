@@ -1,0 +1,76 @@
+---
+title: 'What are AI Guardrails and why you should care.'
+subtitle: 'Guardrails are essential for ensuring safe and reliable AI interactions. But what are they and how to create them?'
+date: 'October 8, 2025'
+tags: ['task-specific LLM', 'offline NLP', 'text classification', 'without training data', 'NLP', 'machine learning']
+imageName: 'guardrail-models.png'
+---
+
+import Link from 'next/link';
+import { Github } from 'react-bootstrap-icons';
+
+import { Config } from '../../config';
+
+
+Guardrails are tools that help ensure the safe and reliable output of AI systems, preventing
+LLMs and other generative models from generating responses that may be harmful or unwanted.
+
+By their very nature, LLMs are **probabilistic models** that create outputs based on patterns learned
+from vast amounts of training data, often **scraped from the internet**. Since the data they were 
+trained on is rarely filtered or curated in any way, their responses can sometimes be
+unpredictable or **unaligned with user or developer expectations**. On top of that, having become 
+aware of the limitations of LLMs, users will sometimes try to **trick them** into generating harmful 
+content through prompt injection or other adversarial techniques.
+
+## How guardrails work
+
+At their core, guardrails are **binary classification models** that are trained to analyze input and 
+outputs of AI systems and, based on a set of rules and safety standards provided by the developer, 
+determine whether they are ***safe*** or ***unsafe***.
+
+They can be implemented as either
+<Link href={Config.TASK_SPECIFIC_LLMS_POST}>task-specific LLMs</Link> specifically trained for 
+the purpose of acting as guardrails, or through general-purpose LLMs that are prompted to behave
+as guardrails. Performance-wise, task-specific LLMs are generally to be preferred, as they can be
+fine-tuned and optimized for the specific domain and requirements of the application, while 
+general-purpose LLMs can only be guided through prompt engineering.
+
+While some kind of minimal guardrails should be included directly into the AI model's system 
+prompt, so to set the tone and boundaries of the interaction and filter out obviously harmful
+content, it is crucial that more stringent guardrails be implemented as **separate components**. 
+This is because anything that is part of the model's prompt can be bypassed by a savvy user, while
+separate components that the user has no direct access to are much **harder to trick**.
+
+## Types of guardrails
+
+Guardrails can be broadly grouped into two categories: **pre-inference** and **post-inference**.
+
+**Pre-inference guardrails** are applied *before* the AI model generates a response, and are
+typically used to ensure the user's input is appropriate. While the definition of *inappropriate
+input* depends on the rules provided to the guardrail, examples of inappropriate inputs include
+attempts to modify the behavior of the AI model or the guardrail itself (prompt injection), or 
+requests for the generation of harmful or out-of-scope content.
+
+**Post-inference guardrails**, on the other hand, are applied on the AI model's output, and are
+used to ensure that the generated content is safe and appropriate, based on the provided rules
+and safety standards. A classic example of post-inference guardrail is a safety filter that
+flags content that holds sensitive data or out-of-scope information.
+
+## Creating a guardrail model
+
+While many developers resort to LLM APIs to implement guardrails, we believe that this is often not
+the best approach. <Link href={Config.OFFLINE_NLP_POST}>Offline, local NLP solutions</Link> provide
+a more cost-effective, private and customizable alternative to API-based guardrails, especially
+when the volume of text to be processed is high.
+
+At Tanaos, we developed <a href={Config.ARTIFEX_GITHUB_URL} rel='noreferrer' target='_blank'>Artifex</a>,
+an open-source Python library that allows you to create your own 
+<Link href={Config.TASK_SPECIFIC_LLMS_POST}>task-specific NLP models</Link> that can be run offline on
+your local machine. Artifex allows you to create guardrail models **without the need for any training data**.
+You simply describe what rules the model should follow, and it will generate a guardrail model
+for that purpose. The guardrails created with Artifex are so lightweight that they can **run locally or on small 
+servers without a GPU**, offloading simple tasks and reducing reliance on third-party LLM APIs.
+
+Artifex is free and open-source. Check it out on GitHub!
+
+<a className='btn btn-primary' href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>See Artifex on GitHub <Github className='ms-2' /></a>
