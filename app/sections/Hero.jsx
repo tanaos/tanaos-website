@@ -6,7 +6,7 @@ import { Config } from '../../config';
 
 
 export const Hero = () => {
-    return <div className='row m-0 global-padding'>
+    return <div className='row m-0 global-padding mb-0 mb-md-5'>
         <div className='col-12 col-md-6 m-0 p-0 pt-md-5 pe-md-4'>
             <h1 className={styles['hero-title']}>
                 Create task-specific LLMs for NLP and Text Classification

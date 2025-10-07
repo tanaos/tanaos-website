@@ -1,10 +1,10 @@
 'use client';
 
 import { XLg, List } from 'react-bootstrap-icons';
-
 import { useState, useEffect } from 'react';
 import { Navigation } from './Navigation';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 import { HeadlineBar } from './HeadlineBar';
 import { Config } from '../config';
@@ -85,7 +85,15 @@ export const Navbar = () => {
             {/* Large devices. */}
             <div className={`m-0 p-0 ${styles['navbar-large-devices']}`}>
                 <div className='col m-0 p-0 text-start'>
-                    <span className={styles['logo']} onClick={() => router.push('/')}>Tanaos</span>
+                    <Image
+                        src='/images/logo.png'
+                        alt='Create task-specific LLMs for NLP and Text Classification | Tanaos'
+                        width={40}
+                        height={40}
+                        onClick={() => router.push('/')}
+                        className={styles['logo']}
+                        unoptimized
+                    />
                 </div>
                 <div className='col m-0 p-0 text-end'>
                     <Navigation />
@@ -94,7 +102,15 @@ export const Navbar = () => {
             {/* Small devices. */}
             <div className={`${styles['navbar-small-devices']} d-md-none m-0 p-0 d-flex align-items-center`}>
                 <div className='col-10 m-0 p-0 text-start'>
-                    <span className={styles['logo']} onClick={() => router.push('/')}>Tanaos</span>
+                    <Image
+                        src='/images/logo.png'
+                        alt='Create task-specific LLMs for NLP and Text Classification | Tanaos'
+                        width={40}
+                        height={40}
+                        onClick={() => router.push('/')}
+                        className={styles['logo']}
+                        unoptimized
+                    />
                 </div>
                 <div className='col-2 m-0 p-0 text-end'>
                     <NavbarToggle onClick={toggleMenu} isMenuOpen={isMenuOpen} />
