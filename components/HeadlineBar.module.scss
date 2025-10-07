@@ -1,7 +1,7 @@
 .headline-bar {
     width: 100%;
-    background-color: $warning-color-700;
-    color: white;
+    background-color: $primary-100;
+    color: $font-color-light;
     height: $headline-bar-height;
     font-size: $font-size-p-300;
     font-weight: 500;
@@ -22,20 +22,20 @@
         right: 10px;
         cursor: pointer;
         font-size: 0.9rem;
-        color: white;
+        color: $font-color-dark;
 
         &:hover {
-            color: $grey-200;
+            color: black;
         }
     }
 
     a {
         margin: 0 5px;
-        color: white;
+        color: $primary;
         text-decoration: underline;
 
         &:hover {
-            color: $grey-200;
+            color: $primary-700;
         }
     }
 }
