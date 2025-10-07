@@ -7,7 +7,7 @@ import { Config } from '../../config';
 
 export const Hero = () => {
     return <div className='row m-0 global-padding'>
-        <div className='col-12 col-md-6 m-0 p-0 pt-md-5 pe-md-4 mt-4'>
+        <div className='col-12 col-md-6 m-0 p-0 pt-md-5 pe-md-4'>
             <h1 className={styles['hero-title']}>
                 Create task-specific LLMs for NLP and Text Classification
             </h1>
@@ -32,7 +32,7 @@ export const Hero = () => {
                 </a>
             </div>
         </div>
-        <div className='col-12 col-md-6 col-6 m-0 p-0 ps-md-5 mt-4 d-flex align-items-center'>
+        <div className='col-12 col-md-6 mt-4 d-none d-md-flex align-items-center'>
             <Image
                 className={styles['hero-image']}
                 src='/images/hero.png'
