@@ -17,3 +17,12 @@
         color: $primary-500;
     }
 }
+
+.hero-image {
+    width: 50% !important;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

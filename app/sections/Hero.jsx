@@ -12,7 +12,7 @@ export const Hero = () => {
                 Create task-specific LLMs for NLP and Text Classification
             </h1>
             <h2 className={`mt-4 ${styles['hero-subtitle']}`}>
-                Perform offline <b>NLP</b> and <b>Text Classification</b> tasks, such as Guardrail Models and
+                Perform <b>offline NLP</b> and <b>Text Classification</b> tasks, such as Guardrail Models and
                 Intent Classification, <b>without training data, GPUs or third-party APIs.</b>
             </h2>
             <div className='mt-5'>
@@ -32,8 +32,9 @@ export const Hero = () => {
                 </a>
             </div>
         </div>
-        <div className='col-12 col-md-6 col-6 m-0 p-0 ps-md-5 mt-4'>
-            <Image 
+        <div className='col-12 col-md-6 col-6 m-0 p-0 ps-md-5 mt-4 d-flex align-items-center'>
+            <Image
+                className={styles['hero-image']}
                 src='/images/hero.png'
                 alt='Create task-specific LLMs for NLP and Text Classification | Tanaos'
                 layout='responsive'
