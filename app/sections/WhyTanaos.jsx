@@ -5,7 +5,7 @@ export const WhyTanaos = () => {
         <div className='row'>
             <div className='row'>
                 <div className={`col-12 col-md-3 ${styles['feature-box']}`}>
-                    <h3>Task-Specific LLMs</h3>
+                    <h3>Small, task-specific LLMs</h3>
                     <p>
                         Build small LLMs that are optimized for specific NLP tasks, for which
                         general-purpose LLMs are overkill.

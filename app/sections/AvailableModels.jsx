@@ -1,4 +1,5 @@
-import { ShieldCheck, BoxArrowUpRight, ChatSquareText, Lightbulb } from 'react-bootstrap-icons';
+import { BoxArrowUpRight } from 'react-bootstrap-icons';
+import Image from 'next/image';
 
 import { Config } from '../../config';
 import styles from './AvailableModels.module.scss';
@@ -11,11 +12,17 @@ export const AvailableModels = () => {
             <h2 className='mb-5'>Available Task-Specific Models</h2>
             <div className='col-12 col-md-4 margin-end'>
                 <div className={`${styles['model-card']}`}>
-                    <h3 className='mb-3'><ShieldCheck className='ms-1' /> Guardrail Model</h3>
+                    <Image 
+                        src='/images/available-models/guardrail.png'
+                        alt='Easily create Guardrail Models without training data or GPUs | Tanaos'
+                        width={547} height={132}
+                        className={styles['model-image']}
+                        unoptimized
+                    />
+                    <h3 className='mb-3'>Guardrail Model</h3>
                     <p>
-                        Typically used to flag unsafe, harmful or off-topic messages in chatbots
-                        and virtual assistants. Create your local Guardrail Model and reduce the
-                        number of paid calls to third-party APIs.
+                        Guardrail models are used to flag unsafe, harmful or off-topic messages 
+                        in chatbots and virtual assistants.
                     </p>
                     <div className='mt-4'>
                         <a 
@@ -37,11 +44,17 @@ export const AvailableModels = () => {
             </div>
             <div className='col-12 col-md-4 margin-end mt-5 mt-md-0'>
                 <div className={`${styles['model-card']}`}>
-                    <h3 className='mb-3'><ChatSquareText /> Intent Classification</h3>
+                    <Image 
+                        src='/images/available-models/intent-classification.png'
+                        alt='Easily create Intent Classification Models without training data or GPUs | Tanaos'
+                        width={547} height={132}
+                        className={styles['model-image']}
+                        unoptimized
+                    />
+                    <h3 className='mb-3'>Intent Classification</h3>
                     <p>
-                        Typically used in chatbots and virtual assistants to classify user intents.
-                        Create your local Intent Classification Model and reduce the number of paid 
-                        calls to third-party APIs.
+                        Intent Classification models are used in chatbots and virtual assistants 
+                        to classify user intents.
                     </p>
                     <div className='mt-4'>
                         <a 
@@ -63,7 +76,7 @@ export const AvailableModels = () => {
             </div>
             <div className='col-12 col-md-4 mt-5 mt-md-0'>
                 <div className={`${styles['model-card']}`}>
-                    <h3 className='mb-3'><Lightbulb /> <ins>Tell us what you need!</ins></h3>
+                    <h3 className='mb-3'><ins>Tell us what you need!</ins></h3>
                     <p>
                         We are actively working on creating new task-specific models based on user 
                         feedback and demand. Creating models that users need is our top priority.
