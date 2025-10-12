@@ -74,26 +74,22 @@ export const AvailableModels = () => {
                     </div>
                 </div>
             </div>
-            <div className='col-12 col-md-4 mt-5 mt-md-0'>
+            <div className='col-12 col-md-4 margin-end mt-5 mt-md-0'>
                 <div className={`${styles['model-card']}`}>
-                    <h3 className='mb-3'><ins>Tell us what you need!</ins></h3>
+                    <Image 
+                        src='/images/available-models/reranker.png'
+                        alt='Easily create Intent Classification Models without training data or GPUs | Tanaos'
+                        width={547} height={132}
+                        className={styles['model-image']}
+                        unoptimized
+                    />
+                    <h3 className='mb-3'>Reranker</h3>
                     <p>
-                        We are actively working on creating new task-specific models based on user 
-                        feedback and demand. Creating models that users need is our top priority.
-                        <br /><br />
-
-                        Is there a specific task you would like to see a model for? <a 
-                            href={Config.ARTIFEX_NEW_MODEL_SUGGESTION_URL}
-                            target='_blank' rel='noreferrer'
-                        >
-                            Suggest it <BoxArrowUpRight />
-                        </a> or <a 
-                            href={Config.ARTIFEX_NEW_MODEL_SUGGESTIONS_LIST_URL}
-                            target='_blank' rel='noreferrer'
-                        >
-                            upvote existing suggestions! <BoxArrowUpRight />
-                        </a>
+                        Reranker models improve the relevance of search results by reordering them 
+                        based on their relevance to a given query.
                     </p>
+                    <div className='mt-4'>
+                    </div>
                 </div>
             </div>
         </div>
