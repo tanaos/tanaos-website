@@ -12,7 +12,7 @@ export const metadata = {
     }
 };
 
-export default async function BlogPage() {
+export const BlogPage = async () => {
     const posts = await getAllPosts();
 
     return <div className={`global-padding ${styles['blog-page']}`}>
@@ -32,3 +32,5 @@ export default async function BlogPage() {
         </div>
     </div>
 }
+
+export default BlogPage;

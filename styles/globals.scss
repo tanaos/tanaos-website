@@ -164,5 +164,5 @@ a {
 // Padding.
 .global-padding {
     padding: $page-padding;
-    padding-top: calc(#{$headline-bar-height} + 1rem);
+    padding-top: calc(#{$headline-bar-height} + 2rem);
 }
