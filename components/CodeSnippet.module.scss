@@ -1,0 +1,24 @@
+.code-snippet-container {
+    position: relative;
+    margin-top: 1rem;
+
+    button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        border-radius: $border-radius;
+        padding: 10px;
+        color: $grey-700;
+        border: none;
+
+        &:hover {
+            background-color: $grey-300 !important;
+            cursor: pointer;
+        }
+    }
+
+    button.copied {
+        background-color: $success-color-500 !important;
+        color: white !important;
+    }
+}
