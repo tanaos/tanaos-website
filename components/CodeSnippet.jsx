@@ -23,6 +23,7 @@ export const CodeSnippet = ({ code, language = 'python' }) => {
 
     return <div className={`${styles['code-snippet-container']}`}>
         <SyntaxHighlighter
+            className='code-block'
             language={language}
             style={oneDark}
             wrapLines={true}
@@ -33,7 +34,6 @@ export const CodeSnippet = ({ code, language = 'python' }) => {
                 margin: 0,
                 padding: '1rem',
                 borderRadius: '0.75rem',
-                fontSize: '0.9rem',
                 boxShadow: '0 5px 8px rgba(0, 0, 0, 0.3)',
             }}
         >

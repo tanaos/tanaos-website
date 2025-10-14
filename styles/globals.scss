@@ -73,6 +73,12 @@ p {
     font-size: $font-size-p-500;
 }
 
+.code-block code,
+.code-block code span {
+    font-size: $font-size-p-400 !important;
+    line-height: $line-height-p-400 !important;
+}
+
 span {
     font-size: $font-size-p-500;
     line-height: $line-height-p-500;
