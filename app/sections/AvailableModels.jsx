@@ -16,7 +16,7 @@ export const AvailableModels = () => {
         <div className={`d-flex align-items-center justify-content-between ${styles['section-header']} mb-5`}>
             <h2>Available Task-Specific Models</h2>
             <Link href={Config.AVAILABLE_MODELS_ROUTE + '#available-models'}>
-                View all models <ArrowRight className='ms-1' />
+                View all <ArrowRight className='ms-1' />
             </Link>
         </div>
         <div className='row'>

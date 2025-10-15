@@ -21,11 +21,16 @@ export const CodeSnippet = ({ code, language = 'python' }) => {
         }
     };
 
+    const customStyle = {
+        ...oneDark,
+        comment: { color: '#aaa' }, // update comment colors, barely visible in dark mode
+    };
+
     return <div className={`${styles['code-snippet-container']}`}>
         <SyntaxHighlighter
             className='code-block'
             language={language}
-            style={oneDark}
+            style={customStyle}
             wrapLines={true}
             lineProps={{
                 style: { wordBreak: 'break-word', whiteSpace: 'pre-wrap' }
