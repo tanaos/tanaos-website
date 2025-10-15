@@ -17,7 +17,11 @@ export const AvailableModels = () => {
         </div>
         <div className='mt-5'>
             {availableModels.map(({ name, description, emoji, trainingCode, inferenceCode }) => (
-                <div key={name} className={styles['model-box']}>
+                <div 
+                    key={name} 
+                    className={styles['model-box']} 
+                    id={`${name.toLowerCase().replace(/\s+/g, '-')}`}
+                >
                     <h2>{emoji} {name}</h2>
                     <p className='mt-4 mb-4'>
                         {description}

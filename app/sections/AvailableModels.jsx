@@ -1,5 +1,6 @@
-import { BoxArrowUpRight } from 'react-bootstrap-icons';
+import { ArrowRight } from 'react-bootstrap-icons';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Config } from '../../config';
 import styles from './AvailableModels.module.scss';
@@ -26,22 +27,12 @@ export const AvailableModels = () => {
                         />
                         <h3 className='mb-3'>{name}</h3>
                         <p>{description}</p>
-                        <div className='mt-4'>
-                            <a 
-                                href={Config.DOCS_GUARDRAIL_INTRO_URL}
-                                target='_blank' rel='noreferrer'
-                                className='btn btn-white me-4'
-                            >
-                                Read the docs <BoxArrowUpRight className='ms-1' />
-                            </a>
-                            <a 
-                                href={Config.ARTIFEX_GUARDRAIL_DEMO_URL}
-                                target='_blank' rel='noreferrer'
-                                className='btn btn-white'
-                            >
-                                Try it out <BoxArrowUpRight className='ms-1' />
-                            </a>
-                        </div>
+                        <Link 
+                            href={Config.AVAILABLE_MODELS_ROUTE + `#${name.toLowerCase().replace(/\s+/g, '-')}`}
+                            scroll={true}
+                        >
+                            Learn More <ArrowRight className='ms-1' />
+                        </Link>
                     </div>
                 </div>
             ))}

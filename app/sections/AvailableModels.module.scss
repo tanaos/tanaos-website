@@ -1,9 +1,19 @@
 .model-card {
-    a:not(:global(.btn)) {
+    a {
         color: $primary;
+        text-decoration: none;
+
+        svg {
+            display: inline-block;
+            transition: transform $transition-default;
+        }
 
         &:hover {
             color: $primary-700;
+            
+            svg {
+                transform: $transform-translate-right;
+            }
         }
     }
 
