@@ -121,33 +121,16 @@ $line-100: 1px solid $grey-100;
 $line-200: 1px solid $grey-200;
 $line-300: 1px solid $grey-300;
 $line-400: 1px solid $grey-400;
-$line-success: 2px solid $success-color-500;
-$line-danger: 2px solid $danger-color-500;
-$line-warning: 2px solid $warning-color-500;
 
 // Shadows.
 $shadow-100: 0 0 5px 0 rgba(0, 0, 0, 0.05);
 $shadow-300: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 $shadow-500: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
-// Tables.
-$table-padding: 8px 20px 8px 20px;
-
 // Buttons.
 $button-primary: $primary;
 $button-primary-hover: $primary-700;
 $button-disabled: $grey-200;
-$button-light: $grey-100;
-$button-dark: $grey-800;
-$button-dark-hover: $grey-600;
-$button-grey: $grey-300;
-$button-grey-hover: $grey-400;
-$button-success: $success-color-500;
-$button-success-hover: $success-color-700;
-$button-danger: $danger-color-500;
-$button-danger-hover: $danger-color-700;
-$button-warning: $warning-color-500;
-$button-warning-hover: $warning-color-700;
 $button-min-width: 150px;
 
 // Links.
