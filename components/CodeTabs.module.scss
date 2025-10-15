@@ -1,0 +1,24 @@
+.code-tabs {
+    background-color: $dark-code-bg;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    width: fit-content;
+
+    :global(.nav-tabs) {
+        border-bottom: 1px solid #aaa;
+        
+        :global(.nav-link) {
+            background-color: transparent;
+            color: #aaa;
+            border: none;
+            border-bottom: 2px solid transparent;
+
+            &:global(.active) {
+                background-color: $dark-code-bg;
+                color: $primary;
+                border-bottom: 3px solid $primary;
+                font-weight: 500;
+            }
+        }
+    }
+}
