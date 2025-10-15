@@ -1,6 +1,7 @@
 import styles from './AvailableModels.module.scss';
 import { CodeSnippet } from '../../components/CodeSnippet';
 import { getAvailableModels } from '../../lib/availableModels';
+import { CodeTabs } from '../../components/CodeTabs';
 
 
 const availableModels = await getAvailableModels();
@@ -14,19 +15,22 @@ export const AvailableModels = () => {
                 Explore our collection of task-specific models designed to enhance your AI applications. 
             </p>
         </div>
-        {availableModels.map(({ name, description, emoji, sampleCode }) => (
-            <div key={name} className='mt-5'>
-                <div className={styles['model-box']}>
+        <div className='mt-5'>
+            {availableModels.map(({ name, description, emoji, trainingCode, inferenceCode }) => (
+                <div key={name} className={styles['model-box']}>
                     <h2>{emoji} {name}</h2>
-                    <p className='mt-2'>
+                    <p className='mt-4 mb-4'>
                         {description}
                     </p>
-                    <CodeSnippet
-                        code={sampleCode}
+                    <CodeTabs 
+                        codeSnippets={{
+                            training: trainingCode,
+                            inference: inferenceCode,
+                        }}
                     />
                 </div>
-            </div>
-        ))}
+            ))}
+        </div>
     </div>
 }
 
