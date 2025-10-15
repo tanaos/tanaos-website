@@ -1,7 +1,9 @@
 .available-models-page {
+    scroll-margin-top: $navbar-height + $headline-bar-height + 20px;
+
     .model-box {
+        scroll-margin-top: $navbar-height + $headline-bar-height + 20px !important;
         margin-bottom: 5rem;
-        scroll-margin-top: $navbar-height + $headline-bar-height + 20px; 
         
         h2 {
             font-size: $font-size-h3;

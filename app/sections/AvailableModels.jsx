@@ -12,9 +12,14 @@ const availableModels = await getAvailableModels();
 
 export const AvailableModels = () => {
 
-    return <div className='global-padding'>
+    return <div className={`global-padding ${styles['available-models']}`}>
+        <div className={`d-flex align-items-center justify-content-between ${styles['section-header']} mb-5`}>
+            <h2>Available Task-Specific Models</h2>
+            <Link href={Config.AVAILABLE_MODELS_ROUTE + '#available-models'}>
+                View all models <ArrowRight className='ms-1' />
+            </Link>
+        </div>
         <div className='row'>
-            <h2 className='mb-5'>Available Task-Specific Models</h2>
             {availableModels.map(({ name, description, imageUrl }) => (
                 <div className='col-12 col-md-4 margin-end' key={name}>
                     <div className={`${styles['model-card']}`}>

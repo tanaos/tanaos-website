@@ -8,7 +8,10 @@ const availableModels = await getAvailableModels();
 
 
 export const AvailableModels = () => {
-    return <div className={`global-padding ${styles['available-models-page']}`}>
+    return <div 
+        className={`global-padding ${styles['available-models-page']}`}
+        id='available-models'
+    >
         <div className='text-center'>
             <h1>Available Task-Specific Models</h1>
             <p className='mt-4'>

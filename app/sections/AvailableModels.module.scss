@@ -1,4 +1,8 @@
-.model-card {
+.available-models {
+    .section-header {
+        max-width: 700px;
+    }
+
     a {
         color: $primary;
         text-decoration: none;
@@ -17,17 +21,19 @@
         }
     }
 
-    h3 svg {
-        font-size: $icon-size;
-        vertical-align: middle;
-        margin-right: 0.5rem;
-        color: $font-color-light;
-    }
+    .model-card {
+        h3 svg {
+            font-size: $icon-size;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+            color: $font-color-light;
+        }
 
-    .model-image {
-        width: 40%;
-        height: auto;
-        object-fit: cover;
-        margin-bottom: 2rem;
+        .model-image {
+            width: 40%;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 2rem;
+        }
     }
 }
