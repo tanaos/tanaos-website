@@ -11,7 +11,7 @@ const availableModels = await getAvailableModels();
 
 export const AvailableModels = () => {
 
-    return <div id='available-models' className='global-padding'>
+    return <div className='global-padding'>
         <div className='row'>
             <h2 className='mb-5'>Available Task-Specific Models</h2>
             {availableModels.map(({ name, description, imageUrl }) => (
