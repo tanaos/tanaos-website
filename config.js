@@ -26,7 +26,7 @@ export const Config = {
     LINKEDIN_URL: 'https://www.linkedin.com/company/tanaos',
 
     // Demo
-    ARTIFEX_GUARDRAIL_DEMO_URL: 'https://colab.research.google.com/github/tanaos/tanaos-docs/blob/master/blueprints/artifex/guardrail.ipynb',
+    ARTIFEX_GUARDRAIL_TUTORIAL_URL: 'https://docs.tanaos.com/artifex/guardrail/code_examples/',
     ARTIFEX_INTENT_CLASSIFIER_DEMO_URL: 'https://colab.research.google.com/github/tanaos/tanaos-docs/blob/master/blueprints/artifex/intent_classifier.ipynb',
 
     // Session Storage

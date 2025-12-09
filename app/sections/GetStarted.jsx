@@ -18,7 +18,7 @@ export const GetStarted = () => {
                     Install Artifex with <code>pip install artifex</code> and use
                     it for free. <a href={Config.DOCS_TRAIN_GUARDRAIL_URL} rel='noreferrer' target='_blank'>
                         Read the docs <BoxArrowUpRight />
-                    </a> to learn more.
+                    </a> to learn how to integrate it into your project.
                 </p>
                 <a 
                     className='btn btn-primary mt-3'
@@ -29,7 +29,7 @@ export const GetStarted = () => {
                 </a>
             </div>
             <div className='col-12 col-md-8 ps-md-4 mt-5 mt-md-0 mb-5 mb-md-0'>
-                <h3 className='mb-5'>Advanced usage: pay-as-you-go</h3>
+                <h3 className='mb-5'>Advanced usage: pick a plan for better performance</h3>
                 <div className='row'>
                     <div className='col-12 col-md-4'>
                         <h4><span className={`${styles['step-number']}`}>1</span>Signup</h4>
@@ -38,9 +38,9 @@ export const GetStarted = () => {
                         </p>
                     </div>
                     <div className='col-12 col-md-4'>
-                        <h4><span className={`${styles['step-number']}`}>2</span>Buy credits</h4>
+                        <h4><span className={`${styles['step-number']}`}>2</span>Pick a plan</h4>
                         <p>
-                            Buy any amount of credits, starting from $5.
+                            Pick a plan to get access to higher rate limits and better model performance.
                         </p>
                     </div>
                     <div className='col-12 col-md-4'>
