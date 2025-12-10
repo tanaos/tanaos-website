@@ -10,9 +10,28 @@ export const Config = {
 
     // Docs
     DOCS_URL: 'https://docs.tanaos.com/artifex/',
-    DOCS_TRAIN_GUARDRAIL_URL: 'https://docs.tanaos.com/artifex/guardrail/train/',
-    DOCS_GUARDRAIL_INTRO_URL: 'https://docs.tanaos.com/artifex/guardrail/intro/',
-    DOCS_INTENT_CLASSIFICATION_INTRO_URL: 'https://docs.tanaos.com/artifex/intent-classifier/intro/',
+
+    DOCS_GUARDRAIL_EXAMPLES: 'https://docs.tanaos.com/artifex/guardrail/code_examples/',
+    DOCS_GUARDRAIL_TRAIN: 'https://docs.tanaos.com/artifex/guardrail/train/',
+    DOCS_GUARDRAIL_INFERENCE: 'https://docs.tanaos.com/artifex/guardrail/inference/',
+
+    DOCS_INTENT_CLASSIFICATION_TRAIN: 'https://docs.tanaos.com/artifex/intent-classifier/train/',
+    DOCS_INTENT_CLASSIFICATION_INFERENCE: 'https://docs.tanaos.com/artifex/intent-classifier/inference/',
+
+    DOCS_RERANKER_TRAIN: 'https://docs.tanaos.com/artifex/reranker/train/',
+    DOCS_RERANKER_INFERENCE: 'https://docs.tanaos.com/artifex/reranker/inference/',
+
+    DOCS_SENTIMENT_ANALYSIS_TRAIN: 'https://docs.tanaos.com/artifex/sentiment-analysis/train/',
+    DOCS_SENTIMENT_ANALYSIS_INFERENCE: 'https://docs.tanaos.com/artifex/sentiment-analysis/inference/',
+
+    DOCS_EMOTION_DETECTION_TRAIN: 'https://docs.tanaos.com/artifex/emotion-detection/train/',
+    DOCS_EMOTION_DETECTION_INFERENCE: 'https://docs.tanaos.com/artifex/emotion-detection/inference/',
+
+    DOCS_NER_TRAIN: 'https://docs.tanaos.com/artifex/named-entity-recognition/train/',
+    DOCS_NER_INFERENCE: 'https://docs.tanaos.com/artifex/named-entity-recognition/inference/',
+
+    DOCS_TEXT_ANONYMIZATION_TRAIN: 'https://docs.tanaos.com/artifex/text-anonymization/train/',
+    DOCS_TEXT_ANONYMIZATION_INFERENCE: 'https://docs.tanaos.com/artifex/text-anonymization/inference/',
 
     // Github
     SYNTHEX_GITHUB_URL: 'https://github.com/tanaos/synthex',
@@ -24,10 +43,6 @@ export const Config = {
     TWITTER_URL: 'https://x.com/tanaosai',
     HUGGINGFACE_URL: 'https://huggingface.co/tanaos',
     LINKEDIN_URL: 'https://www.linkedin.com/company/tanaos',
-
-    // Demo
-    ARTIFEX_GUARDRAIL_TUTORIAL_URL: 'https://docs.tanaos.com/artifex/guardrail/code_examples/',
-    ARTIFEX_INTENT_CLASSIFIER_DEMO_URL: 'https://colab.research.google.com/github/tanaos/tanaos-docs/blob/master/blueprints/artifex/intent_classifier.ipynb',
 
     // Session Storage
     DISPLAY_BANNER_SESSION_STORAGE_FLAG: 'displayBanner',
@@ -41,4 +56,13 @@ export const Config = {
     TASK_SPECIFIC_LLMS_POST: '/blog/task-specific-llms/',
     OFFLINE_NLP_POST: '/blog/offline-nlp/',
     GUARDRAIL_MODELS_POST: '/blog/guardrail-models/',
+
+    // Hugging Face
+    GUARDRAIL_HF_LINK: 'https://huggingface.co/tanaos/tanaos-guardrail-v1',
+    INTENT_CLASSIFICATION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-intent-classifier-v1',
+    RERANKER_HF_LINK: 'https://huggingface.co/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1',
+    SENTIMENT_ANALYSIS_HF_LINK: 'https://huggingface.co/tanaos/tanaos-sentiment-analysis-v1',
+    EMOTION_DETECTION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-emotion-detection-v1',
+    NER_HF_LINK: 'https://huggingface.co/tanaos/tanaos-NER-v1',
+    TEXT_ANONYMIZATION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-text-anonymizer-v1'
 };

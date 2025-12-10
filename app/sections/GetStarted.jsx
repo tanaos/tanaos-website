@@ -16,7 +16,7 @@ export const GetStarted = () => {
                 </a></h4>
                 <p>
                     Install Artifex with <code>pip install artifex</code> and use
-                    it for free. <a href={Config.DOCS_TRAIN_GUARDRAIL_URL} rel='noreferrer' target='_blank'>
+                    it for free. <a href={Config.DOCS_GUARDRAIL_TRAIN} rel='noreferrer' target='_blank'>
                         Read the docs <BoxArrowUpRight />
                     </a> to learn how to integrate it into your project.
                 </p>

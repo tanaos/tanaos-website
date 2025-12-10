@@ -25,7 +25,7 @@ export const Hero = () => {
                 </a>
                 <a
                     className='btn btn-white'
-                    href={Config.ARTIFEX_GUARDRAIL_TUTORIAL_URL}
+                    href={Config.DOCS_GUARDRAIL_EXAMPLES}
                     target='_blank' rel='noreferrer'
                 >
                     Try it out <BoxArrowUpRight className='ms-1' />

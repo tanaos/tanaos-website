@@ -154,6 +154,22 @@ a {
     }
 }
 
+// Tables
+
+.table,
+.table tbody,
+.table tfoot,
+.table tr,
+.table th,
+.table td {
+    background-color: inherit !important;
+    vertical-align: middle !important;
+
+    thead {
+        background-color: $grey-200;
+    }
+}
+
 // ------------------
 
 // Misc.
