@@ -8,7 +8,7 @@ export const GetStarted = () => {
 
     return <div id='quickstart' className={`${styles['quickstart-section']} global-padding`}>
         <div className='row'>
-            <h2 className='mb-5'>🚀 Quick start</h2>
+            <h2 className='mb-5'>How to use</h2>
             <div className={`col-12 col-md-4 ${styles['margin-end']}`}>
                 <h3 className='mb-5'>Casual usage: free</h3>
                 <h4>Use our open source <a href={Config.ARTIFEX_GITHUB_URL} rel='noreferrer' target='_blank'>

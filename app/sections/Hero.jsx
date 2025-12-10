@@ -9,11 +9,11 @@ export const Hero = () => {
     return <div className='row m-0 global-padding mb-0 mb-md-5'>
         <div className='col-12 col-md-6 m-0 p-0 pt-md-5'>
             <h1 className={styles['hero-title']}>
-                Create and use small, task-specific LLMs. Without training data or GPUs.
+                Use and fine-tune small, task-specific LLMs. Without training data or GPUs.
             </h1>
             <h2 className={`mt-4 ${styles['hero-subtitle']}`}>
                 Reduce LLM API <b>costs</b>, get built-in <b>privacy</b> and <b>improve 
-                performance</b> on your specific tasks by creating local, small-scale LLMs.
+                performance</b> on your tasks by using task-specific, local, small LLMs.
             </h2>
             <div className='mt-5'>
                 <a 
