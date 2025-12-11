@@ -9,7 +9,7 @@ import styles from './CodeSnippet.module.scss';
 
 
 export const CodeSnippet = ({ code, language = 'python' }) => {
-    const [copied, setCopied] = useState(false);
+    const [ copied, setCopied ] = useState(false);
 
     const copyToClipboard = async () => {
         try {
@@ -26,12 +26,12 @@ export const CodeSnippet = ({ code, language = 'python' }) => {
         comment: { color: '#aaa' }, // update comment colors, barely visible in dark mode
     };
 
-    return <div className={`${styles['code-snippet-container']}`}>
+    return <div className={`${styles['code-snippet-container']} mb-5`}>
         <SyntaxHighlighter
             className='code-block'
             language={language}
             style={customStyle}
-            wrapLines={true}
+            wrapLines={false}
             lineProps={{
                 style: { wordBreak: 'break-word', whiteSpace: 'pre-wrap' }
             }}
@@ -39,7 +39,6 @@ export const CodeSnippet = ({ code, language = 'python' }) => {
                 margin: 0,
                 padding: '1rem',
                 borderRadius: '0.75rem',
-                boxShadow: '0 5px 8px rgba(0, 0, 0, 0.3)',
             }}
         >
             {code}
