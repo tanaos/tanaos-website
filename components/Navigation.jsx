@@ -12,13 +12,6 @@ export const Navigation = ({ onLinkClick }) => {
 
     return <div className={`${styles['navigation']}`}>
         <Link 
-            href={Config.AVAILABLE_MODELS_ROUTE} 
-            className={`mt-4 mt-md-0 ms-md-5 ${url === Config.AVAILABLE_MODELS_ROUTE && styles['highlighted']}`}
-            onClick={onLinkClick}
-        >
-            Models
-        </Link>
-        <Link 
             href={Config.BLOG_ROUTE} 
             className={`mt-4 mt-md-0 ms-md-4 ${url === Config.BLOG_ROUTE && styles['highlighted']}`}
             onClick={onLinkClick}

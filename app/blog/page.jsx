@@ -24,7 +24,7 @@ export const BlogPage = async () => {
             </p>
             <div className='mt-5 row'>
                 {posts.map((post) => {
-                    return <div className='col-12 col-md-4 px-4' key={post.slug}>
+                    return <div className='col-12 col-md-4 px-4 mt-5 mb-4' key={post.slug}>
                         <BlogPostPreview post={post} />
                     </div>
                 })}

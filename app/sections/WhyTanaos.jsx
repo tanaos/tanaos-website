@@ -2,34 +2,37 @@ import styles from './WhyTanaos.module.scss';
 
 export const WhyTanaos = () => {
     return <div className={`mt-5 mb-5 mt-md-0 mb-md-0 ${styles['why-tanaos-section']} global-padding`}>
+        <div className={`d-flex align-items-center justify-content-between ${styles['section-header']} mb-5`}>
+            <h2>Why Tanaos?</h2>
+        </div>
         <div className='row'>
             <div className='row'>
                 <div className={`col-12 col-md-3 ${styles['feature-box']}`}>
-                    <h3>Small, task-specific LLMs</h3>
+                    <h3>Use small, task-specific LLMs on CPU</h3>
                     <p>
-                        Build small LLMs that are optimized for specific NLP tasks, for which
-                        general-purpose LLMs are overkill.
+                        Use pre-trained, task-specific small LLMs on your CPU for fast and
+                        cost-effective inference.
                     </p>
                 </div>
                 <div className={`col-12 col-md-3 mt-4 mt-md-0 ${styles['feature-box']}`}>
-                    <h3>No training data needed</h3>
+                    <h3>Fine-tune them without training data, on CPU</h3>
                     <p>
-                        Perform Text Classification without training data, as training is done
+                        Fine-tune the pre-trained models without training data; models are trained
                         on synthetic data generated on-the-fly.
                     </p>
                 </div>
                 <div className={`col-12 col-md-3 mt-4 mt-md-0 ${styles['feature-box']}`}>
-                    <h3>Perform offline NLP tasks</h3>
+                    <h3>Keep your data private and secure</h3>
                     <p>
-                        None of the created models require a GPU, so you can run everything 
-                        on your laptop or on a small server.
+                        Stop sending data to third-party servers. Since models run locally on your CPU, 
+                        your data never leaves your machine.
                     </p>
                 </div>
                 <div className={`col-12 col-md-3 mt-4 mt-md-0 ${styles['feature-box']}`}>
-                    <h3>Reduce your LLM API bill</h3>
+                    <h3>Lower costs, higher accuracy</h3>
                     <p>
-                        Offload tasks to local task-specific models and reduce the number of 
-                        paid calls to LLM APIs.
+                        Offload tasks to local, specialized task-specific models; reduce cost on your 
+                        LLM API, while improving accuracy.
                     </p>
                 </div>
             </div>

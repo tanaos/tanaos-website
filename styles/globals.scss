@@ -28,6 +28,10 @@ html, body, #root {
     flex: 1;
 }
 
+strong {
+    color: $font-color-dark;
+}
+
 // Text.
 h1 {
     font-size: $font-size-h1;
@@ -74,11 +78,21 @@ p {
     font-size: $font-size-p-500;
 }
 
-.code-block code,
-.code-block code span {
-    font-size: $font-size-p-400 !important;
-    line-height: $line-height-p-400 !important;
-    color: white;
+.code-block {
+    code, span {
+        font-size: $font-size-p-500 !important;
+        line-height: $line-height-p-500 !important;
+        color: white;
+    }
+}
+
+:not(.code-block) > code {
+    color: $font-color-dark;
+    font-weight: 600;
+    font-size: unset;
+    background-color: $regular-code-bg;
+    padding: 0.5%;
+    border-radius: 0.4rem;
 }
 
 span {
@@ -151,6 +165,22 @@ a {
     &:focus, &:active {
         background-color: white;
         border: $line-300;
+    }
+}
+
+// Tables
+
+.table,
+.table tbody,
+.table tfoot,
+.table tr,
+.table th,
+.table td {
+    background-color: inherit !important;
+    vertical-align: middle !important;
+
+    thead {
+        background-color: $grey-200;
     }
 }
 

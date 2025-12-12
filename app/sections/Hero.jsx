@@ -9,11 +9,11 @@ export const Hero = () => {
     return <div className='row m-0 global-padding mb-0 mb-md-5'>
         <div className='col-12 col-md-6 m-0 p-0 pt-md-5'>
             <h1 className={styles['hero-title']}>
-                Create task-specific LLMs for NLP and Text Classification
+                Use and fine-tune small, task-specific LLMs. Without training data or GPUs.
             </h1>
             <h2 className={`mt-4 ${styles['hero-subtitle']}`}>
-                Perform <b>offline NLP</b> and <b>Text Classification</b> tasks, such as Guardrail Models and
-                Intent Classification, <b>without training data, GPUs or third-party APIs.</b>
+                Reduce LLM API <b>costs</b>, get built-in <b>privacy</b> and <b>improve 
+                performance</b> on your tasks by using task-specific, local, small LLMs.
             </h2>
             <div className='mt-5'>
                 <a 
@@ -25,7 +25,7 @@ export const Hero = () => {
                 </a>
                 <a
                     className='btn btn-white'
-                    href={Config.ARTIFEX_GUARDRAIL_DEMO_URL}
+                    href={Config.DOCS_GUARDRAIL_EXAMPLES}
                     target='_blank' rel='noreferrer'
                 >
                     Try it out <BoxArrowUpRight className='ms-1' />
