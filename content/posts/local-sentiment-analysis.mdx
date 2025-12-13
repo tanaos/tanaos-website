@@ -100,7 +100,7 @@ id,time,username,comment,sentiment
 `
 } />
 
-The result is what we wanted, the process was relatively fast and, unless our CSV dataset had a billion rows, its 
+The result is what we wanted, the process was relatively fast and, unless our CSV dataset had a billion rows, the 
 cost was negligible.
 
 ## The privacy problem
@@ -117,6 +117,77 @@ a **third-party server for analysis**? Probably not. Is this **GDPR-compliant**?
 
 ## A better approach: local sentiment analysis
 
-We could, in theory, bypass this problem by hosting our own instance of an open-source general-purpose LLM, like 
-Llama, DeepSeek or Mistral. But do we really want to host a **multi-billion parameter model** on our own servers, 
-**just to analyze product reviews**? Nah.
+We could, in theory, bypass the privacy issue by hosting our own instance of an open-source general-purpose LLM, 
+like Llama, DeepSeek or Mistral. But do we really want to host a **multi-billion parameter model** on our own servers, 
+**just to analyze product reviews**? Not really.
+
+The better approach is to use a **small, task-specific model** that can run entirely on our local device, without
+sending any data to third-party servers or requiring GPU acceleration. But where do we find a small model that can run 
+locally? Do we really have to look for one on Hugging Face and read its docs to figure out how to use it? We have 
+better plans for the weekend.
+
+This is where <Link href={Config.ARTIFEX_GITHUB_URL}>Artifex</Link> comes in. Artifex is a Python library that 
+provides easy access to a variety of small, task-specific LLMs that can run entirely on your CPU, as well as the
+possibility to fine-tune them on your specific tasks. Our sentiment analysis task is standard enough that Artifex
+already provides a pre-trained model for it, without any need for fine-tuning.
+
+### The new script
+
+First of all, let's install Artifex.
+
+<CodeSnippet code='pip install artifex' />
+
+Once that's done, let's rewrite our previous script using Artifex's sentiment analysis model.
+
+<CodeSnippet language='python' code={
+`
+import csv
+from artifex import Artifex
+
+sentiment_analyzer = Artifex().sentiment_analysis
+
+with open("user_comments.csv", mode="r", newline="", encoding="utf-8") as infile, open("user_comments_with_sentiment.csv", mode="w", newline="", encoding="utf-8") as outfile:
+    reader = csv.DictReader(infile)
+    fieldnames = reader.fieldnames + ["sentiment"]
+    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+    writer.writeheader()
+    for row in reader:
+        comment = row["comment"]
+        sentiment = sentiment_analyzer(comment)[0].label
+        row["sentiment"] = sentiment
+        writer.writerow(row)
+`
+} />
+
+What we did here is instantiate an Artifex object and use its `sentiment_analysis` method to 
+analyze each comment. We removed the `analyze_sentiment` function and all references to OpenAI API, 
+since we don't need it anymore. The rest of the script remains unchanged. If you need more 
+information on how to use Artifex or the sentiment analysis model specifically, please refer to 
+the <a href={Config.DOCS_SENTIMENT_ANALYSIS_TRAIN} target='_blank' rel='noreferrer'>Artifex documentation</a>.
+
+The new script gives us the same result as before.
+
+<CodeSnippet language='csv' code={
+`
+id,time,username,comment,sentiment
+1,2025-12-01 12:34:56,user1234,"I love this product! It has changed my life.",very_positive
+2,2025-12-02 14:23:45,user5678,"This product is okay, but it could be better.",neutral
+3,2025-12-03 16:12:34,user9101,"I hate it! It's the worst thing I've ever used.",very_negative
+...
+1000,2025-12-15 18:45:23,user4321,"Not bad, but not great either.",neutral
+`
+} />
+
+Cost of running the new script was $0, speed was comparable to the previous version, and most 
+importantly, our users' data never leaves our device and we don't risk having to hire a lawyer.
+
+## Conclusion
+
+In this post, we saw how to use Artifex to perform local sentiment analysis using a small, 
+task-specific LLM that runs entirely on our CPU. This approach allows us to analyze user feedback 
+while preserving their privacy.
+
+Artifex provides many other task-specific models that can be used for various NLP tasks, such as
+text classification, named entity recognition, guardrailing, and more. Feel free to explore the
+<a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>Artifex GitHub repository</a> and the
+<a href={Config.DOCS_URL} target='_blank' rel='noreferrer'>Artifex docs</a> for more information.
