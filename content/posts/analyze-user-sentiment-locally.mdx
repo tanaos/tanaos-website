@@ -16,7 +16,7 @@ As we noted in our previous <Link href={Config.OFFLINE_NLP_POST}>post on offline
 many developers have gotten used to throwing an LLM API, or at least a general-purpose LLM, at 
 whatever language-related problem they are facing. While this is probably the most practical choice, 
 or at least the one that comes to mind most easily, it is not necessarily to best one in terms 
-of **costs, data privacy, speed and** yes, sometimes even **performance**.
+of **costs, data privacy and speed**.
 
 Let's see why.
 
@@ -105,11 +105,12 @@ cost was negligible.
 
 ## The privacy problem
 
-So why did we even bother writing this tutorial? Well, if you think about it, each one of those reviews was sent 
-to a **third-party server**, together with the **username of the person who wrote it** and the **timestamp** at 
-which it was written. Even if we wrote the script in such a way that OpenAI API only receives the actual reviews
-(and not username and timestamp), chances are that some of the reviews themselves contain **personally identifiable 
-information** (PII), like names, locations, email addresses, phone numbers, etc.
+If it was so easy, then why did we even bother writing this tutorial? Well, if you think about it, each one of 
+those reviews was sent to a **third-party server**, together with the **username of the person who wrote it** 
+and the **timestamp** at which it was written. Even if we wrote the script in such a way that OpenAI API only 
+receives the actual reviews (and not username and timestamp), chances are that some of the reviews themselves
+contain **personally identifiable information** (PII), like names, locations, email addresses, phone numbers, 
+etc.
 
 Would our users be happy if they found out that, unbeknownst to them, their reviews and messages were sent to 
 a **third-party server for analysis**? Probably not. Is this **GDPR-compliant**? Certainly not. Could we technically
@@ -127,9 +128,11 @@ locally? Do we really have to look for one on Hugging Face and read its docs to 
 better plans for the weekend.
 
 This is where <Link href={Config.ARTIFEX_GITHUB_URL}>Artifex</Link> comes in. Artifex is a Python library that 
-provides easy access to a variety of small, task-specific LLMs that can run entirely on your CPU, as well as the
+provides easy access to a variety of small, task-specific LLMs that run entirely on your CPU, as well as the
 possibility to fine-tune them on your specific tasks. Our sentiment analysis task is standard enough that Artifex
-already provides a pre-trained model for it, without any need for fine-tuning.
+already provides a **pre-trained model** for it, without any need for fine-tuning.
+
+Let's see how to do it.
 
 ### The new script
 
@@ -161,9 +164,10 @@ with open("user_comments.csv", mode="r", newline="", encoding="utf-8") as infile
 
 What we did here is instantiate an Artifex object and use its `sentiment_analysis` method to 
 analyze each comment. We removed the `analyze_sentiment` function and all references to OpenAI API, 
-since we don't need it anymore. The rest of the script remains unchanged. If you need more 
-information on how to use Artifex or the sentiment analysis model specifically, please refer to 
-the <a href={Config.DOCS_SENTIMENT_ANALYSIS_TRAIN} target='_blank' rel='noreferrer'>Artifex documentation</a>.
+since we don't need it anymore. The rest of the script remains unchanged. 
+
+If you need more information on how to use Artifex or the sentiment analysis model specifically, please refer 
+to the <a href={Config.DOCS_SENTIMENT_ANALYSIS_TRAIN} target='_blank' rel='noreferrer'>Artifex documentation</a>.
 
 The new script gives us the same result as before.
 
