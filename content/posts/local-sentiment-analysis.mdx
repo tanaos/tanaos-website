@@ -1,0 +1,122 @@
+---
+title: "Analyze your users' sentiment without sending their data to third-party servers"
+subtitle: "Perform local sentiment analysis using a small, task-specific LLM that runs entirely on your CPU without making it go BRRR."
+date: 'December 16, 2025'
+tags: ['task-specific LLM', 'offline NLP', 'text classification', 'local sentiment analysis', 'privacy-first ML']
+imageName: 'sentiment-analysis.png'
+---
+
+import Link from 'next/link';
+
+import { Config } from '../../config';
+import { CodeSnippet } from '../../components/CodeSnippet';
+
+
+As we noted in our previous <Link href={Config.OFFLINE_NLP_POST}>post on offline NLP</Link>, 
+many developers have gotten used to throwing an LLM API, or at least a general-purpose LLM, at 
+whatever language-related problem they are facing. While this is probably the most practical choice, 
+or at least the one that comes to mind most easily, it is not necessarily to best one in terms 
+of **costs, data privacy, speed and** yes, sometimes even **performance**.
+
+Let's see why.
+
+## Our objective
+
+Let's say we have a tech product that's been on the market for a few months. Our social media pages
+are quite active, and we get lots of user feedback.
+
+As it turns out, most users love our product, some users find it *meh* and a handful of them 
+hate it. Or at least that's what our gut feeling is, based on comments to our social media posts 
+and direct messages we receive. If we want to have a more precise idea of what users think, however,
+**we need metrics**.
+
+## The classic approach
+
+That's easy enough. We will just find a way to download all user comments and DMs, put them in a 
+CSV file and feed it to the OpenAI API.
+
+The CSV file might look something like this.
+
+<CodeSnippet language='csv' code={
+`
+id,time,username,comment
+1,2025-12-01 12:34:56,user1234,"I love this product! It has changed my life."
+2,2025-12-02 14:23:45,user5678,"This product is okay, but it could be better."
+3,2025-12-03 16:12:34,user9101,"I hate it! It's the worst thing I've ever used."
+...
+1000,2025-12-15 18:45:23,user4321,"Not bad, but not great either."
+`
+} />
+
+*Classic user9101. Always so dramatic.*
+
+Now let's write a simple script that reads the CSV file, sends each comment to the OpenAI API
+for sentiment analysis, and stores the results in a new CSV file.
+
+<CodeSnippet language='python' code={
+`
+import csv
+from openai import OpenAI
+
+
+client = OpenAI(api_key="YOUR_API_KEY")
+
+def analyze_sentiment(comment):
+    prompt = f"Analyze the sentiment of the following comment: '{comment}'. Return a single word: 'very_positive', 'positive', 'neutral', 'negative' or 'very_negative'."
+
+    response = client.chat.completions.create(
+        model="gpt-4.1",
+        messages=[
+            {"role": "system", "content": "You are a sentiment analysis assistant."},
+            {"role": "user", "content": prompt}
+        ]
+    )
+    sentiment = response.choices[0].message.content.strip().lower()
+    return sentiment
+
+with open("user_comments.csv", mode="r", newline="", encoding="utf-8") as infile, open("user_comments_with_sentiment.csv", mode="w", newline="", encoding="utf-8") as outfile:
+    reader = csv.DictReader(infile)
+    fieldnames = reader.fieldnames + ["sentiment"]
+    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+    writer.writeheader()
+    for row in reader:
+        comment = row["comment"]
+        sentiment = analyze_sentiment(comment)
+        row["sentiment"] = sentiment
+        writer.writerow(row)
+`
+} />
+
+The result looks like this.
+
+<CodeSnippet language='csv' code={
+`
+id,time,username,comment,sentiment
+1,2025-12-01 12:34:56,user1234,"I love this product! It has changed my life.",very_positive
+2,2025-12-02 14:23:45,user5678,"This product is okay, but it could be better.",neutral
+3,2025-12-03 16:12:34,user9101,"I hate it! It's the worst thing I've ever used.",very_negative
+...
+1000,2025-12-15 18:45:23,user4321,"Not bad, but not great either.",neutral
+`
+} />
+
+The result is what we wanted, the process was relatively fast and, unless our CSV dataset had a billion rows, its 
+cost was negligible.
+
+## The privacy problem
+
+So why did we even bother writing this tutorial? Well, if you think about it, each one of those reviews was sent 
+to a **third-party server**, together with the **username of the person who wrote it** and the **timestamp** at 
+which it was written. Even if we wrote the script in such a way that OpenAI API only receives the actual reviews
+(and not username and timestamp), chances are that some of the reviews themselves contain **personally identifiable 
+information** (PII), like names, locations, email addresses, phone numbers, etc.
+
+Would our users be happy if they found out that, unbeknownst to them, their reviews and messages were sent to 
+a **third-party server for analysis**? Probably not. Is this **GDPR-compliant**? Certainly not. Could we technically
+**face a lawsuit**? I am afraid so.
+
+## A better approach: local sentiment analysis
+
+We could, in theory, bypass this problem by hosting our own instance of an open-source general-purpose LLM, like 
+Llama, DeepSeek or Mistral. But do we really want to host a **multi-billion parameter model** on our own servers, 
+**just to analyze product reviews**? Nah.
