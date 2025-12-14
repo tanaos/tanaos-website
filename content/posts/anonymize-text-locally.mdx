@@ -1,0 +1,154 @@
+---
+title: 'Sharing user data? Anonymize it locally and stay GDPR-compliant.'
+subtitle: 'Use a task-specific LLM to remove Personally Identifiable Information from text, so you can share data without compromising user privacy.'
+date: 'December 22, 2025'
+tags: ['task-specific LLM', 'offline NLP', 'token classification', 'text anonymization', 'Personally Identifiable Information', 'PII removal', 'privacy-first ML']
+imageName: 'text-anonymization.png'
+---
+
+import Link from 'next/link'
+
+import { Config } from '../../config';
+import { CodeSnippet } from '../../components/CodeSnippet';
+
+
+We have a large dataset containing user information and we need to share it with a shareholder, a 
+collegue from a different department, a third-party service provider, or even publish it for 
+research purposes. However, the data contains **Personally Identifiable Information (PII)** such 
+as names, email addresses, phone numbers, and other sensitive details that a dozen different 
+regulations **prevent us from disclosing**.
+
+What do we do? A few options come to mind:
+
+1. Going through the dataset, one row at a time, and manually removing Personally Identifiable 
+Information. Possible, but not a great idea: it's tedious, time-consuming and strongly error-prone.
+2. Using regular expressions or rule-based scripts to identify and redact PII. This might (or might 
+not) work for simple patterns like email addresses or phone numbers, but it often misses context 
+and more complex identifiers.
+3. Sending the data to a third-party service that specializes in data anonymization. This kind of 
+defeats the purpose of anonymization, as we're still sharing sensitive data with an external party.
+4. Using an LLM. This really depends on what we mean: if we're thinking of an LLM API, we're back
+to option 3; if we're thinking of a local LLM, this might actually work... if we have a GPU and a 
+few days (weeks?) to set up and fine-tune the model on the anonymization task.
+
+None of the options really cut it. The local LLM approach seems the most promising: it would allow 
+us to anonymize the entire dataset at once, locally and quickly. However, we **don't have a 
+GPU** or the time to **fine-tune the model**.
+
+## The task-specific LLM approach
+
+A related tool that allows us to benefit from the power and privacy of a local LLM, without
+the need for expensive hardware or time-consuming fine-tuning, are <Link href={Config.TASK_SPECIFIC_LLMS_POST}>
+Task-Specific LLMs.</Link>
+
+Task-Specific LLMs are small language models that have been pre-trained and fine-tuned on 
+specific tasks, such as text classification, token classification, summarization, etc. Because of
+their small size they **don't require a GPU** to run, which makes them ideal for local use on a
+standard personal computer, and because they have already been fine-tuned on the target task, they
+can be used out-of-the-box **without any additional training**. Exactly what we need.
+
+## Artifex
+
+<a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>Artifex</a> is an open-source
+Python library, developed by us at Tanaos, which makes it easy to use and fine-tune Task-Specific 
+LLMs for various NLP tasks, including text anonymization. Artifex provides a simple API to load 
+pre-trained Task-Specific LLMs and use them to process text data locally.
+
+### Text anonymization with Artifex
+
+Anonymizing text with Artifex is straightforward. Let's suppose we have a dataset in a CSV file,
+`user_data.csv`. Each row consists of an ID, a *message* field and a *comments* field, both of
+which may contain Personally Identifiable Information. We want to share the dataset with a 
+third-party, but first we need to anonymize the *message* and *comments* fields, removing any PII 
+while preserving the rest of the content.
+
+The dataset looks like this:
+
+<CodeSnippet language='csv' code={
+`id,message,comments
+1,"Hello, could you please send the report to our colleague Jane Smith?","Done, I CC'd Tom Lewis as well."
+2,"Contact me at (123) 456-7890 for further details.","Thanks, I will do that."
+3,"Please call Dr. Emily Johnson at 987-654-3210.","The phone number I have is (987) 654-3210, is that correct?"
+...
+1000,"My address is 123 Main St, Springfield.","Great, I'll see you there."
+`
+} />
+
+If you haven't already, install Artifex with
+
+<CodeSnippet code={`pip install artifex`} />
+
+Using Artifex to load a pre-trained Text Anonymization model and process the dataset is simple:
+
+<CodeSnippet language='python' code={
+`import csv
+from artifex import Artifex
+
+text_anonymizer = Artifex().text_anonymization
+
+with open("user_data.csv", mode="r", newline="", encoding="utf-8") as infile, open("user_data_anonymized.csv", mode="w", newline="", encoding="utf-8") as outfile:
+    reader = csv.DictReader(infile)
+    fieldnames = reader.fieldnames
+    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+    writer.writeheader()
+    for row in reader:
+        anonymized_message = text_anonymizer(row["message"])[0]
+        anonymized_comment = text_anonymizer(row["comments"])[0]
+        row["message"] = anonymized_message
+        row["comments"] = anonymized_comment
+        writer.writerow(row)
+`
+} />
+
+All we have done is import Artifex, load the text anonymization model, read the CSV file row by row,
+anonymize the *message* and *comments* fields, and write the anonymized data to a new CSV file.
+
+The resulting anonymized dataset looks like this:
+
+<CodeSnippet language='csv' code={
+`id,message,comments
+1,"Hello, could you please send the report to our colleague ...?","Done, I CC'd ... as well."
+2,"Contact me at ... for further details.","Thanks, I will do that."
+3,"Please call ... at [MASKED]","The phone number I have is [MASKED], is that correct?"
+1000,"My address is [MASKED], [MASKED]","Great, I'll see you there."
+`
+} />
+
+As you can see, all Personally Identifiable Information has been replaced with the token `[MASKED]`,
+while the rest of the content remains intact. If the `[MASKED]` token is not of our liking, we can
+customize it by passing the `mask_token` parameter to the `text_anonymizer` function:
+
+<CodeSnippet language='python' code={
+`anonymized_message = text_anonymizer(row["message"], mask_token="...")[0]
+anonymized_comment = text_anonymizer(row["comments"], mask_token="...")[0]
+` } />
+
+which results in:
+
+<CodeSnippet language='csv' code={
+`id,message,comments
+1,"Hello, could you please send the report to our colleague ...?","Done, I CC'd ... as well."
+2,"Contact me at ... for further details.","Thanks, I will do that."
+3,"Please call ... at ...","The phone number I have is ..., is that correct?"
+1000,"My address is ..., ...","Great, I'll see you there."
+`
+} />
+
+### The pre-trained model
+
+The `text_anonymization` method we used to anonymize our file employs a small, pre-trained language 
+model that was created with Artifex itself. If you would like to know more about the model 
+architecture or capapilities, or what the training process looked like, check out 
+the <a href={Config.TEXT_ANONYMIZATION_HF_LINK} target='_blank' rel='noreferrer'>model's Hugging Face page</a>.
+
+## Conclusion
+
+Using a Task-Specific LLM to anonymize text locally is the fastest, easiest and most 
+privacy-preserving way to remove Personally Identifiable Information from datasets and stay 
+GDPR-compliant.
+
+Artifex makes it easy to use not only text anonymization models, but also many other 
+Task-Specific LLMs for various NLP tasks, such as sentiment analysis, text classification,
+named entity recognition, guardrailing, and more. If you want to learn more about Artifex, feel 
+free to explore the <a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>Artifex GitHub repository</a> and the 
+<a href={Config.ARTIFEX_DOCUMENTATION_URL} target='_blank' rel='noreferrer'>Artifex documentation</a>.
