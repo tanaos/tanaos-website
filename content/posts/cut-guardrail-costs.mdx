@@ -45,8 +45,8 @@ the number of round-trips to the API server.
 doesn't everybody train their own little guardrail and save themselves tons of money?"*.
 
 As is often the case in AI, **the problem is data**. While *some* of the content that guardrails
-should guard against are common to most users — profanity, hate speech, violence or self-harm,
-adult content, prompt injection and jailbreak prevention... — a large portion of the guardrail's behavior
+should guard against are common to most users (profanity, hate speech, violence or self-harm,
+adult content, prompt injection and jailbreak prevention...) a large portion of the guardrail's behavior
 really **depends on each user's specific needs**: some users may need guardrails against legal or medical advice, 
 others may want to keep away from mentioning competitors, others may want to avoid political topics,
 and so on.
@@ -59,8 +59,8 @@ most developers (or even companies) **don't have**.
 
 Our <a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>Artifex library</a> 
 overcomes this problem by allowing you to fine-tune a small, general-purpose, pre-trained guardrail 
-model — one with a few, very general instructions already in place (such as profanity and hate 
-speech detection) — **without the need to provide any training dataset**. You simply describe what 
+model, meaning one with a few, very general instructions already in place (such as profanity and hate 
+speech detection), **without the need to provide any training dataset**. You simply describe what 
 the guardrail model should guard against, and Artifex will fine-tune the pre-trained model on 
 **synthetic data generated on-the-fly** based on your requirements.
 
@@ -78,8 +78,7 @@ be implemented as a FastAPI web service, with a single `/chat` endpoint that rec
 A bare-bone implementation may look like this:
 
 <CodeSnippet code={
-`
-from fastapi import FastAPI
+`from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
 
@@ -143,8 +142,7 @@ out-of-scope content).
 Let's add the two-levels guardrailing system to the our chatbot:
 
 <CodeSnippet code={
-`
-from fastapi import FastAPI
+`from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
 
@@ -266,8 +264,7 @@ First of all, install the Artifex library with
 Creating a guardrail model with Artifex is as simple as the following:
 
 <CodeSnippet code={
-`
-from artifex import Artifex
+`from artifex import Artifex
 
 gr = Artifex().guardrail
 
@@ -295,8 +292,7 @@ during training, based on the instructions we provided.
 Once the input guardrail model is ready, we can create the output guardrail model in a similar way:
 
 <CodeSnippet code={
-`
-from artifex import Artifex
+`from artifex import Artifex
 
 gr = Artifex().guardrail
 
@@ -316,8 +312,7 @@ Now that both guardrail models are ready, we can modify our FastAPI chatbot impl
 models instead of the API-based ones:
 
 <CodeSnippet code={
-`
-from fastapi import FastAPI
+`from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
 from artifex import Artifex
