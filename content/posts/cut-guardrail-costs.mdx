@@ -1,6 +1,6 @@
 ---
-title: 'Cut your chatbot costs and latency by 40% using local Guardrail models.'
-subtitle: 'Reduce your reliance on expensive API calls by offloading guardrail-specific queries to small guardrail models that run locally, without a GPU.'
+title: 'Cut your chatbot cost and latency by 40% using small, self-hosted Guardrail models.'
+subtitle: "Reduce your reliance on expensive API calls by offloading guardrail-specific queries to self-hosted, small guardrail models that don't need a GPU."
 date: 'December 12, 2025'
 tags: ['task-specific LLM', 'offline NLP', 'text classification', 'without training data', 'NLP', 'Artifex', '0.4.0']
 imageName: 'cut-guardrail-costs.png'
@@ -30,10 +30,11 @@ to the user.
 Latency is another important factor to consider: every additional API call adds network latency by increasing
 the number of round-trips to the API server.
 
-## So why don't people use local chatbots?
+## So why don't people self-host their guardrail model?
 
 *"If guardrailing tasks are so easy to get right even for small models..."*, you may ask, *"...then why 
-doesn't everybody train their own little guardrail and save themselves tons of money?"*.
+doesn't everybody train their own guardrail, self-host it on the same server as the chatbot backend 
+and save themselves tons of money?"*.
 
 As is often the case in AI, **the problem is data**. While *some* of the content that guardrails
 should guard against are common to most users (profanity, hate speech, violence or self-harm,
@@ -227,11 +228,12 @@ guardrailed chatbot is **2.5x slower** than the guardrai-free version.
     className='mb-5'
 />
 
-## Offloading guardrail tasks to a local model with Artifex
+## Offloading guardrail tasks to a self-hosted model with Artifex
 
-We now come to the main point of this tutorial. If only we had a way to offload guardrail-related queries to a
-small guardrail model that runs locally, instead of sending them to OpenAI's API, we could reduce the number of 
-API calls by two-thirds, thereby **cutting costs and latency** by a significant amount.
+We now come to the main point of this tutorial. If only we had a way to offload guardrail-related 
+queries to a small guardrail model that runs on the same server as the chatbot backend, instead of 
+sending them to OpenAI's API, we could reduce the number of API calls by two-thirds, 
+thereby **cutting costs and latency** by a significant amount.
 
 Such a solution is, in fact, possible with <a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>Artifex</a>. 
 Artifex is an open-source Python library for using and fine-tuning small, task-specific LLMs without the need for labeled
@@ -291,8 +293,8 @@ gr.train(
 `
 } />
 
-Now that both guardrail models are ready, we can modify our FastAPI chatbot implementation to use the local
-models instead of the API-based ones:
+Now that both guardrail models are ready, we can modify our FastAPI chatbot implementation to use 
+the guardrail models we just created instead of the API-based ones:
 
 <CodeSnippet code={
 `from fastapi import FastAPI
@@ -355,7 +357,7 @@ For more information on how to train, load and perform inference with guardrail 
 the <a href={Config.DOCS_GUARDRAIL_TRAIN} target='_blank' rel='noreferrer'>
 Artifex documentation</a>.
 
-### Cost & latency assessment of model that uses local guardrails
+### Cost & latency assessment of model that uses self-hosted guardrails
 
 Since all guardrail-related inference is now happening entirely on our CPU, OpenAI will not bill
 us for it. Our chatbot cost is therefore back to its original level (prior to adding the API-based
@@ -376,8 +378,8 @@ chatbot that uses API-based guardrails.
 ## Wrapping up
 
 In this tutorial, we have seen how to use Artifex to create small, task-specific guardrail 
-models that run locally on our CPU, thereby **cutting chatbot costs by 43% and latency by 53%**, by
-offloading guardrail-related queries to the local models.
+models that run on the same server as the chatbot backend, thereby **cutting chatbot costs by 
+43% and latency by 53%**, by offloading guardrail-related queries to the self-hosted models.
 
 This approach is not limited to guardrail tasks only: any kind of specialized text 
 classification task that would otherwise require expensive API calls can be offloaded to a small,
