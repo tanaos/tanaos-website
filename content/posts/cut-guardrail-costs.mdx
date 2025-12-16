@@ -1,6 +1,6 @@
 ---
 title: 'Cut your chatbot costs and latency by 40% using local Guardrail models.'
-subtitle: 'Use our Artifex library to reduce your reliance on expensive API calls by offloading guardrail-specific queries to a small model that runs locally.'
+subtitle: 'Reduce your reliance on expensive API calls by offloading guardrail-specific queries to small guardrail models that run locally, without a GPU.'
 date: 'December 12, 2025'
 tags: ['task-specific LLM', 'offline NLP', 'text classification', 'without training data', 'NLP', 'Artifex', '0.4.0']
 imageName: 'cut-guardrail-costs.png'
@@ -12,15 +12,6 @@ import Link from 'next/link';
 import { CodeSnippet } from '../../components/CodeSnippet';
 import { Config } from '../../config';
 
-
-<a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>Artifex</a> is our Python 
-library that allows you to use and fine-tune small, task-specific LLMs without the need for training 
-data or GPUs.
-
-In this tutorial, we will see how to use Artifex to **drastically reduce chatbot costs**, by offloading
-guardrail-specific queries to a local guardrail model created with Artifex.
-
-## Chatbot costs
 
 It may or may not surprise you that, in most chatbots implemented through an LLM API, guardrail-related queries 
 account on average for **40% of total API costs**. And by the way, if you need a refresher on what
@@ -45,8 +36,8 @@ the number of round-trips to the API server.
 doesn't everybody train their own little guardrail and save themselves tons of money?"*.
 
 As is often the case in AI, **the problem is data**. While *some* of the content that guardrails
-should guard against are common to most users — profanity, hate speech, violence or self-harm,
-adult content, prompt injection and jailbreak prevention... — a large portion of the guardrail's behavior
+should guard against are common to most users (profanity, hate speech, violence or self-harm,
+adult content, prompt injection and jailbreak prevention...) a large portion of the guardrail's behavior
 really **depends on each user's specific needs**: some users may need guardrails against legal or medical advice, 
 others may want to keep away from mentioning competitors, others may want to avoid political topics,
 and so on.
@@ -55,31 +46,21 @@ Guardrail models won't just magically know what they need to guard against: they
 teaching them requires **datasets with tens of thousands of labeled utterances**, which is something that 
 most developers (or even companies) **don't have**.
 
-## The solution: Artifex
-
-Our <a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>Artifex library</a> 
-overcomes this problem by allowing you to fine-tune a small, general-purpose, pre-trained guardrail 
-model — one with a few, very general instructions already in place (such as profanity and hate 
-speech detection) — **without the need to provide any training dataset**. You simply describe what 
-the guardrail model should guard against, and Artifex will fine-tune the pre-trained model on 
-**synthetic data generated on-the-fly** based on your requirements.
-
-Let's see how to do that.
-
 ## Regular chatbot implementation
 
 Let's suppose we have a little online store, and we want to develop a chatbot that acts as a 
 customer assistant. The chatbot should help customers track their orders, answer inquiries on 
 available products and so on.
 
-We will be using OpenAI's GPT-4.1 API, but the same principles apply to any other LLM API. The chatbot will 
-be implemented as a FastAPI web service, with a single `/chat` endpoint that receives user messages. 
+Since most developers would implement a guardrailed chatbot entirely through an LLM API, that's the
+scenario we will be using as our starting point. We will employ **OpenAI's GPT-4.1 API**, but the 
+same principles apply to any other LLM API. The chatbot will be implemented as a **FastAPI web 
+service**, with a single `/chat` endpoint that receives user messages. 
 
 A bare-bone implementation may look like this:
 
 <CodeSnippet code={
-`
-from fastapi import FastAPI
+`from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
 
@@ -143,8 +124,7 @@ out-of-scope content).
 Let's add the two-levels guardrailing system to the our chatbot:
 
 <CodeSnippet code={
-`
-from fastapi import FastAPI
+`from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
 
@@ -244,6 +224,7 @@ guardrailed chatbot is **2.5x slower** than the guardrai-free version.
     height={0}
     style={{ width: '100%', height: 'auto' }}
     unoptimized
+    className='mb-5'
 />
 
 ## Offloading guardrail tasks to a local model with Artifex
@@ -252,9 +233,9 @@ We now come to the main point of this tutorial. If only we had a way to offload 
 small guardrail model that runs locally, instead of sending them to OpenAI's API, we could reduce the number of 
 API calls by two-thirds, thereby **cutting costs and latency** by a significant amount.
 
-Such a solution is, in fact, possible with <a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>Artifex</a>.
-Artifex allows us to create a small guardrail model based on our requirements in under five minutes and without
-any training dataset.
+Such a solution is, in fact, possible with <a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>Artifex</a>. 
+Artifex is an open-source Python library for using and fine-tuning small, task-specific LLMs without the need for labeled
+data or GPUs.
 
 We will again create two separate guardrails, one for the input message and one for the output message, then
 replace the API-based guardrails with the ones running locally.
@@ -266,8 +247,7 @@ First of all, install the Artifex library with
 Creating a guardrail model with Artifex is as simple as the following:
 
 <CodeSnippet code={
-`
-from artifex import Artifex
+`from artifex import Artifex
 
 gr = Artifex().guardrail
 
@@ -295,8 +275,7 @@ during training, based on the instructions we provided.
 Once the input guardrail model is ready, we can create the output guardrail model in a similar way:
 
 <CodeSnippet code={
-`
-from artifex import Artifex
+`from artifex import Artifex
 
 gr = Artifex().guardrail
 
@@ -316,8 +295,7 @@ Now that both guardrail models are ready, we can modify our FastAPI chatbot impl
 models instead of the API-based ones:
 
 <CodeSnippet code={
-`
-from fastapi import FastAPI
+`from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
 from artifex import Artifex
@@ -398,13 +376,13 @@ chatbot that uses API-based guardrails.
 ## Wrapping up
 
 In this tutorial, we have seen how to use Artifex to create small, task-specific guardrail 
-models that run locally on our CPU, thereby **drastically cutting chatbot costs and latency** by
+models that run locally on our CPU, thereby **cutting chatbot costs by 43% and latency by 53%**, by
 offloading guardrail-related queries to the local models.
 
 This approach is not limited to guardrail tasks only: any kind of specialized text 
 classification task that would otherwise require expensive API calls can be offloaded to a small,
 locally running model created with Artifex, thereby reducing costs and latency across the board.
 
-If you want to learn more about Artifex and how to use it, check out our
+If you want to learn more about Artifex and how to use it, check out its
 <a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>GitHub repository</a> and
 <a href={Config.ARTIFEX_DOCS_URL} target='_blank' rel='noreferrer'>documentation</a>.

@@ -2,7 +2,7 @@
 title: "Analyze your users' sentiment without sending their data to third-party servers"
 subtitle: "Perform local sentiment analysis using a small, task-specific LLM that runs entirely on your CPU without making it go BRRR."
 date: 'December 16, 2025'
-tags: ['task-specific LLM', 'offline NLP', 'text classification', 'local sentiment analysis', 'privacy-first ML']
+tags: ['task-specific LLM', 'offline NLP', 'text classification', 'local sentiment analysis', 'sentiment classification', 'privacy-first ML']
 imageName: 'sentiment-analysis.png'
 ---
 
@@ -38,8 +38,7 @@ CSV file and feed it to the OpenAI API.
 The CSV file might look something like this.
 
 <CodeSnippet language='csv' code={
-`
-id,time,username,comment
+`id,time,username,comment
 1,2025-12-01 12:34:56,user1234,"I love this product! It has changed my life."
 2,2025-12-02 14:23:45,user5678,"This product is okay, but it could be better."
 3,2025-12-03 16:12:34,user9101,"I hate it! It's the worst thing I've ever used."
@@ -54,8 +53,7 @@ Now let's write a simple script that reads the CSV file, sends each comment to t
 for sentiment analysis, and stores the results in a new CSV file.
 
 <CodeSnippet language='python' code={
-`
-import csv
+`import csv
 from openai import OpenAI
 
 
@@ -90,8 +88,7 @@ with open("user_comments.csv", mode="r", newline="", encoding="utf-8") as infile
 The result looks like this.
 
 <CodeSnippet language='csv' code={
-`
-id,time,username,comment,sentiment
+`id,time,username,comment,sentiment
 1,2025-12-01 12:34:56,user1234,"I love this product! It has changed my life.",very_positive
 2,2025-12-02 14:23:45,user5678,"This product is okay, but it could be better.",neutral
 3,2025-12-03 16:12:34,user9101,"I hate it! It's the worst thing I've ever used.",very_negative
@@ -143,8 +140,7 @@ First of all, let's install Artifex.
 Once that's done, let's rewrite our previous script using Artifex's sentiment analysis model.
 
 <CodeSnippet language='python' code={
-`
-import csv
+`import csv
 from artifex import Artifex
 
 sentiment_analyzer = Artifex().sentiment_analysis
@@ -172,8 +168,7 @@ to the <a href={Config.DOCS_SENTIMENT_ANALYSIS_TRAIN} target='_blank' rel='noref
 The new script gives us the same result as before.
 
 <CodeSnippet language='csv' code={
-`
-id,time,username,comment,sentiment
+`id,time,username,comment,sentiment
 1,2025-12-01 12:34:56,user1234,"I love this product! It has changed my life.",very_positive
 2,2025-12-02 14:23:45,user5678,"This product is okay, but it could be better.",neutral
 3,2025-12-03 16:12:34,user9101,"I hate it! It's the worst thing I've ever used.",very_negative
@@ -184,6 +179,13 @@ id,time,username,comment,sentiment
 
 Cost of running the new script was $0, speed was comparable to the previous version, and most 
 importantly, our users' data never leaves our device and we don't risk having to hire a lawyer.
+
+### The pre-trained model
+
+The `sentiment_analysis` method we used in the script above employs a small, pre-trained language 
+model that was created with Artifex itself. If you would like to know more about the model 
+architecture or capapilities, or what the training process looked like, check out 
+the <a href={Config.SENTIMENT_ANALYSIS_HF_LINK} target='_blank' rel='noreferrer'>model's Hugging Face page</a>.
 
 ## Conclusion
 
