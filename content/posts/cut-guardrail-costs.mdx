@@ -92,7 +92,7 @@ async def chat_endpoint(req: ChatRequest):
 `
 } />
 
-### Cost & latency assessment of guardrail-free model
+### Cost & latency assessment of guardrail-free chatbot
 
 As of the time of writing, the GPT-4.1 API costs $2 per 1M input tokens and $8 per 1M output tokens. Since the 
 system prompt we provided is 30 tokens long, if we assume that the average user message is 20 tokens long and the 
@@ -200,7 +200,7 @@ async def chat_endpoint(req: ChatRequest):
 `
 } />
 
-### Cost & latency assessment of guardrailed model
+### Cost & latency assessment of guardrailed chatbot
 
 Boom, our chatbot is now much safer, but its **cost has increased dramatically**. For every user message, we 
 are now making not one, but three separate requests to OpenAI's API: one for the input guardrail, one for chat 
@@ -357,7 +357,7 @@ For more information on how to train, load and perform inference with guardrail 
 the <a href={Config.DOCS_GUARDRAIL_TRAIN} target='_blank' rel='noreferrer'>
 Artifex documentation</a>.
 
-### Cost & latency assessment of model that uses self-hosted guardrails
+### Cost & latency assessment of chatbot that uses self-hosted guardrails
 
 Since all guardrail-related inference is now happening entirely on our CPU, OpenAI will not bill
 us for it. Our chatbot cost is therefore back to its original level (prior to adding the API-based
