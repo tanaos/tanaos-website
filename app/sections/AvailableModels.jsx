@@ -23,6 +23,33 @@ export const AvailableModels = () => {
                     </thead>
                     <tbody>
                         <tr>
+                            <td>Text Classification</td>
+                            <td>
+                                No default model — must be trained
+                            </td>
+                            <td>0.1B params, 470Mb</td>
+                            <td>
+                                Performs general-purpose text classification based on the user 
+                                requirements.
+                            </td>
+                            <td>
+                                <a 
+                                    href={Config.DOCS_TEXT_CLASSIFICATION_INFERENCE}
+                                    target='_blank' rel='noreferrer'
+                                >
+                                    Code Examples
+                                </a>
+                            </td>
+                            <td>
+                                <a 
+                                    href={Config.DOCS_TEXT_CLASSIFICATION_TRAIN}
+                                    target='_blank' rel='noreferrer'
+                                >
+                                    Code Examples
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
                             <td>Guardrail</td>
                             <td><a 
                                 href={Config.GUARDRAIL_HF_LINK}

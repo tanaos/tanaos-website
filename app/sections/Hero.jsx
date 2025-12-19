@@ -25,7 +25,7 @@ export const Hero = () => {
                 </a>
                 <a
                     className='btn btn-white'
-                    href={Config.DOCS_GUARDRAIL_EXAMPLES}
+                    href={Config.DOCS_TEXT_CLASSIFICATION_EXAMPLES}
                     target='_blank' rel='noreferrer'
                 >
                     Try it out <BoxArrowUpRight className='ms-1' />

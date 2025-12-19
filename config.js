@@ -11,6 +11,10 @@ export const Config = {
     // Docs
     DOCS_URL: 'https://docs.tanaos.com/artifex/',
 
+    DOCS_TEXT_CLASSIFICATION_EXAMPLES: 'https://docs.tanaos.com/artifex/text-classification/code-examples/',
+    DOCS_TEXT_CLASSIFICATION_TRAIN: 'https://docs.tanaos.com/artifex/text-classification/train/',
+    DOCS_TEXT_CLASSIFICATION_INFERENCE: 'https://docs.tanaos.com/artifex/text-classification/inference/',
+
     DOCS_GUARDRAIL_EXAMPLES: 'https://docs.tanaos.com/artifex/guardrail/code_examples/',
     DOCS_GUARDRAIL_TRAIN: 'https://docs.tanaos.com/artifex/guardrail/train/',
     DOCS_GUARDRAIL_INFERENCE: 'https://docs.tanaos.com/artifex/guardrail/inference/',
