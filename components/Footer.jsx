@@ -14,7 +14,6 @@ export const Footer = () => {
         <div className={`col-12 col-md-4 text-md-end mt-4 mt-md-0 ${styles['footer-links']} m-0 p-0`}>
             <Link href={Config.HOME_ROUTE}>Home</Link>
             <Link href={Config.BLOG_ROUTE}>Blog</Link>
-            <a href={Config.DOCS_URL} rel='noreferrer' target='_blank'>Docs</a>
             <a href={Config.PLATFORM_BASE_URL} rel='noreferrer' target='_blank'>Platform</a>
         </div>
     </div>

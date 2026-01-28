@@ -9,57 +9,62 @@ export const GetStarted = () => {
     return <div id='quickstart' className={`${styles['quickstart-section']} global-padding`}>
         <div className='row'>
             <h2 className='mb-5'>How to use</h2>
-            <div className={`col-12 col-md-4 ${styles['margin-end']}`}>
-                <h3 className='mb-5'>Casual usage: free</h3>
-                <h4>Use our open source <a href={Config.ARTIFEX_GITHUB_URL} rel='noreferrer' target='_blank'>
-                    Artifex library
-                </a></h4>
-                <p>
-                    Install Artifex with <code>pip install artifex</code> and use
-                    it for free. <a href={Config.DOCS_GUARDRAIL_TRAIN} rel='noreferrer' target='_blank'>
-                        Read the docs <BoxArrowUpRight />
-                    </a> to learn how to integrate it into your project.
-                </p>
-                <a 
-                    className='btn btn-primary mt-3'
-                    href={Config.ARTIFEX_GITHUB_URL}
-                    rel='noreferrer' target='_blank'
-                >
-                    Start for free <Github className='ms-1' />
-                </a>
-            </div>
-            <div className='col-12 col-md-8 ps-md-4 mt-5 mt-md-0 mb-5 mb-md-0'>
-                <h3 className='mb-5'>Advanced usage: pick a plan for better performance</h3>
+            <div>
                 <div className='row'>
                     <div className='col-12 col-md-4'>
-                        <h4><span className={`${styles['step-number']}`}>1</span>Signup</h4>
+                        <h4><span className={`${styles['step-number']}`}>1</span>Sign up</h4>
                         <p>
-                            Get started by creating an account on our platform.
+                            Get started by creating a free account on our platform.
                         </p>
                     </div>
                     <div className='col-12 col-md-4'>
-                        <h4><span className={`${styles['step-number']}`}>2</span>Pick a plan</h4>
+                        <h4><span className={`${styles['step-number']}`}>2</span>Get a free API key</h4>
                         <p>
-                            Pick a plan to get access to higher rate limits and better model performance.
+                            Generate a free API key from the API Key page.
                         </p>
                     </div>
                     <div className='col-12 col-md-4'>
-                        <h4><span className={`${styles['step-number']}`}>3</span>Get an API key</h4>
+                        <h4><span className={`${styles['step-number']}`}>3</span>Use the API</h4>
                         <p>
-                            Create an api key and pass it to <a 
-                                href={Config.ARTIFEX_GITHUB_URL} 
-                                rel='noreferrer' target='_blank'
-                            >Artifex <BoxArrowUpRight /></a> at initialization.
+                            Pass your API Key in the <code>X-API-Key</code> header.
                         </p>
                     </div>
                 </div>
-                <a 
-                    className='btn btn-white mt-1'
-                    href={Config.PLATFORM_BASE_URL}
-                    rel='noreferrer' target='_blank'
-                >
-                    Signup <ArrowRight className='ms-1' />
-                </a>
+                <div className='row mb-5'>
+                    <div className='col-12 col-md-4'>
+                        <a 
+                            className='btn btn-primary mt-1'
+                            href={Config.PLATFORM_BASE_URL}
+                            rel='noreferrer' target='_blank'
+                        >
+                            Sign up <ArrowRight className='ms-1' />
+                        </a>
+                    </div>
+                    <div className='col-12 col-md-4'>
+                        <a 
+                            className='btn btn-primary mt-1'
+                            href={Config.PLATFORM_BASE_URL}
+                            rel='noreferrer' target='_blank'
+                        >
+                            Get API Key <ArrowRight className='ms-1' />
+                        </a>
+                    </div>
+                    <div className='col-12 col-md-4'>
+                        <a 
+                            className='btn btn-primary mt-1'
+                            href={Config.PLATFORM_BASE_URL}
+                            rel='noreferrer' target='_blank'
+                        >
+                            Use the API <ArrowRight className='ms-1' />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className='row mt-5'>
+            <h2 className='mb-5'>Need more?</h2>
+            <div>
+                Pick one of our plans to unlock higher rate limits.
             </div>
         </div>
     </div>

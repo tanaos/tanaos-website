@@ -1,6 +1,6 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { Github } from 'react-bootstrap-icons';
+import { BoxArrowUpRight } from 'react-bootstrap-icons';
 
 import { Config } from '../config';
 import styles from './Navigation.module.scss';
@@ -19,15 +19,6 @@ export const Navigation = ({ onLinkClick }) => {
             Blog
         </Link>
         <a 
-            href={Config.DOCS_URL} 
-            rel='noreferrer'
-            target='_blank'
-            className={'mt-4 mt-md-0 ms-md-4'}
-            onClick={onLinkClick}
-        >
-            Docs
-        </a>
-        <a 
             href={Config.PLATFORM_BASE_URL} 
             rel='noreferrer'
             target='_blank'
@@ -42,7 +33,7 @@ export const Navigation = ({ onLinkClick }) => {
             target='_blank' rel='noreferrer'
             onClick={onLinkClick}
         >
-            See on GitHub <Github className='ms-1' />
+            Try it out <BoxArrowUpRight className='ms-1' />
         </a>
     </div>
 };

@@ -4,6 +4,11 @@
     color: $font-color-dark;
     line-height: $line-height-hero;
     font-weight: 500;
+
+    b {
+        font-weight: 600;
+        color: $primary-500;
+    }
 }
 
 .hero-subtitle {

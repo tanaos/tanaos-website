@@ -6,8 +6,8 @@ import { RecentBlogPosts } from './sections/RecentBlogPosts';
 import { Config } from '../config';
 
 
-const title = 'Task-specific LLMs for NLP and Text Classification | Tanaos'
-const description = 'Train task-specific LLMs without training data, for offline NLP and Text Classification tasks, such as Guardrail Models and Intent Classification.'
+const title = 'Low-latency API for real-time NLP tasks | Tanaos'
+const description = 'Get under 100ms latency on various NLP tasks such as guardrail, text anonymization and NER. All in a single, easy-to-use API.'
 const applicationName = 'Tanaos Website'
 const url = Config.WEBSITE_BASE_URL
 
@@ -48,7 +48,6 @@ export const HomePage = () => {
         <WhyTanaos />
         <AvailableModels />
         <GetStarted />
-        <RecentBlogPosts />
     </div>;
 };
 

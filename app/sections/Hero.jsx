@@ -1,4 +1,4 @@
-import { Github, BoxArrowUpRight } from 'react-bootstrap-icons';
+import { BoxArrowUpRight } from 'react-bootstrap-icons';
 import Image from 'next/image';
 
 import styles from './Hero.module.scss';
@@ -9,26 +9,25 @@ export const Hero = () => {
     return <div className='row m-0 global-padding mb-0 mb-md-5'>
         <div className='col-12 col-md-6 m-0 p-0 pt-md-5'>
             <h1 className={styles['hero-title']}>
-                Use and fine-tune small, task-specific LLMs. Without training data or GPUs.
+                <b>Low-latency</b> API, built for <b>real-time</b> NLP applications.
             </h1>
             <h2 className={`mt-4 ${styles['hero-subtitle']}`}>
-                Reduce LLM API <b>costs</b>, get built-in <b>privacy</b> and <b>improve 
-                performance</b> on your tasks by using task-specific, local, small LLMs.
+                Easy-to-use REST API with <b>under 100ms</b> end-to-end latency for 
+                7 different NLP tasks, including Guardrail, Text Anonymization, NER and Reranking.
             </h2>
             <div className='mt-5'>
-                <a 
-                    className='btn btn-white me-5'
-                    href={Config.ARTIFEX_GITHUB_URL}
-                    target='_blank' rel='noreferrer'
-                >
-                    See on GitHub <Github className='ms-1' />
-                </a>
                 <a
-                    className='btn btn-white'
+                    className='btn btn-white me-5'
                     href={Config.DOCS_TEXT_CLASSIFICATION_EXAMPLES}
                     target='_blank' rel='noreferrer'
                 >
                     Try it out <BoxArrowUpRight className='ms-1' />
+                </a>
+                <a 
+                    className='btn btn-white'
+                    href='#available-tasks'
+                >
+                    See available tasks <BoxArrowUpRight className='ms-1' />
                 </a>
             </div>
         </div>

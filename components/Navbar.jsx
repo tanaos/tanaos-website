@@ -55,7 +55,7 @@ export const Navbar = () => {
         }
 
         if (bannerDisplayed === 'true') {
-            setDisplayBanner(true);
+            setDisplayBanner(false); // Set to true to enable the banner
         }
     }, []);
 
