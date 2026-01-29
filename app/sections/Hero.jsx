@@ -15,9 +15,9 @@ export const Hero = () => {
                 Easy-to-use REST API with <b>under 100ms</b> end-to-end latency for 
                 8 different NLP tasks, including Guardrail, Text Anonymization, NER and Spam Detection.
             </h2>
-            <div className='mt-5'>
+            <div className='mt-5 d-flex flex-nowrap gap-2 gap-md-4'>
                 <a
-                    className='btn btn-white me-5'
+                    className='btn btn-white'
                     href={Config.TANAOS_API_DEMO}
                     target='_blank' rel='noreferrer'
                 >
