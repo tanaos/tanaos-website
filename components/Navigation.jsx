@@ -29,7 +29,7 @@ export const Navigation = ({ onLinkClick }) => {
         </a>
         <a 
             className='btn btn-white mt-4 mt-md-0 ms-md-4'
-            href={Config.ARTIFEX_GITHUB_URL}
+            href={Config.TANAOS_API_DEMO}
             target='_blank' rel='noreferrer'
             onClick={onLinkClick}
         >

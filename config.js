@@ -7,6 +7,7 @@ export const Config = {
 
     // Platform
     PLATFORM_BASE_URL: 'https://platform.tanaos.com',
+    PLATFORM_PLANS_PAGE_URL: 'https://platform.tanaos.com/profile/plans',
 
     // Docs
     DOCS_URL: 'https://docs.tanaos.com/artifex/',
@@ -36,6 +37,16 @@ export const Config = {
 
     DOCS_TEXT_ANONYMIZATION_TRAIN: 'https://docs.tanaos.com/artifex/text-anonymization/train/',
     DOCS_TEXT_ANONYMIZATION_INFERENCE: 'https://docs.tanaos.com/artifex/text-anonymization/inference/',
+
+    TANAOS_API_DEMO: 'https://colab.research.google.com/github/tanaos/tanaos-docs/blob/master/blueprints/tanaos-api/tanaos-api-tutorial.ipynb',
+    get TANAOS_API_DEMO_GUARDRAIL() { return `${this.TANAOS_API_DEMO}#scrollTo=ptAF6Efb3-6-`; },
+    get TANAOS_API_DEMO_INTENT_CLASSIFICATION() { return `${this.TANAOS_API_DEMO}#scrollTo=jytV4CBv4nT7`; },
+    get TANAOS_API_DEMO_SPAM_DETECTION() { return `${this.TANAOS_API_DEMO}#scrollTo=3418gc_N4-fF`; },
+    get TANAOS_API_DEMO_SENTIMENT_ANALYSIS() { return `${this.TANAOS_API_DEMO}#scrollTo=nOvE4a5H5QUX`; },
+    get TANAOS_API_DEMO_EMOTION_DETECTION() { return `${this.TANAOS_API_DEMO}#scrollTo=gdcmvZlR55K2`; },
+    get TANAOS_API_DEMO_NAMED_ENTITY_RECOGNITION() { return `${this.TANAOS_API_DEMO}#scrollTo=cEnZ2iu64IqM`; },
+    get TANAOS_API_DEMO_TEXT_ANONYMIZATION() { return `${this.TANAOS_API_DEMO}#scrollTo=ZDbuM6Xk4atr`; },
+    get TANAOS_API_DEMO_TOPIC_CLASSIFICATION() { return `${this.TANAOS_API_DEMO}#scrollTo=2hb4qVeQ6JQH`; },
 
     // Github
     SYNTHEX_GITHUB_URL: 'https://github.com/tanaos/synthex',

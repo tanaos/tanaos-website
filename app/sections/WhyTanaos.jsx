@@ -16,10 +16,10 @@ export const WhyTanaos = () => {
                     </p>
                 </div>
                 <div className={`col-12 col-md-4 mt-4 mt-md-0 ${styles['feature-box']}`}>
-                    <div className={styles['icon']}>7 models</div>
-                    <h3>7 specialized models, single API</h3>
+                    <div className={styles['icon']}>8 models</div>
+                    <h3>8 specialized models, single API</h3>
                     <p>
-                        Get access to 7 specialized models for 7 different NLP tasks, including 
+                        Get access to 8 specialized models for 8 different NLP tasks, including 
                         Text Anonymization, Named Entity Recognition, Reranking and Guardrail.
                     </p>
                 </div>

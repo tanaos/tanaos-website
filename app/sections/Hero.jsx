@@ -13,12 +13,12 @@ export const Hero = () => {
             </h1>
             <h2 className={`mt-4 ${styles['hero-subtitle']}`}>
                 Easy-to-use REST API with <b>under 100ms</b> end-to-end latency for 
-                7 different NLP tasks, including Guardrail, Text Anonymization, NER and Reranking.
+                8 different NLP tasks, including Guardrail, Text Anonymization, NER and Spam Detection.
             </h2>
             <div className='mt-5'>
                 <a
                     className='btn btn-white me-5'
-                    href={Config.DOCS_TEXT_CLASSIFICATION_EXAMPLES}
+                    href={Config.TANAOS_API_DEMO}
                     target='_blank' rel='noreferrer'
                 >
                     Try it out <BoxArrowUpRight className='ms-1' />
