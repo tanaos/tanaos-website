@@ -9,7 +9,7 @@ export const Hero = () => {
     return <div className='row m-0 global-padding mb-0 mb-md-5'>
         <div className='col-12 col-md-6 m-0 p-0 pt-md-5'>
             <h1 className={styles['hero-title']}>
-                <b>Low-latency</b> API, built for <b>real-time</b> NLP applications.
+                <b>Low-latency</b> NLP API, built for <b>real-time</b> applications.
             </h1>
             <h2 className={`mt-4 ${styles['hero-subtitle']}`}>
                 Easy-to-use REST API with <b>under 100ms</b> end-to-end latency for 
