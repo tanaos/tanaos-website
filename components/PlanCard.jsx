@@ -5,7 +5,7 @@ import { Config } from '../config';
 
 
 export const PlanCard = ({ 
-    planName, planPrice, planCurrency, planDescription, features, buttonDisabled, linkText
+    planName, planPrice, planCurrency, planDescription, features, buttonDisabled, linkUrl, linkText
 }) => {
 
     return <div className={styles['plan-card']}>
@@ -18,13 +18,13 @@ export const PlanCard = ({
         <div className={`mt-5 ${styles['link-container']}`}>
             <a 
                 className={`${styles['plan-link']} ${buttonDisabled ? styles['disabled'] : ''}`}
-                href={Config.PLATFORM_PLANS_PAGE_URL}
+                href={linkUrl}
                 disabled={buttonDisabled}
+                rel='noreferrer noopener'
+                target='_blank'
             >
-                {  
-                    linkText ? linkText : buttonDisabled ? 'Default plan' : 
-                    <>{`To plan selection`}<ArrowRight className='ms-1' /></>
-                }
+                {linkText}
+                {!buttonDisabled && <ArrowRight className='ms-1' />}
             </a>
         </div>
         <div className='mt-5'>

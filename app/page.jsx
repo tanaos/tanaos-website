@@ -2,12 +2,11 @@ import { Hero } from './sections/Hero'
 import { GetStarted } from './sections/GetStarted';
 import { WhyTanaos } from './sections/WhyTanaos';
 import { AvailableModels } from './sections/AvailableModels';
-import { RecentBlogPosts } from './sections/RecentBlogPosts';
 import { Config } from '../config';
 
 
-const title = 'Low-latency NLP API for real-time applications | Tanaos'
-const description = 'Get under 100ms latency on various NLP tasks such as guardrail, text anonymization and NER. All in a single, easy-to-use API.'
+const title = 'Low-latency Small Language Model API for real-time applications | Tanaos'
+const description = 'Get under 100ms inference latency with various Small Language Models such as Guardrail, Text Anonymization and NER. All in a single, easy-to-use API.'
 const applicationName = 'Tanaos Website'
 const url = Config.WEBSITE_BASE_URL
 

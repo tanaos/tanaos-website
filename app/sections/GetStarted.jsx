@@ -66,7 +66,9 @@ export const GetStarted = () => {
                         planPrice={'0'} 
                         planCurrency={'eur'}
                         planDescription={'For individuals that are just getting started.'}
-                        buttonDisabled={true}
+                        linkText={'Try it out'}
+                        linkUrl={Config.TANAOS_API_DEMO}
+                        buttonDisabled={false}
                         features={[
                             { icon: <ChevronUp />, text: 'Max 50 requests per day.' },
                         ]}
@@ -77,6 +79,8 @@ export const GetStarted = () => {
                         planName={'Plus'} 
                         planPrice={'9.99'} 
                         planCurrency={'eur'}
+                        linkText={'To plan selection'}
+                        linkUrl={Config.PLATFORM_PLANS_PAGE_URL}
                         planDescription={'For individuals or small teams growing their usage.'}
                         buttonDisabled={false}
                         features={[
@@ -89,6 +93,8 @@ export const GetStarted = () => {
                         planName={'Premium'} 
                         planPrice={'49.99'} 
                         planCurrency={'eur'}
+                        linkText={'To plan selection'}
+                        linkUrl={Config.PLATFORM_PLANS_PAGE_URL}
                         planDescription={'For professionals and teams needing more.'}
                         buttonDisabled={false}
                         features={[

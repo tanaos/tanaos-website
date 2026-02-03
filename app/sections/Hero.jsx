@@ -9,11 +9,12 @@ export const Hero = () => {
     return <div className='row m-0 global-padding mb-0 mb-md-5'>
         <div className='col-12 col-md-6 m-0 p-0 pt-md-5'>
             <h1 className={styles['hero-title']}>
-                <b>Low-latency</b> NLP API, built for <b>real-time</b> applications.
+                <b>Low-latency</b> Small Language Model API, built for <b>real-time</b> applications.
             </h1>
             <h2 className={`mt-4 ${styles['hero-subtitle']}`}>
                 Easy-to-use REST API with <b>under 100ms</b> end-to-end latency for 
-                8 different NLP tasks, including Guardrail, Text Anonymization, NER and Spam Detection.
+                8 different <b>Small Language models</b>, including Guardrail, Text Anonymization, 
+                NER and Spam Detection.
             </h2>
             <div className='mt-5 d-flex flex-nowrap gap-2 gap-md-4'>
                 <a
@@ -27,7 +28,7 @@ export const Hero = () => {
                     className='btn btn-white'
                     href='#available-tasks'
                 >
-                    See available tasks <BoxArrowUpRight className='ms-1' />
+                    See available models <BoxArrowUpRight className='ms-1' />
                 </a>
             </div>
         </div>

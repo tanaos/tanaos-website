@@ -6,7 +6,7 @@ export const AvailableModels = () => {
 
     return <div className={`global-padding ${styles['available-models']}`} id='available-tasks'>
         <div className={`d-flex align-items-center justify-content-between ${styles['section-header']} mb-5`}>
-            <h2>Available Tasks</h2>
+            <h2>Available Small Language Models</h2>
         </div>
         <div className='row'>
             <div className='table-responsive'>

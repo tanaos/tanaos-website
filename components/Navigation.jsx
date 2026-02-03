@@ -11,13 +11,13 @@ export const Navigation = ({ onLinkClick }) => {
     const url = usePathname();
 
     return <div className={`${styles['navigation']}`}>
-        <Link 
+        {/* <Link 
             href={Config.BLOG_ROUTE} 
             className={`mt-4 mt-md-0 ms-md-4 ${url === Config.BLOG_ROUTE && styles['highlighted']}`}
             onClick={onLinkClick}
         >
             Blog
-        </Link>
+        </Link> */}
         <a 
             href={Config.PLATFORM_BASE_URL} 
             rel='noreferrer'
