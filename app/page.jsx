@@ -2,6 +2,7 @@ import { Hero } from './sections/Hero'
 import { GetStarted } from './sections/GetStarted';
 import { WhyTanaos } from './sections/WhyTanaos';
 import { AvailableModels } from './sections/AvailableModels';
+import { Statistics } from './sections/Statistics';
 import { Config } from '../config';
 
 
@@ -44,6 +45,7 @@ export const metadata = {
 export const HomePage = () => {
     return <div className='homepage-layout'>
         <Hero />
+        <Statistics />
         <WhyTanaos />
         <AvailableModels />
         <GetStarted />

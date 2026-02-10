@@ -9,12 +9,12 @@ export const Hero = () => {
     return <div className='row m-0 global-padding mb-0 mb-md-5'>
         <div className='col-12 col-md-6 m-0 p-0 pt-md-5'>
             <h1 className={styles['hero-title']}>
-                <b>Low-latency</b> Small Language Model API, built for <b>real-time</b> applications.
+                <b>Small Language Models</b> for all your needs. Use them <b>locally</b> or <b>via API</b>.
             </h1>
             <h2 className={`mt-4 ${styles['hero-subtitle']}`}>
-                Easy-to-use REST API with <b>under 100ms</b> end-to-end latency for 
-                8 different <b>Small Language models</b>, including Guardrail, Text Anonymization, 
-                NER and Spam Detection.
+                At Tanaos we develop task-specific SmallLMs for any text processing task and language.
+                Use them through our API or get in touch to get a custom model that you can run
+                on your own hardware.
             </h2>
             <div className='mt-5 d-flex flex-nowrap gap-2 gap-md-4'>
                 <a

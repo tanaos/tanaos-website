@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+
+.statistics-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-number {
+    font-size: 4rem;
+    font-weight: 600;
+    color: $primary-500;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: $font-size-h5;
+    color: $font-color-light;
+    font-weight: 500;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .statistics-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    
+    .stat-number {
+        font-size: 3.5rem;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+    }
+}
