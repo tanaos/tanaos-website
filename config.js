@@ -73,11 +73,13 @@ export const Config = {
     GUARDRAIL_MODELS_POST: '/blog/guardrail-models/',
 
     // Hugging Face
-    GUARDRAIL_HF_LINK: 'https://huggingface.co/tanaos/tanaos-guardrail-v1',
+    GUARDRAIL_HF_LINK: 'https://huggingface.co/tanaos/tanaos-guardrail-v2',
     INTENT_CLASSIFICATION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-intent-classifier-v1',
     RERANKER_HF_LINK: 'https://huggingface.co/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1',
     SENTIMENT_ANALYSIS_HF_LINK: 'https://huggingface.co/tanaos/tanaos-sentiment-analysis-v1',
     EMOTION_DETECTION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-emotion-detection-v1',
     NER_HF_LINK: 'https://huggingface.co/tanaos/tanaos-NER-v1',
-    TEXT_ANONYMIZATION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-text-anonymizer-v1'
+    TEXT_ANONYMIZATION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-text-anonymizer-v1',
+    SPAM_DETECTION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-spam-detection-v1',
+    TOPIC_CLASSIFICATION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-topic-classification-v1',
 };

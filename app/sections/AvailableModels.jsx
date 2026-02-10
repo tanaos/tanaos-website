@@ -6,7 +6,7 @@ export const AvailableModels = () => {
 
     return <div className={`global-padding ${styles['available-models']}`} id='available-tasks'>
         <div className={`d-flex align-items-center justify-content-between ${styles['section-header']} mb-5`}>
-            <h2>Available Small Language Models</h2>
+            <h2>Some of our publicly available models</h2>
         </div>
         <div className='row'>
             <div className='table-responsive'>
@@ -15,15 +15,23 @@ export const AvailableModels = () => {
                         <tr>
                             <th>Model</th>
                             <th>Description</th>
-                            <th>Endpoint</th>
-                            <th>Link</th>
+                            <th>See the model</th>
+                            <th>Try it out</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Guardrail</td>
                             <td>Flags unsafe or harmful messages sent by users or LLMs</td>
-                            <td>POST slm.tanaos.com/models/guardrail</td>
+                            <td>
+                                <a 
+                                    href={Config.GUARDRAIL_HF_LINK} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    See the model
+                                </a>
+                            </td>
                             <td>
                                 <a 
                                     href={Config.TANAOS_API_DEMO_GUARDRAIL} 
@@ -37,7 +45,15 @@ export const AvailableModels = () => {
                         <tr>
                             <td>Intent Classification</td>
                             <td>Classifies user messages into predefined intent categories.</td>
-                            <td>POST slm.tanaos.com/models/intent-classification</td>
+                            <td>
+                                <a 
+                                    href={Config.INTENT_CLASSIFICATION_HF_LINK} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    See the model
+                                </a>
+                            </td>
                             <td>
                                 <a 
                                     href={Config.TANAOS_API_DEMO_INTENT_CLASSIFICATION} 
@@ -51,7 +67,15 @@ export const AvailableModels = () => {
                         <tr>
                             <td>Spam Detection</td>
                             <td>Identifies whether a message is spam or not.</td>
-                            <td>POST slm.tanaos.com/models/spam-detection</td>
+                            <td>
+                                <a 
+                                    href={Config.SPAM_DETECTION_HF_LINK} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    See the model
+                                </a>
+                            </td>
                             <td>
                                 <a 
                                     href={Config.TANAOS_API_DEMO_SPAM_DETECTION} 
@@ -65,7 +89,15 @@ export const AvailableModels = () => {
                         <tr>
                             <td>Sentiment Analysis</td>
                             <td>Determines the sentiment (positive, negative, neutral) of a text.</td>
-                            <td>POST slm.tanaos.com/models/sentiment-analysis</td>
+                            <td>
+                                <a 
+                                    href={Config.SENTIMENT_ANALYSIS_HF_LINK} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    See the model
+                                </a>
+                            </td>
                             <td>
                                 <a 
                                     href={Config.TANAOS_API_DEMO_SENTIMENT_ANALYSIS} 
@@ -79,7 +111,15 @@ export const AvailableModels = () => {
                         <tr>
                             <td>Emotion Detection</td>
                             <td>Identifies the emotion expressed in a given text.</td>
-                            <td>POST slm.tanaos.com/models/emotion-detection</td>
+                            <td>
+                                <a 
+                                    href={Config.EMOTION_DETECTION_HF_LINK} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    See the model
+                                </a>
+                            </td>
                             <td>
                                 <a 
                                     href={Config.TANAOS_API_DEMO_EMOTION_DETECTION} 
@@ -93,7 +133,15 @@ export const AvailableModels = () => {
                         <tr>
                             <td>Named Entity Recognition</td>
                             <td>Detects and classifies named entities in text.</td>
-                            <td>POST slm.tanaos.com/models/named-entity-recognition</td>
+                            <td>
+                                <a 
+                                    href={Config.NER_HF_LINK} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    See the model
+                                </a>
+                            </td>
                             <td>
                                 <a 
                                     href={Config.TANAOS_API_DEMO_NAMED_ENTITY_RECOGNITION} 
@@ -107,7 +155,15 @@ export const AvailableModels = () => {
                         <tr>
                             <td>Text Anonymization</td>
                             <td>Removes personally identifiable information (PII) from text.</td>
-                            <td>POST slm.tanaos.com/models/text-anonymization</td>
+                            <td>
+                                <a 
+                                    href={Config.TEXT_ANONYMIZATION_HF_LINK} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    See the model
+                                </a>
+                            </td>
                             <td>
                                 <a 
                                     href={Config.TANAOS_API_DEMO_TEXT_ANONYMIZATION} 
@@ -121,7 +177,15 @@ export const AvailableModels = () => {
                         <tr>
                             <td>Topic Classification</td>
                             <td>Classifies text into predefined topics.</td>
-                            <td>POST slm.tanaos.com/models/topic-classification</td>
+                            <td>
+                                <a 
+                                    href={Config.TOPIC_CLASSIFICATION_HF_LINK} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    See the model
+                                </a>
+                            </td>
                             <td>
                                 <a 
                                     href={Config.TANAOS_API_DEMO_TOPIC_CLASSIFICATION} 

@@ -8,27 +8,24 @@ export const WhyTanaos = () => {
         <div className='row'>
             <div className='row'>
                 <div className={`col-12 col-md-4 ${styles['feature-box']}`}>
-                    <div className={styles['icon']}>100ms</div>
-                    <h3>Under 100ms end-to-end latency</h3>
+                    <h3>Models for any use-case</h3>
                     <p>
-                        Blazingly fast inference times, with end-to-end latency under 100ms,
-                        perfect for real-time applications.
+                        We develop custom Small Language Models based on your specific requirements,
+                        ensuring that you get the best performance. No data needed.
                     </p>
                 </div>
                 <div className={`col-12 col-md-4 mt-4 mt-md-0 ${styles['feature-box']}`}>
-                    <div className={styles['icon']}>8 models</div>
-                    <h3>8 specialized models, single API</h3>
+                    <h3>Use them on your CPU</h3>
                     <p>
-                        Get access to 8 specialized Small Language Models, including 
-                        Text Anonymization, Named Entity Recognition, Reranking and Guardrail.
+                        Once we've created a model for you, you can run it on your own CPU for
+                        maximum control, privacy and performance. No API, no latency.
                     </p>
                 </div>
                 <div className={`col-12 col-md-4 ${styles['feature-box']}`}>
-                    <div className={styles['icon']}>All-in-one</div>
-                    <h3>Simple, easy-to-use REST API</h3>
+                    <h3>Only pay if you use it</h3>
                     <p>
-                        A simple, easy-to-use REST API that allows you to access several Small Language
-                        Models in a single service, with unified authentication and billing.
+                        Model development is 100% free. You only pay if you end up using the model. 
+                        You don't like it? Don't use it, don't pay. No questions asked.
                     </p>
                 </div>
             </div>

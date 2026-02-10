@@ -48,7 +48,7 @@ export const HomePage = () => {
         <Statistics />
         <WhyTanaos />
         <AvailableModels />
-        <GetStarted />
+        {/* <GetStarted /> */}
     </div>;
 };
 
