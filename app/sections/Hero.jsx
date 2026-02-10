@@ -22,13 +22,13 @@ export const Hero = () => {
                     href={Config.TANAOS_API_DEMO}
                     target='_blank' rel='noreferrer'
                 >
-                    Try it out <BoxArrowUpRight className='ms-1' />
+                    Try the API <BoxArrowUpRight className='ms-1' />
                 </a>
                 <a 
                     className='btn btn-white'
                     href='#available-tasks'
                 >
-                    See available models <BoxArrowUpRight className='ms-1' />
+                    See available models
                 </a>
             </div>
         </div>

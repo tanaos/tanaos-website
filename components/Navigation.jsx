@@ -33,7 +33,7 @@ export const Navigation = ({ onLinkClick }) => {
             target='_blank' rel='noreferrer'
             onClick={onLinkClick}
         >
-            Try it out <BoxArrowUpRight className='ms-1' />
+            Try the API <BoxArrowUpRight className='ms-1' />
         </a>
     </div>
 };
