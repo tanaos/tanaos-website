@@ -3,6 +3,7 @@ import { GetStarted } from './sections/GetStarted';
 import { WhyTanaos } from './sections/WhyTanaos';
 import { AvailableModels } from './sections/AvailableModels';
 import { Statistics } from './sections/Statistics';
+import { TryItOut } from './sections/TryItOut';
 import { Config } from '../config';
 
 
@@ -46,6 +47,7 @@ export const HomePage = () => {
     return <div className='homepage-layout'>
         <Hero />
         <Statistics />
+        <TryItOut />
         <WhyTanaos />
         <AvailableModels />
         {/* <GetStarted /> */}

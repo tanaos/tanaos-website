@@ -1,8 +1,7 @@
-import { BoxArrowUpRight } from 'react-bootstrap-icons';
+import { ArrowRight } from 'react-bootstrap-icons';
 import Image from 'next/image';
 
 import styles from './Hero.module.scss';
-import { Config } from '../../config';
 
 
 export const Hero = () => {
@@ -19,16 +18,15 @@ export const Hero = () => {
             <div className='mt-5 d-flex flex-nowrap gap-2 gap-md-4'>
                 <a
                     className='btn btn-white'
-                    href={Config.TANAOS_API_DEMO}
-                    target='_blank' rel='noreferrer'
+                    href='#try-it-out'
                 >
-                    Try the API <BoxArrowUpRight className='ms-1' />
+                    Create your model <ArrowRight className='ms-2' />
                 </a>
                 <a 
                     className='btn btn-white'
                     href='#available-tasks'
                 >
-                    See available models
+                    See sample models <ArrowRight className='ms-2' />
                 </a>
             </div>
         </div>

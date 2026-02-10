@@ -3,7 +3,7 @@ import styles from './Statistics.module.scss';
 export const Statistics = () => {
     const stats = [
         { number: '7,000', label: 'monthly model downloads' },
-        { number: '30,000', label: 'monthly inferences' },
+        { number: '500 MB', label: 'average model size' },
         { number: '100ms', label: 'average inference speed' },
     ];
 
