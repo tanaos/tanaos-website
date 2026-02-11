@@ -16,7 +16,7 @@ export const TryItOut = () => {
     const sentences = [
         'Classify emails in Spanish into billing, technical, and general inquiry.',
         'Detect toxic or harmful content in user-generated comments before publishing.',
-        'Extract names, addresses and phone numbers text documents in German.',
+        'Extract names, addresses and phone numbers from text documents in German.',
         'Summarize long product reviews, mostly written in French, into a single sentence with sentiment.',
         'Filter spam messages received through my website contact form.',
     ];
