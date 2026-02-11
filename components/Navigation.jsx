@@ -1,6 +1,5 @@
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import { BoxArrowUpRight } from 'react-bootstrap-icons';
+import { ArrowRight } from 'react-bootstrap-icons';
 
 import { Config } from '../config';
 import styles from './Navigation.module.scss';
@@ -29,11 +28,10 @@ export const Navigation = ({ onLinkClick }) => {
         </a>
         <a 
             className='btn btn-white mt-4 mt-md-0 ms-md-4'
-            href={Config.TANAOS_API_DEMO}
-            target='_blank' rel='noreferrer'
+            href='#try-it-out'
             onClick={onLinkClick}
         >
-            Try the API <BoxArrowUpRight className='ms-1' />
+            Create your model <ArrowRight className='ms-1' />
         </a>
     </div>
 };

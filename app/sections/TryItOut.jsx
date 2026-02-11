@@ -16,7 +16,7 @@ export const TryItOut = () => {
     const sentences = [
         'Classify emails in Spanish into billing, technical, and general inquiry.',
         'Detect toxic or harmful content in user-generated comments before publishing.',
-        'Extract names, addresses and phone numbers from German text documents.',
+        'Extract names, addresses and phone numbers text documents in German.',
         'Summarize long product reviews, mostly written in French, into a single sentence with sentiment.',
         'Filter spam messages received through my website contact form.',
     ];
@@ -89,8 +89,8 @@ export const TryItOut = () => {
                     <h1 className={styles['section-title']}>Let's create your Small Model</h1>
                     <p className={`${styles['section-subtitle']} mt-4`}>
                         Tell us what you need and we'll create a custom Small Language Model for 
-                        you, <b>completely free.</b> You'll only pay if you decide to use the model after 
-                        we create it.
+                        you, <b>100% free of charge</b>. You'll only pay if you decide to use the model after 
+                        we create it. <a href="#quickstart">Learn more.</a>
                     </p>
 
                     <div className={styles['form-card']}>
@@ -118,7 +118,7 @@ export const TryItOut = () => {
 
                             <div className='mb-4'>
                                 <label htmlFor='email' className={`form-label ${styles['field-label']}`}>
-                                    The email address to send the model to
+                                    The email address to send the model to once it's created
                                 </label>
                                 <input
                                     type='email'

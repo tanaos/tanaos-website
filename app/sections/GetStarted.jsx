@@ -8,7 +8,7 @@ import styles from './GetStarted.module.scss';
 export const GetStarted = () => {
 
     return <div id='quickstart' className={`${styles['quickstart-section']} global-padding`}>
-        <div className='row'>
+        {/* <div className='row'>
             <h2 className='mb-5'>Get started for free</h2>
             <div>
                 <div className='row mb-5'>
@@ -53,14 +53,17 @@ export const GetStarted = () => {
                     </div>
                 </div>
             </div>
-        </div>
-        <div className='row mt-5'>
-            <h2 className='mb-5'>Need more?</h2>
-            <div>
-                Pick one of our paid plans to unlock higher rate limits.
-            </div>
+        </div> */}
+        <div className='row'>
+            <h2 className='mb-5'>Pricing</h2>
+            <p>
+                <b>Model creation is completely free of charge</b>. Once you have the model, you 
+                get to test it, <b>also for free</b>. You only pay if you decide to use the model 
+                after testing it. The following pricing plans apply to the usage of the model after 
+                the free testing phase.
+            </p>
             <div className='row mt-5'>
-                <div className='col-10 col-md-3 mx-auto mb-4 mb-md-0'>
+                {/* <div className='col-10 col-md-3 mx-auto mb-4 mb-md-0'>
                     <PlanCard 
                         planName={'Free'} 
                         planPrice={'0'} 
@@ -73,7 +76,7 @@ export const GetStarted = () => {
                             { icon: <ChevronUp />, text: 'Max 50 requests per day.' },
                         ]}
                     />
-                </div>
+                </div> */}
                 <div className='col-10 col-md-3 mx-auto mb-4 mb-md-0'>
                     <PlanCard 
                         planName={'Plus'} 
@@ -84,7 +87,7 @@ export const GetStarted = () => {
                         planDescription={'For individuals or small teams growing their usage.'}
                         buttonDisabled={false}
                         features={[
-                            { icon: <ChevronDoubleUp />, text: 'Max 1,000 requests per day.' },
+                            { icon: <ChevronDoubleUp />, text: 'Max 200 requests per day.' },
                         ]}
                     />
                 </div>
@@ -98,7 +101,7 @@ export const GetStarted = () => {
                         planDescription={'For professionals and teams needing more.'}
                         buttonDisabled={false}
                         features={[
-                            { icon: <Capslock />, text: 'Max 10,000 requests per day.' },
+                            { icon: <Capslock />, text: 'Max 1,000 requests per day.' },
                         ]}
                     />
                 </div>
