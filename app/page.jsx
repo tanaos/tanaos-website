@@ -7,8 +7,8 @@ import { TryItOut } from './sections/TryItOut';
 import { Config } from '../config';
 
 
-const title = 'Low-latency Small Language Model API for real-time applications | Tanaos'
-const description = 'Get under 100ms inference latency with various Small Language Models such as Guardrail, Text Anonymization and NER. All in a single, easy-to-use API.'
+const title = 'Developing custom Small Language Models for all your needs | Tanaos'
+const description = 'At Tanaos we develop task-specific Small Language Models for any text processing task and language. Tell us what you need to do and we will create a model that does it.'
 const applicationName = 'Tanaos Website'
 const url = Config.WEBSITE_BASE_URL
 
