@@ -90,7 +90,7 @@ export const TryItOut = () => {
                     <p className={`${styles['section-subtitle']} mt-4`}>
                         Tell us what you need and we'll create a custom Small Language Model for 
                         you, <b>100% free of charge</b>. You'll only pay if you decide to use the model after 
-                        we create it. <a href="#quickstart">Learn more.</a>
+                        we create it.
                     </p>
 
                     <div className={styles['form-card']}>
