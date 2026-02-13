@@ -89,8 +89,8 @@ export const TryItOut = () => {
                     <h1 className={styles['section-title']}>Let's create your Small Model</h1>
                     <p className={`${styles['section-subtitle']} mt-4`}>
                         Tell us what you need and we'll create a custom Small Language Model for 
-                        you, <b>100% free of charge</b>. You'll only pay if you decide to use the model after 
-                        we create it.
+                        you, <b>100% free of charge</b>. You'll only pay if you decide to use the 
+                        model after you've tested it and seen the results.
                     </p>
 
                     <div className={styles['form-card']}>
