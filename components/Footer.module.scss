@@ -44,16 +44,12 @@
     a {
         display: flex;
         align-items: center;
-        font-size: 1.25rem;
-    }
+        font-size: 1.35rem;
+        color: $grey-300;
 
-    .hf-icon {
-        filter: grayscale(1) brightness(1.8);
-        transition: filter $transition-default;
-    }
-
-    a:hover .hf-icon {
-        filter: grayscale(0) brightness(1);
+        &:hover {
+            color: white;
+        }
     }
 }
 

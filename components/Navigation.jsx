@@ -20,6 +20,15 @@ export const Navigation = ({ onLinkClick }) => {
         >
             Platform
         </a>
+        <a 
+            href={Config.HUGGINGFACE_URL}
+            rel='noreferrer'
+            target='_blank'
+            className={'mt-4 mt-md-0 ms-md-4'}
+            onClick={onLinkClick}
+        >
+            Our models 🤗
+        </a>
         <Link 
             href={Config.BLOG_ROUTE} 
             className={`mt-4 mt-md-0 ms-md-4 ${url === Config.BLOG_ROUTE && styles['highlighted']}`}

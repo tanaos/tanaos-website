@@ -58,6 +58,7 @@ export const Config = {
     TWITTER_URL: 'https://x.com/tanaosai',
     HUGGINGFACE_URL: 'https://huggingface.co/tanaos',
     LINKEDIN_URL: 'https://www.linkedin.com/company/tanaos',
+    GITHUB_URL: 'https://github.com/tanaos',
 
     // Session Storage
     DISPLAY_BANNER_SESSION_STORAGE_FLAG: 'displayBanner',

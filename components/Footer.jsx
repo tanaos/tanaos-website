@@ -1,9 +1,7 @@
 import { BsGithub } from 'react-icons/bs';
-import { SiHuggingface } from 'react-icons/si';
 import { Config } from '../config';
 import styles from './Footer.module.scss';
 import Link from 'next/link';
-import Image from 'next/image';
 
 
 export const Footer = () => {
@@ -16,11 +14,11 @@ export const Footer = () => {
                     <a href={Config.PLATFORM_BASE_URL} rel='noreferrer' target='_blank'>Platform</a>
                 </div>
                 <div className={styles['footer-social']}>
-                    <a href='https://github.com/tanaos' rel='noreferrer' target='_blank' aria-label='GitHub'>
+                    <a href={Config.GITHUB_URL} rel='noreferrer' target='_blank' aria-label='GitHub'>
                         <BsGithub />
                     </a>
-                    <a href='https://huggingface.co/tanaos' rel='noreferrer' target='_blank' aria-label='Hugging Face'>
-                        <SiHuggingface />
+                    <a href={Config.HUGGINGFACE_URL} rel='noreferrer' target='_blank' aria-label='Hugging Face'>
+                        🤗
                     </a>
                 </div>
             </div>
