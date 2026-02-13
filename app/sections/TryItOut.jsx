@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { ArrowRight } from 'react-bootstrap-icons';
+import { BsArrowRight } from 'react-icons/bs';
 
 import styles from './TryItOut.module.scss';
 
@@ -137,7 +137,7 @@ export const TryItOut = () => {
                                     className={`btn btn-primary ${styles['submit-btn']}`}
                                     disabled={status === 'sending'}
                                 >
-                                    {status === 'sending' ? 'Sending...' : <>Create model <ArrowRight className='ms-2' /></>}
+                                    {status === 'sending' ? 'Sending...' : <>Create model <BsArrowRight className='ms-2' /></>}
                                 </button>
 
                                 {status === 'success' && (

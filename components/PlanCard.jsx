@@ -1,4 +1,4 @@
-import { ArrowRight } from 'react-bootstrap-icons';
+import { BsArrowRight } from 'react-icons/bs';
 
 import styles from './PlanCard.module.scss';
 import { Config } from '../config';
@@ -24,7 +24,7 @@ export const PlanCard = ({
                 target='_blank'
             >
                 {linkText}
-                {!buttonDisabled && <ArrowRight className='ms-1' />}
+                {!buttonDisabled && <BsArrowRight className='ms-1' />}
             </a>
         </div>
         <div className='mt-5'>

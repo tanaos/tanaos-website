@@ -6,7 +6,7 @@ tags: ['task-specific LLM', 'offline NLP', 'text classification', 'without train
 imageName: 'offline-nlp.png'
 ---
 
-import { Github } from 'react-bootstrap-icons';
+import { BsGithub } from 'react-icons/bs';
 import Link from 'next/link';
 
 import { Config } from '../../config';
@@ -63,4 +63,4 @@ At Tanaos, we developed <a href={Config.ARTIFEX_GITHUB_URL} rel='noreferrer' tar
 Python library that allows you to create your own <Link href={Config.TASK_SPECIFIC_LLMS_POST}>task-specific NLP models</Link> that can be run offline on your local
 machine, without needing any training data or GPUs. Try it out!
 
-<a className='btn btn-primary' href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>See Artifex on GitHub <Github className='ms-2' /></a>
+<a className='btn btn-primary' href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>See Artifex on GitHub <BsGithub className='ms-2' /></a>

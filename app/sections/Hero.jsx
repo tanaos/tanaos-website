@@ -1,4 +1,4 @@
-import { ArrowRight } from 'react-bootstrap-icons';
+import { BsArrowRight } from 'react-icons/bs';
 import Image from 'next/image';
 
 import styles from './Hero.module.scss';
@@ -21,13 +21,13 @@ export const Hero = () => {
                     className='btn btn-white'
                     href='#try-it-out'
                 >
-                    Create your model <ArrowRight className='ms-2' />
+                    Create your model <BsArrowRight className='ms-2' />
                 </a>
                 <a 
                     className='btn btn-white'
                     href='#available-tasks'
                 >
-                    See sample models <ArrowRight className='ms-2' />
+                    See sample models <BsArrowRight className='ms-2' />
                 </a>
             </div>
         </div>
@@ -36,9 +36,9 @@ export const Hero = () => {
                 className={styles['hero-image']}
                 src='/images/hero.png'
                 alt='Create task-specific LLMs for NLP and Text Classification | Tanaos'
-                layout='responsive'
                 width={800}
                 height={407}
+                style={{ width: '100%', height: 'auto' }}
                 unoptimized
             />
         </div>

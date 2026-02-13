@@ -1,38 +1,89 @@
 .footer {
-    padding: $footer-padding;
     background-color: $grey-800;
-    color: white;
-    
+    color: $grey-300;
+    padding: 2.5rem 4vw 1.5rem;
+
     a {
-        color: unset;
+        color: $grey-300;
         text-decoration: none;
-    }
+        transition: color $transition-default;
 
-    a:hover {
-        color: $grey-200;
-    }
-
-    .footer-links {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        row-gap: 5px;
-        justify-content: flex-end;
-
-        a:not(:last-child)::after {
-            content: '|';
-            margin: 0 10px;
+        &:hover {
+            color: white;
         }
     }
 }
 
+.footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    a {
+        font-size: $font-size-p-500;
+        font-weight: 400;
+    }
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    a {
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+    }
+
+    .hf-icon {
+        filter: grayscale(1) brightness(1.8);
+        transition: filter $transition-default;
+    }
+
+    a:hover .hf-icon {
+        filter: grayscale(0) brightness(1);
+    }
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: $grey-700;
+    margin: 1.5rem 0;
+}
+
+.footer-bottom {
+    font-size: $font-size-p-400;
+    color: $grey-400;
+    text-align: center;
+}
+
 @include media-breakpoint-down(md) {
     .footer {
-        text-align: center;
-        padding: 1.5rem 5vw;
+        padding: 2rem 5vw 1.2rem;
+    }
 
-        .footer-links {
-            justify-content: center;
-        }
+    .footer-top {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer-nav {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
     }
 }

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight } from 'react-bootstrap-icons';
+import { BsArrowRight } from 'react-icons/bs';
 
 import { Config } from '../config';
 import styles from './BlogPostPreview.module.scss';
@@ -29,7 +29,7 @@ export const BlogPostPreview = ({ post }) => {
                 <div className={styles['bottom-row']}>
                     <span className={styles['post-date']}>{post.date}</span>
                     <span className={styles['read-more']}>
-                        Read more <ArrowRight />
+                        Read more <BsArrowRight />
                     </span>
                 </div>
             </div>

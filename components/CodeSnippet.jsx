@@ -1,6 +1,6 @@
 'use client';
 
-import { Check2, Clipboard } from 'react-bootstrap-icons';
+import { BsCheck2, BsClipboard } from 'react-icons/bs';
 
 import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -47,7 +47,7 @@ export const CodeSnippet = ({ code, language = 'python' }) => {
             className={`${copied ? styles['copied'] : ''}`}
             onClick={copyToClipboard}
         >
-            {copied ? <Check2 /> : <Clipboard />}
+            {copied ? <BsCheck2 /> : <BsClipboard />}
         </button>
     </div>
 }

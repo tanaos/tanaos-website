@@ -1,5 +1,5 @@
 import { usePathname } from 'next/navigation';
-import { ArrowRight } from 'react-bootstrap-icons';
+import { BsArrowRight } from 'react-icons/bs';
 import Link from 'next/link';
 
 import { Config } from '../config';
@@ -32,7 +32,7 @@ export const Navigation = ({ onLinkClick }) => {
             href='#try-it-out'
             onClick={onLinkClick}
         >
-            Create your model <ArrowRight className='ms-1' />
+            Create your model <BsArrowRight className='ms-1' />
         </a>
     </div>
 };

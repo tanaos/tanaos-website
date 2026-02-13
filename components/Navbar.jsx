@@ -1,6 +1,6 @@
 'use client';
 
-import { XLg, List } from 'react-bootstrap-icons';
+import { BsXLg, BsList } from 'react-icons/bs';
 import { useState, useEffect } from 'react';
 import { Navigation } from './Navigation';
 import { useRouter } from 'next/navigation';
@@ -14,8 +14,8 @@ import styles from './Navbar.module.scss';
 // Button that toggles the collapsible navbar component.
 const NavbarToggle = ({ onClick, isMenuOpen }) => {
     return isMenuOpen ? 
-        <XLg className={`${styles['navbar-toggle-icon']}`} onClick={onClick} /> :
-        <List className={`${styles['navbar-toggle-icon']}`} onClick={onClick} />;
+        <BsXLg className={`${styles['navbar-toggle-icon']}`} onClick={onClick} /> :
+        <BsList className={`${styles['navbar-toggle-icon']}`} onClick={onClick} />;
 };
 
 // Collapsible navbar component which contains the navbar links.

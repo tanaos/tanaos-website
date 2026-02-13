@@ -1,4 +1,4 @@
-import { ArrowRight } from 'react-bootstrap-icons';
+import { BsArrowRight } from 'react-icons/bs';
 import Link from 'next/link';
 
 import styles from './RecentBlogPosts.module.scss';
@@ -14,7 +14,7 @@ export const RecentBlogPosts = async () => {
         <div className={`d-flex align-items-center justify-content-between ${styles['section-header']}`}>
             <h2>Recent Blog Posts</h2>
             <Link href={Config.BLOG_ROUTE} className={`${styles['view-all']}`}>
-                View all <ArrowRight />
+                View all <BsArrowRight />
             </Link>
         </div>
         <div className='row mt-4'>

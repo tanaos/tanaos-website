@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronUp, ChevronDoubleUp, Capslock, ArrowsMove } from 'react-bootstrap-icons';
+import { BsArrowRight, BsChevronUp, BsChevronDoubleUp, BsCapslock, BsArrowsMove } from 'react-icons/bs';
 
 import { Config } from '../../config';
 import { PlanCard } from '../../components/PlanCard';
@@ -22,7 +22,7 @@ export const GetStarted = () => {
                             href={Config.PLATFORM_BASE_URL}
                             rel='noreferrer' target='_blank'
                         >
-                            Sign up <ArrowRight className='ms-1' />
+                            Sign up <BsArrowRight className='ms-1' />
                         </a>
                     </div>
                     <div className='col-12 col-md-4 mb-5 mb-md-0'>
@@ -35,7 +35,7 @@ export const GetStarted = () => {
                             href={Config.PLATFORM_BASE_URL}
                             rel='noreferrer' target='_blank'
                         >
-                            Get API Key <ArrowRight className='ms-1' />
+                            Get API Key <BsArrowRight className='ms-1' />
                         </a>
                     </div>
                     <div className='col-12 col-md-4'>
@@ -48,7 +48,7 @@ export const GetStarted = () => {
                             href={Config.TANAOS_API_DEMO}
                             rel='noreferrer' target='_blank'
                         >
-                            Use the API <ArrowRight className='ms-1' />
+                            Use the API <BsArrowRight className='ms-1' />
                         </a>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ export const GetStarted = () => {
                         linkUrl={Config.TANAOS_API_DEMO}
                         buttonDisabled={false}
                         features={[
-                            { icon: <ChevronUp />, text: 'Max 50 requests per day.' },
+                            { icon: <BsChevronUp />, text: 'Max 50 requests per day.' },
                         ]}
                     />
                 </div> */}
@@ -87,7 +87,7 @@ export const GetStarted = () => {
                         planDescription={'For individuals or small teams growing their usage.'}
                         buttonDisabled={false}
                         features={[
-                            { icon: <ChevronDoubleUp />, text: 'Max 200 requests per day.' },
+                            { icon: <BsChevronDoubleUp />, text: 'Max 200 requests per day.' },
                         ]}
                     />
                 </div>
@@ -101,7 +101,7 @@ export const GetStarted = () => {
                         planDescription={'For professionals and teams needing more.'}
                         buttonDisabled={false}
                         features={[
-                            { icon: <Capslock />, text: 'Max 1,000 requests per day.' },
+                            { icon: <BsCapslock />, text: 'Max 1,000 requests per day.' },
                         ]}
                     />
                 </div>
@@ -113,7 +113,7 @@ export const GetStarted = () => {
                         buttonDisabled={true}
                         linkText={'Email us at info@tanaos.com to get a personalized quote. No commitment required.'}
                         features={[
-                            { icon: <ArrowsMove />, text: 'Custom rate limits.' },
+                            { icon: <BsArrowsMove />, text: 'Custom rate limits.' },
                         ]}
                     />
                 </div>
