@@ -21,7 +21,7 @@ export const WhyTanaos = () => {
                         maximum control, privacy and performance. No API, no latency.
                     </p>
                 </div>
-                <div className={`col-12 col-md-4 ${styles['feature-box']}`}>
+                <div className={`col-12 col-md-4 mt-4 mt-md-0 ${styles['feature-box']}`}>
                     <h3>Only pay if you use it</h3>
                     <p>
                         Model development is 100% free. You only pay if you end up using the model. 

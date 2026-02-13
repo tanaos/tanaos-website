@@ -17,10 +17,22 @@
         flex-wrap: wrap;
         align-items: center;
         row-gap: 5px;
+        justify-content: flex-end;
 
         a:not(:last-child)::after {
             content: '|';
             margin: 0 10px;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .footer {
+        text-align: center;
+        padding: 1.5rem 5vw;
+
+        .footer-links {
+            justify-content: center;
         }
     }
 }

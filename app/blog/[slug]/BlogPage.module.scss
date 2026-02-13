@@ -63,3 +63,34 @@
         object-fit: cover;
     }
 }
+
+@include media-breakpoint-down(md) {
+    .article {
+        margin: 3rem auto;
+        padding: 0 1rem;
+
+        h1 {
+            font-size: $font-size-h2;
+        }
+
+        .subtitle {
+            font-size: $font-size-h4;
+            line-height: $line-height-h4;
+        }
+
+        p, span, li {
+            font-size: $font-size-h6;
+            line-height: $line-height-h6;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .article {
+        margin: 2rem auto;
+
+        h1 {
+            font-size: $font-size-h3;
+        }
+    }
+}

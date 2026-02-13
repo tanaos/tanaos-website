@@ -25,9 +25,29 @@
 
 .hero-image {
     width: 60% !important;
+    max-width: 480px;
     height: auto;
     object-fit: cover;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+@include media-breakpoint-down(md) {
+    .hero-title {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: $font-size-h6;
+        line-height: $line-height-p-500;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .hero-title {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+    }
 }

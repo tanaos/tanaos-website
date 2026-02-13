@@ -128,6 +128,7 @@ a {
     padding: $object-padding-300;
     min-width: $button-min-width;
     font-weight: 500;
+    white-space: nowrap;
 
     &:hover, &:focus, &:active {
         border: none;
@@ -136,6 +137,14 @@ a {
     &:disabled {
         background-color: $button-disabled;
         color: white;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .btn {
+        min-width: unset;
+        padding: $object-padding-300 $object-padding-400;
+        font-size: $font-size-p-400;
     }
 }
 
@@ -203,4 +212,39 @@ a {
 .global-padding {
     padding: $page-padding;
     padding-top: calc(#{$headline-bar-height} + 2rem);
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Responsive typography.
+@include media-breakpoint-down(md) {
+    h1 {
+        font-size: $font-size-h2;
+        line-height: $line-height-h2;
+    }
+
+    h2 {
+        font-size: $font-size-h3;
+    }
+
+    h3 {
+        font-size: $font-size-h4;
+    }
+
+    p {
+        font-size: $font-size-p-500;
+    }
+
+    .global-padding {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .global-padding {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
 }

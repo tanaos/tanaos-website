@@ -3,4 +3,21 @@
         color: $primary;
         font-weight: 600;
     }
+
+    .feature-box {
+        padding: 1.5rem;
+
+        p {
+            margin-top: 0.75rem;
+            line-height: $line-height-p-600;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .why-tanaos-section {
+        .feature-box {
+            padding: 1rem 0;
+        }
+    }
 }

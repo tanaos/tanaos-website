@@ -115,3 +115,27 @@
         font-size: $font-size-p-500;
     }
 }
+
+@include media-breakpoint-down(md) {
+    .try-it-out-section {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        .section-subtitle {
+            font-size: $font-size-h6;
+            line-height: $line-height-p-500;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .try-it-out-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        .submit-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}

@@ -50,4 +50,29 @@
     .table-responsive table {
         min-width: 600px;
     }
+
+    table {
+        th, td {
+            padding: 0.75rem 1rem;
+            vertical-align: middle;
+        }
+
+        th {
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        td:first-child {
+            font-weight: 500;
+            white-space: nowrap;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .available-models {
+        .section-header {
+            max-width: 100%;
+        }
+    }
 }

@@ -68,3 +68,10 @@
         object-fit: cover;
     }
 }
+
+@include media-breakpoint-down(md) {
+    .post-preview {
+        min-height: unset;
+        padding-bottom: 3rem;
+    }
+}

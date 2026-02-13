@@ -5,7 +5,8 @@ import styles from './Hero.module.scss';
 
 
 export const Hero = () => {
-    return <div className='row m-0 global-padding mb-0 mb-md-5'>
+    return <div className='global-padding mb-0 mb-md-5'>
+        <div className='row m-0'>
         <div className='col-12 col-md-6 m-0 p-0 pt-md-5'>
             <h1 className={styles['hero-title']}>
                 Developing custom <b>Small Language Models</b> for all your needs.
@@ -15,7 +16,7 @@ export const Hero = () => {
                 language. Tell us what you need to do and we will create a model that does it.
                 We don't need any data from you.
             </h2>
-            <div className='mt-5 d-flex flex-nowrap gap-2 gap-md-4'>
+            <div className='mt-5 d-flex flex-wrap gap-2 gap-md-4'>
                 <a
                     className='btn btn-white'
                     href='#try-it-out'
@@ -40,6 +41,7 @@ export const Hero = () => {
                 height={407}
                 unoptimized
             />
+        </div>
         </div>
     </div>
 };

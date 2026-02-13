@@ -10,7 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 10rem;
+    gap: 6rem;
+    flex-wrap: wrap;
 }
 
 .stat-item {
@@ -21,7 +22,7 @@
 }
 
 .stat-number {
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: 600;
     color: $primary-500;
     line-height: 1;
@@ -36,18 +37,18 @@
 // Responsive adjustments
 @media (max-width: 768px) {
     .statistics-section {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
     
     .stats-container {
         flex-direction: column;
         align-items: center;
-        gap: 3rem;
+        gap: 2.5rem;
     }
     
     .stat-number {
-        font-size: 3.5rem;
+        font-size: 2.8rem;
     }
     
     .stat-label {

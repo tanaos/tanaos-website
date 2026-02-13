@@ -2,7 +2,8 @@
     background-color: $dark-code-bg;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
-    width: fit-content;
+    width: 100%;
+    overflow-x: auto;
 
     :global(.nav-tabs) {
         border-bottom: 1px solid #aaa;
