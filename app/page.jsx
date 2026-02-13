@@ -1,9 +1,10 @@
 import { Hero } from './sections/Hero'
-import { GetStarted } from './sections/GetStarted';
+// import { GetStarted } from './sections/GetStarted';
 import { WhyTanaos } from './sections/WhyTanaos';
 import { AvailableModels } from './sections/AvailableModels';
 import { Statistics } from './sections/Statistics';
 import { TryItOut } from './sections/TryItOut';
+import { RecentBlogPosts } from './sections/RecentBlogPosts';
 import { Config } from '../config';
 
 
@@ -50,6 +51,7 @@ export const HomePage = () => {
         <TryItOut />
         <WhyTanaos />
         <AvailableModels />
+        <RecentBlogPosts />
         {/* <GetStarted /> */}
     </div>;
 };
