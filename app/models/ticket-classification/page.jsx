@@ -1,4 +1,4 @@
-import { BsArrowRight, BsCpu, BsShieldCheck, BsLightning, BsGlobe, BsCodeSlash, BsGraphUp } from 'react-icons/bs';
+import { BsArrowRight, BsCpu, BsShieldCheck, BsLightning, BsGlobe, BsCodeSlash, BsGraphUp, BsStars } from 'react-icons/bs';
 import Link from 'next/link';
 
 import { Config } from '../../../config';
@@ -232,7 +232,7 @@ export default function TicketClassificationPage() {
             {/* CTA */}
             <section id='try-it-out' className={`global-padding ${styles['section']} ${styles['cta-section']}`}>
                 <div className={styles['cta-card']}>
-                    <h2>Ready to automate ticket routing?</h2>
+                    <h2><BsStars style={{ fontSize: '2rem', marginRight: '1rem', verticalAlign: 'middle' }} />Ready to automate ticket routing?</h2>
                     <p>
                         Tell us about your use case and we&apos;ll create a custom model for you — 
                         <b> 100% free of charge</b>. You only pay if you decide to use it.
