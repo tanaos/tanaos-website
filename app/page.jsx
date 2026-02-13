@@ -1,5 +1,5 @@
 import { Hero } from './sections/Hero'
-import { GetStarted } from './sections/GetStarted';
+// import { GetStarted } from './sections/GetStarted';
 import { WhyTanaos } from './sections/WhyTanaos';
 import { AvailableModels } from './sections/AvailableModels';
 import { Statistics } from './sections/Statistics';
@@ -52,7 +52,7 @@ export const HomePage = () => {
         <WhyTanaos />
         <AvailableModels />
         <RecentBlogPosts />
-        <GetStarted />
+        {/* <GetStarted /> */}
     </div>;
 };
 

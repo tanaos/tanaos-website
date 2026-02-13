@@ -112,7 +112,7 @@ export default function TicketClassificationPage() {
 
             {/* Benefits */}
             <section className={`global-padding ${styles['section']}`}>
-                <h2 className={`${styles['section-title']} ${styles['left']}`}>Why use a Tanaos model?</h2>
+                <h2 className={`${styles['section-title']} ${styles['left']}`}>Why use our Ticket Classification model?</h2>
                 <p className={`${styles['section-subtitle']} ${styles['left']}`}>
                     Other ticket classification solutions rely on your data being sent to a third-party 
                     servers and lengthy training processes. With Tanaos, you get a custom model that runs 

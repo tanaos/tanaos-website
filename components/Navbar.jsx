@@ -1,6 +1,7 @@
 'use client';
 
 import { BsXLg, BsList } from 'react-icons/bs';
+import { FaAngleDown } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { Navigation } from './Navigation';
 import { useRouter } from 'next/navigation';
@@ -31,29 +32,43 @@ const NavbarCollapse = ({ isOpen, setOpen }) => {
 
 // The actual navbar.
 export const Navbar = () => {
-
     const router = useRouter();
     const [ isMenuOpen, setMenuOpen ] = useState(false);
     const [ displayBanner, setDisplayBanner ] = useState(false);
+    const [ showDropdown, setShowDropdown ] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     };
 
     const handleBannerDismiss = () => {
-        // Set sessionStorage flag to false, so the banner does not get displayed again during
-        // the same session.
         sessionStorage.setItem(Config.DISPLAY_BANNER_SESSION_STORAGE_FLAG, 'false');
-        // Hide banner.
         setDisplayBanner(false)
     };
-    
+
+    // Dropdown handlers
+    const handleDropdownClick = (e) => {
+        e.preventDefault();
+        setShowDropdown((prev) => !prev);
+    };
+    const handleDropdownMouseEnter = () => setShowDropdown(true);
+    const handleDropdownMouseLeave = () => setShowDropdown(false);
+
+    // Close dropdown on outside click
+    useEffect(() => {
+        if (!showDropdown) return;
+        const handleClick = (e) => {
+            if (!e.target.closest('.dropdown')) setShowDropdown(false);
+        };
+        document.addEventListener('mousedown', handleClick);
+        return () => document.removeEventListener('mousedown', handleClick);
+    }, [showDropdown]);
+
     useEffect(() => {
         let bannerDisplayed = sessionStorage.getItem(Config.DISPLAY_BANNER_SESSION_STORAGE_FLAG);
         if (bannerDisplayed === null) {
             bannerDisplayed = 'true';
         }
-
         if (bannerDisplayed === 'true') {
             setDisplayBanner(false); // Set to true to enable the banner
         }
@@ -95,7 +110,42 @@ export const Navbar = () => {
                         unoptimized
                     />
                 </div>
-                <div className='col m-0 p-0 text-end'>
+                <div className='col m-0 p-0 text-end d-flex align-items-center justify-content-end' style={{ gap: '1.5rem' }}>
+                    <div 
+                        className="dropdown"
+                        style={{ position: 'relative' }}
+                        onMouseEnter={handleDropdownMouseEnter}
+                        onMouseLeave={handleDropdownMouseLeave}
+                    >
+                        <button
+                            className={styles['navbar-link']}
+                            style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 'inherit', fontWeight: 400, padding: 0 }}
+                            onClick={handleDropdownClick}
+                            aria-haspopup="true"
+                            aria-expanded={showDropdown}
+                            tabIndex={0}
+                        >
+                            Custom Models <span style={{ fontSize: '0.8em', marginLeft: 2 }}><FaAngleDown /></span>
+                        </button>
+                        <div
+                            className={styles['models-dropdown']}
+                            style={{
+                                display: showDropdown ? 'block' : 'none',
+                                position: 'absolute',
+                                right: 0,
+                                top: '100%',
+                                background: 'white',
+                                boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+                                borderRadius: 8,
+                                minWidth: 220,
+                                zIndex: 1000
+                            }}
+                        >
+                            <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE} className={styles['dropdown-link']} style={{ display: 'block', padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
+                                Ticket Classification
+                            </a>
+                        </div>
+                    </div>
                     <Navigation />
                 </div>
             </div>
@@ -118,6 +168,7 @@ export const Navbar = () => {
             </div>
             {/* Display the collapsible navbar component. */}
             <NavbarCollapse isOpen={isMenuOpen} setOpen={setMenuOpen} />
+            {/* Mobile models link (in collapsible menu) handled in Navigation.jsx */}
         </div>
     </>
 };

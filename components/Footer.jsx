@@ -12,6 +12,7 @@ export const Footer = () => {
                     <Link href={Config.HOME_ROUTE}>Home</Link>
                     <Link href={Config.BLOG_ROUTE}>Blog</Link>
                     <a href={Config.PLATFORM_BASE_URL} rel='noreferrer' target='_blank'>Platform</a>
+                    <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE}>Ticket Classification</a>
                 </div>
                 <div className={styles['footer-social']}>
                     <a href={Config.GITHUB_URL} rel='noreferrer' target='_blank' aria-label='GitHub'>
