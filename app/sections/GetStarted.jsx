@@ -7,7 +7,7 @@ import styles from './GetStarted.module.scss';
 
 export const GetStarted = () => {
 
-    return <div id='quickstart' className={`${styles['quickstart-section']} global-padding`}>
+    return <div id='quickstart' className={`section-grey ${styles['quickstart-section']} global-padding`}>
         {/* <div className='row'>
             <h2 className='mb-5'>Get started for free</h2>
             <div>

@@ -22,10 +22,13 @@ export const metadata = {
     twitter: { title, description },
 };
 
-const EXAMPLE_CODE = `from artifex import TextClassifier
+const EXAMPLE_CODE = `from transformers import pipeline
 
-# Load your custom ticket classification model.
-classifier = TextClassifier("your-org/ticket-classifier")
+# Load the custom ticket classification model we created for you
+pipeline(
+    task="text-classification",
+    model="your-org/ticket-classifier",
+)
 
 tickets = [
     "I can't log in to my account, it says password is incorrect",
@@ -34,7 +37,7 @@ tickets = [
     "I'd like a refund for my last payment",
 ]
 
-results = classifier.predict(tickets)
+results = pipeline(tickets)
 
 # [
 #   {"label": "authentication",  "confidence": 0.96},
@@ -69,7 +72,7 @@ export default function TicketClassificationPage() {
                                 No cloud dependency, no latency, no data leaving your infrastructure.
                             </p>
                             <div className={styles['hero-actions']} style={{ justifyContent: 'flex-start' }}>
-                                <a className='btn btn-primary' href='#try-it-out'>
+                                <a className='btn btn-primary' href='/#try-it-out'>
                                     Get this model <BsArrowRight className='ms-2' />
                                 </a>
                                 <a className='btn btn-white' href='#how-it-works'>
@@ -108,11 +111,12 @@ export default function TicketClassificationPage() {
             </section>
 
             {/* Benefits */}
-            <section className={`global-padding ${styles['section']} ${styles['section-alt']}`}>
-                <h2 className={`${styles['section-title']} ${styles['left']}`}>Why use a custom model?</h2>
+            <section className={`global-padding ${styles['section']}`}>
+                <h2 className={`${styles['section-title']} ${styles['left']}`}>Why use a Tanaos model?</h2>
                 <p className={`${styles['section-subtitle']} ${styles['left']}`}>
-                    General-purpose LLMs are overkill for ticket classification. A task-specific 
-                    Small Language Model is faster, cheaper, and more accurate.
+                    Other ticket classification solutions rely on your data being sent to a third-party 
+                    servers and lengthy training processes. With Tanaos, you get a custom model that runs 
+                    entirely on your infrastructure, with no data leaving your servers.
                 </p>
                 <div className='row mt-5 g-4'>
                     <div className='col-12 col-md-4'>
@@ -121,7 +125,7 @@ export default function TicketClassificationPage() {
                             <h3>Blazing fast</h3>
                             <p>
                                 Classify tickets in under 100ms on a regular CPU. 
-                                No GPU required, no API latency.
+                                No GPU required, perfect for real-time applications.
                             </p>
                         </div>
                     </div>
@@ -182,8 +186,8 @@ export default function TicketClassificationPage() {
             <section id='how-it-works' className={`global-padding ${styles['section']}`}>
                 <h2 className={styles['section-title']}>How it works</h2>
                 <p className={styles['section-subtitle']}>
-                    Integrate ticket classification in your pipeline with just a few lines of code, 
-                    using our open-source <a href={Config.ARTIFEX_GITHUB_URL} target='_blank' rel='noreferrer'>Artifex</a> library.
+                    Integrate the ticket classification model we've created for you in your pipeline 
+                    with just a few lines of code, using the Transformers library.
                 </p>
                 <div className={`mt-5 ${styles['code-container']}`}>
                     <CodeSnippet code={EXAMPLE_CODE} language='python' />
@@ -191,7 +195,7 @@ export default function TicketClassificationPage() {
             </section>
 
             {/* How we build it */}
-            <section className={`global-padding ${styles['section']} ${styles['section-alt']}`}>
+            <section className={`global-padding ${styles['section']}`}>
                 <h2 className={`${styles['section-title']} ${styles['left']}`}>How we build your model</h2>
                 <div className={`row mt-5 g-4 ${styles['steps']}`}>
                     <div className='col-12 col-md-3'>
