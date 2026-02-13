@@ -1,0 +1,352 @@
+.page {
+    a:not(:global(.btn)) {
+        color: $primary;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary-700;
+            text-decoration: underline;
+        }
+    }
+}
+
+// Hero
+// --------------------------------------------------
+
+.hero {
+    padding-top: calc(#{$headline-bar-height} + 4rem) !important;
+    padding-bottom: 4rem;
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 780px;
+    margin: 0;
+    h1 {
+        font-size: $font-size-hero;
+        line-height: $line-height-hero;
+        font-weight: 500;
+        color: $font-color-dark;
+        b {
+            font-weight: 600;
+            color: $primary;
+        }
+    }
+}
+
+.badge {
+    display: inline-block;
+    background-color: $primary-100;
+    color: $primary;
+    font-weight: 600;
+    font-size: $font-size-p-400;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: $font-size-h5;
+    line-height: $line-height-p-600;
+    color: $font-color-light;
+    margin-top: 1.5rem;
+    max-width: 650px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.demo-table-hero {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: 0;
+    overflow: visible;
+}
+
+// Sections
+// --------------------------------------------------
+
+.section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.section-alt {
+    background-color: $grey-100;
+}
+
+.section-title {
+    text-align: center;
+    color: $font-color-dark;
+    margin-bottom: 0.75rem;
+
+    &.left {
+        text-align: left;
+    }
+}
+
+.section-subtitle {
+    text-align: center;
+    color: $font-color-light;
+    font-size: $font-size-h5;
+    line-height: $line-height-p-600;
+    max-width: 650px;
+    margin: 0 auto;
+
+    &.left {
+        text-align: left;
+        margin: 0;
+    }
+}
+
+// Demo table
+// --------------------------------------------------
+
+.demo-table-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.demo-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: $shadow-300;
+    background-color: white;
+
+    thead {
+        background-color: $grey-200;
+
+        th {
+            padding: 0.85rem 1.25rem;
+            font-weight: 600;
+            font-size: $font-size-p-500;
+            color: $font-color-dark;
+            text-align: left;
+            border: none;
+        }
+    }
+
+    tbody {
+        tr {
+            transition: background-color $transition-default;
+
+            &:hover {
+                background-color: $grey-100;
+            }
+
+            &:not(:last-child) td {
+                border-bottom: $line-200;
+            }
+        }
+
+        td {
+            padding: 0.75rem 1.25rem;
+            font-size: $font-size-p-500;
+            color: $font-color-dark;
+            border: none;
+        }
+    }
+}
+
+.label-badge {
+    display: inline-block;
+    background-color: $primary-100;
+    color: $primary;
+    font-weight: 500;
+    font-size: $font-size-p-400;
+    padding: 0.2rem 0.7rem;
+    border-radius: 50px;
+}
+
+.confidence {
+    font-weight: 600;
+    color: $success-color-700;
+}
+
+// Benefit cards
+// --------------------------------------------------
+
+.benefit-card {
+    background-color: white;
+    border: $line-200;
+    border-radius: $border-radius;
+    padding: 2rem 1.5rem;
+    height: 100%;
+    transition: box-shadow $transition-default, transform $transition-default;
+
+    &:hover {
+        box-shadow: $shadow-300;
+        transform: translateY(-2px);
+    }
+
+    h3 {
+        font-size: $font-size-h4;
+        font-weight: 600;
+        color: $font-color-dark;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        color: $font-color-light;
+        font-size: $font-size-p-500;
+        line-height: $line-height-p-500;
+        margin: 0;
+    }
+}
+
+.benefit-icon {
+    font-size: 1.8rem;
+    color: $primary;
+}
+
+// Code container
+// --------------------------------------------------
+
+.code-container {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+// Steps
+// --------------------------------------------------
+
+.step {
+    text-align: left;
+    padding: 1.5rem 1rem;
+
+    h3 {
+        font-size: $font-size-h5;
+        font-weight: 600;
+        color: $font-color-dark;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        color: $font-color-light;
+        font-size: $font-size-p-500;
+        line-height: $line-height-p-500;
+        margin: 0;
+    }
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: $primary;
+    color: white;
+    font-weight: 600;
+    font-size: $font-size-h4;
+}
+
+// CTA section
+// --------------------------------------------------
+
+.cta-section {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.cta-card {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    border: $line-200;
+    border-radius: $border-radius;
+    padding: 3rem 2.5rem;
+    box-shadow: $shadow-300;
+
+    h2 {
+        font-weight: 600;
+        color: $font-color-dark;
+    }
+
+    p {
+        color: $font-color-light;
+        font-size: $font-size-h5;
+        line-height: $line-height-p-600;
+        margin-top: 1rem;
+
+        b {
+            color: $primary;
+        }
+    }
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+// Responsive
+// --------------------------------------------------
+
+@include media-breakpoint-down(md) {
+    .hero {
+        padding-top: calc(#{$headline-bar-height} + 2.5rem) !important;
+        padding-bottom: 2.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: $font-size-h1;
+        line-height: $line-height-h1;
+    }
+
+    .hero-subtitle {
+        font-size: $font-size-h6;
+    }
+
+    .section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .section-subtitle {
+        font-size: $font-size-h6;
+    }
+
+    .cta-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .hero-content h1 {
+        font-size: $font-size-h2;
+        line-height: $line-height-h2;
+    }
+
+    .benefit-card {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .cta-card {
+        padding: 1.5rem 1rem;
+
+        p {
+            font-size: $font-size-h6;
+        }
+    }
+}

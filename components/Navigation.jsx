@@ -27,7 +27,7 @@ export const Navigation = ({ onLinkClick }) => {
             className={'mt-4 mt-md-0 ms-md-4'}
             onClick={onLinkClick}
         >
-            Our models 🤗
+            Public models 🤗
         </a>
         <Link 
             href={Config.BLOG_ROUTE} 
