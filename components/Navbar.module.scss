@@ -17,6 +17,8 @@
 
 .models-dropdown {
     display: none;
+    text-align: left;
+    min-width: max-content;
 }
 
 .dropdown:hover .models-dropdown,
@@ -27,6 +29,7 @@
 .dropdown-link {
     color: $font-color-dark;
     text-decoration: none;
+    text-align: left;
     &:hover {
         background: $grey-200;
         color: black !important;

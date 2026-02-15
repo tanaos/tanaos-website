@@ -1,6 +1,6 @@
 'use client';
 
-import { BsXLg, BsList } from 'react-icons/bs';
+import { BsXLg, BsList, BsEnvelopeOpen, BsTag } from 'react-icons/bs';
 import { FaAngleDown } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { Navigation } from './Navigation';
@@ -132,19 +132,22 @@ export const Navbar = () => {
                             style={{
                                 display: showDropdown ? 'block' : 'none',
                                 position: 'absolute',
-                                right: 0,
+                                left: 0,
                                 top: '100%',
                                 background: 'white',
                                 boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
                                 borderRadius: 8,
-                                minWidth: 220,
-                                zIndex: 1000
+                                minWidth: 'max-content',
+                                zIndex: 1000,
+                                textAlign: 'left',
                             }}
                         >
-                            <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE} className={styles['dropdown-link']} style={{ display: 'block', padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
+                            <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE} className={styles['dropdown-link']} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
+                                <BsTag style={{ fontSize: '1.1em', opacity: 0.8 }} />
                                 Ticket Classification
                             </a>
-                            <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} className={styles['dropdown-link']} style={{ display: 'block', padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
+                            <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} className={styles['dropdown-link']} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
+                                <BsEnvelopeOpen style={{ fontSize: '1.1em', opacity: 0.8 }} />
                                 Contact Form Spam Filter
                             </a>
                         </div>
