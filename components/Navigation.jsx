@@ -17,13 +17,17 @@ export const Navigation = ({ onLinkClick }) => {
         >
             Public models 🤗
         </a>
-        <a 
-            href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE}
-            className={'d-md-none'}
-            onClick={onLinkClick}
-        >
-            Custom Models
-        </a>
+        <div className={'d-md-none'} style={{ position: 'relative', display: 'inline-block' }}>
+            <span style={{ cursor: 'pointer', fontWeight: 500 }}>Custom Models</span>
+            <div style={{ position: 'absolute', left: 0, top: '100%', background: '#fff', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', zIndex: 10, minWidth: 220 }}>
+                <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE} style={{ display: 'block', padding: '8px 16px', color: '#222', textDecoration: 'none' }} onClick={onLinkClick}>
+                    Ticket Classification
+                </a>
+                <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} style={{ display: 'block', padding: '8px 16px', color: '#222', textDecoration: 'none' }} onClick={onLinkClick}>
+                    Contact Form Spam Filter
+                </a>
+            </div>
+        </div>
         <Link 
             href={Config.BLOG_ROUTE} 
             className={url === Config.BLOG_ROUTE ? styles['highlighted'] : ''}

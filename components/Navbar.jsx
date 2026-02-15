@@ -144,6 +144,9 @@ export const Navbar = () => {
                             <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE} className={styles['dropdown-link']} style={{ display: 'block', padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
                                 Ticket Classification
                             </a>
+                            <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} className={styles['dropdown-link']} style={{ display: 'block', padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
+                                Contact Form Spam Filter
+                            </a>
                         </div>
                     </div>
                     <Navigation />
