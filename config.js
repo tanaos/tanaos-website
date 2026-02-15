@@ -69,6 +69,7 @@ export const Config = {
     BLOG_POST_ROUTE: (slug) => `/blog/${slug}/`,
     MODELS_TICKET_CLASSIFICATION_ROUTE: '/models/ticket-classification/',
     MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE: '/models/contact-form-spam-filter/',
+    MODELS_EMAIL_INTENT_DETECTION_ROUTE: '/models/email-intent-detection/',
 
     // Blog posts
     TASK_SPECIFIC_LLMS_POST: '/blog/task-specific-llms/',

@@ -110,48 +110,35 @@ export const Navbar = () => {
                         unoptimized
                     />
                 </div>
-                <div className='col m-0 p-0 text-end d-flex align-items-center justify-content-end' style={{ gap: '1.5rem' }}>
+                <div className={`col m-0 p-0 text-end d-flex align-items-center justify-content-end ${styles['navbar-actions']}`}> 
                     <div 
                         className="dropdown"
-                        style={{ position: 'relative' }}
                         onMouseEnter={handleDropdownMouseEnter}
                         onMouseLeave={handleDropdownMouseLeave}
                     >
                         <button
                             className={styles['navbar-link']}
-                            style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 'inherit', fontWeight: 400, padding: 0 }}
                             onClick={handleDropdownClick}
                             aria-haspopup="true"
                             aria-expanded={showDropdown}
                             tabIndex={0}
                         >
-                            Custom Models <span style={{ fontSize: '0.8em', marginLeft: 2 }}><FaAngleDown /></span>
+                            Custom Models <span className={styles['dropdown-arrow']}><FaAngleDown /></span>
                         </button>
                         <div
                             className={styles['models-dropdown']}
-                            style={{
-                                display: showDropdown ? 'block' : 'none',
-                                position: 'absolute',
-                                left: 0,
-                                top: '100%',
-                                background: 'white',
-                                boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-                                borderRadius: 8,
-                                minWidth: 220,
-                                zIndex: 1000,
-                                textAlign: 'left',
-                            }}
+                            style={{ display: showDropdown ? 'block' : 'none' }}
                         >
-                            <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE} className={styles['dropdown-link']} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
-                                <BsTag style={{ fontSize: '1.1em', opacity: 0.8 }} />
+                            <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE} className={styles['dropdown-link']}>
+                                <BsTag className={styles['dropdown-icon']} />
                                 Ticket Classification
                             </a>
-                            <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} className={styles['dropdown-link']} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
-                                <BsEnvelopeSlash style={{ fontSize: '1.1em', opacity: 0.8 }} />
+                            <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} className={styles['dropdown-link']}>
+                                <BsEnvelopeSlash className={styles['dropdown-icon']} />
                                 Contact Form Spam Filter
                             </a>
-                            <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE} className={styles['dropdown-link']} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
-                                <BsEnvelopeOpen style={{ fontSize: '1.1em', opacity: 0.8 }} />
+                            <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE} className={styles['dropdown-link']}>
+                                <BsEnvelopeOpen className={styles['dropdown-icon']} />
                                 Email Intent Detection
                             </a>
                         </div>

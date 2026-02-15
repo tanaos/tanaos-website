@@ -61,14 +61,14 @@ export default function ContactFormSpamFilterPage() {
             <section className={`global-padding ${styles['hero']}`}>
                 <div className='row m-0 align-items-start'>
                     <div className='col-12 col-lg-6 p-0 pt-lg-2 d-flex flex-column justify-content-start'>
-                        <div className={styles['hero-content']} style={{ textAlign: 'left', margin: 0, marginBottom: 0 }}>
+                        <div className={styles['hero-content']}>
                             <h1>
                                 Contact Form <b>Spam Filter</b>
                             </h1>
-                            <p className={styles['hero-subtitle']} style={{ textAlign: 'left', marginLeft: 0, marginRight: 0 }}>
+                            <p className={styles['hero-subtitle']}>
                                 Automatically filter unwanted or spam messages from your website contact form, with a custom Small Language Model that runs on your CPU. No cloud dependency, no latency, no data leaving your infrastructure.
                             </p>
-                            <div className={styles['hero-actions']} style={{ justifyContent: 'flex-start' }}>
+                            <div className={styles['hero-actions']}>
                                 <a className='btn btn-primary' href='/#try-it-out'>
                                     Get this model <BsArrowRight className='ms-2' />
                                 </a>
@@ -79,7 +79,7 @@ export default function ContactFormSpamFilterPage() {
                         </div>
                     </div>
                     <div className='col-12 col-lg-6 p-0 pt-lg-3 mt-5 mt-lg-0 d-flex justify-content-lg-end justify-content-center'>
-                        <div className={`table-responsive ${styles['demo-table-hero']}`} style={{ maxWidth: 480 }}>
+                        <div className={`table-responsive ${styles['demo-table-hero']}`}>
                             <table className={styles['demo-table']}>
                                 <thead>
                                     <tr>
@@ -220,7 +220,7 @@ export default function ContactFormSpamFilterPage() {
             {/* CTA */}
             <section id='try-it-out' className={`global-padding ${styles['section']} ${styles['cta-section']}`}>
                 <div className={styles['cta-card']}>
-                    <h2><BsStars style={{ fontSize: '2rem', marginRight: '1rem', verticalAlign: 'middle' }} />Ready to stop contact form spam?</h2>
+                    <h2 className={styles['cta-title']}><BsStars className={styles['cta-icon']} />Ready to stop contact form spam?</h2>
                     <p>
                         Tell us about your use case and we&apos;ll create a custom model for you, <b>100% free of charge</b>. You only pay if you decide to use it.
                     </p>

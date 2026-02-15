@@ -62,14 +62,14 @@ export default function EmailIntentDetectionPage() {
             <section className={`global-padding ${styles['hero']}`}>
                 <div className='row m-0 align-items-start'>
                     <div className='col-12 col-lg-6 p-0 pt-lg-2 d-flex flex-column justify-content-start'>
-                        <div className={styles['hero-content']} style={{ textAlign: 'left', margin: 0, marginBottom: 0 }}>
+                        <div className={styles['hero-content']}>
                             <h1>
                                 <b>Email Intent Detection</b> for Sales Teams
                             </h1>
-                            <p className={styles['hero-subtitle']} style={{ textAlign: 'left', marginLeft: 0, marginRight: 0 }}>
+                            <p className={styles['hero-subtitle']}>
                                 Classify inbound sales emails by intent: <b>Interested</b>, <b>Not now</b>, <b>Request demo</b>, <b>Pricing question</b>, <b>Competitor comparison</b>... Or anything else. Perfect for B2B SaaS and enterprise sales teams.
                             </p>
-                            <div className={styles['hero-actions']} style={{ justifyContent: 'flex-start' }}>
+                            <div className={styles['hero-actions']}>
                                 <a className='btn btn-primary' href='/#try-it-out'>
                                     Get this model <BsArrowRight className='ms-2' />
                                 </a>
@@ -80,7 +80,7 @@ export default function EmailIntentDetectionPage() {
                         </div>
                     </div>
                     <div className='col-12 col-lg-6 p-0 pt-lg-3 mt-5 mt-lg-0 d-flex justify-content-lg-end justify-content-center'>
-                        <div className={`table-responsive ${styles['demo-table-hero']}`} style={{ maxWidth: 480 }}>
+                        <div className={`table-responsive ${styles['demo-table-hero']}`}>
                             <table className={styles['demo-table']}>
                                 <thead>
                                     <tr>
@@ -221,7 +221,7 @@ export default function EmailIntentDetectionPage() {
             {/* CTA */}
             <section id='try-it-out' className={`global-padding ${styles['section']} ${styles['cta-section']}`}>
                 <div className={styles['cta-card']}>
-                    <h2><BsStars style={{ fontSize: '2rem', marginRight: '1rem', verticalAlign: 'middle' }} />Ready to classify sales emails?</h2>
+                    <h2 className={styles['cta-title']}><BsStars className={styles['cta-icon']} />Ready to classify sales emails?</h2>
                     <p>
                         Tell us about your use case and we&apos;ll create a custom model for you, <b>100% free of charge</b>. You only pay if you decide to use it.
                     </p>
