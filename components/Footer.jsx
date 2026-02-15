@@ -16,6 +16,7 @@ export const Footer = () => {
                     <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE}>Contact Form Spam Filter</a>
                     <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE}>Email Intent Detection</a>
                     <a href={Config.MODELS_CHATBOT_SAFETY_MODERATION_ROUTE}>Chatbot Safety & Moderation</a>
+                    <a href={Config.MODELS_BLOG_POSTS_MODERATION_ROUTE}>Blog Posts Moderation</a>
                 </div>
                 <div className={styles['footer-social']}>
                     <a href={Config.GITHUB_URL} rel='noreferrer' target='_blank' aria-label='GitHub'>

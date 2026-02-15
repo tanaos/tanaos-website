@@ -1,7 +1,8 @@
 'use client';
 
 import { 
-    BsXLg, BsList, BsEnvelopeOpen, BsEnvelopeSlash, BsTag, BsShieldCheck
+    BsXLg, BsList, BsEnvelopeOpen, BsEnvelopeSlash, BsTag, BsShieldCheck,
+    BsFileText
 } from 'react-icons/bs';
 import { FaAngleDown } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
@@ -146,6 +147,10 @@ export const Navbar = () => {
                             <a href={Config.MODELS_CHATBOT_SAFETY_MODERATION_ROUTE} className={styles['dropdown-link']}>
                                 <BsShieldCheck className={styles['dropdown-icon']} />
                                 Chatbot Safety & Moderation
+                            </a>
+                            <a href={Config.MODELS_BLOG_POSTS_MODERATION_ROUTE} className={styles['dropdown-link']}>
+                                <BsFileText className={styles['dropdown-icon']} />
+                                Blog Posts Moderation
                             </a>
                         </div>
                     </div>

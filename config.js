@@ -71,6 +71,7 @@ export const Config = {
     MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE: '/models/contact-form-spam-filter/',
     MODELS_EMAIL_INTENT_DETECTION_ROUTE: '/models/email-intent-detection/',
     MODELS_CHATBOT_SAFETY_MODERATION_ROUTE: '/models/chatbot-safety-moderation/',
+    MODELS_BLOG_POSTS_MODERATION_ROUTE: '/models/blog-posts-moderation/',
 
     // Blog posts
     TASK_SPECIFIC_LLMS_POST: '/blog/task-specific-llms/',

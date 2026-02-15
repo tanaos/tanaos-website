@@ -6,7 +6,7 @@ import BlogPostPreview from '../../components/BlogPostPreview';
 
 export const metadata = {
     title: 'Blog | Tanaos',
-    description: 'Read the latest articles about task-specific LLMs, new models and ecosystem updates.',
+    description: 'Read the latest articles about task-specific SmallLMs, new models and ecosystem updates.',
     alternates: {
         canonical: Config.WEBSITE_BASE_URL
     }
@@ -19,7 +19,7 @@ export const BlogPage = async () => {
         <div className='text-center'>
             <h1>Tanaos blog</h1>
             <p className='mt-4'>
-                Read articles about task-specific LLMs, new models and
+                Read articles about task-specific SmallLMs, new models and
                 ecosystem updates.
             </p>
             <div className='mt-5 row'>
