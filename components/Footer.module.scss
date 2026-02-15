@@ -25,15 +25,31 @@
     align-items: center;
 }
 
-.footer-nav {
+.footer-nav-columns {
     display: flex;
-    gap: 1.5rem;
+    gap: 3rem;
     flex-wrap: wrap;
-
-    a {
-        font-size: $font-size-p-500;
-        font-weight: 400;
-    }
+    justify-content: center;
+    text-align: left;
+}
+.footer-nav-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    min-width: 160px;
+    align-items: flex-start;
+}
+.footer-nav-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    min-width: 160px;
+}
+.footer-nav-title {
+    font-size: $font-size-h6;
+    font-weight: 600;
+    color: $grey-100;
+    margin-bottom: 0.5rem;
 }
 
 .footer-social {
