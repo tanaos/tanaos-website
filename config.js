@@ -70,6 +70,7 @@ export const Config = {
     MODELS_TICKET_CLASSIFICATION_ROUTE: '/models/ticket-classification/',
     MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE: '/models/contact-form-spam-filter/',
     MODELS_EMAIL_INTENT_DETECTION_ROUTE: '/models/email-intent-detection/',
+    MODELS_CHATBOT_SAFETY_MODERATION_ROUTE: '/models/chatbot-safety-moderation/',
 
     // Blog posts
     TASK_SPECIFIC_LLMS_POST: '/blog/task-specific-llms/',

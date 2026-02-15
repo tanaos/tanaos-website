@@ -1,6 +1,8 @@
 'use client';
 
-import { BsXLg, BsList, BsEnvelopeOpen, BsEnvelopeSlash, BsTag } from 'react-icons/bs';
+import { 
+    BsXLg, BsList, BsEnvelopeOpen, BsEnvelopeSlash, BsTag, BsShieldCheck
+} from 'react-icons/bs';
 import { FaAngleDown } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { Navigation } from './Navigation';
@@ -140,6 +142,10 @@ export const Navbar = () => {
                             <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE} className={styles['dropdown-link']}>
                                 <BsEnvelopeOpen className={styles['dropdown-icon']} />
                                 Email Intent Detection
+                            </a>
+                            <a href={Config.MODELS_CHATBOT_SAFETY_MODERATION_ROUTE} className={styles['dropdown-link']}>
+                                <BsShieldCheck className={styles['dropdown-icon']} />
+                                Chatbot Safety & Moderation
                             </a>
                         </div>
                     </div>
