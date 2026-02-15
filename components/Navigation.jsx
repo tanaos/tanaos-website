@@ -26,6 +26,9 @@ export const Navigation = ({ onLinkClick }) => {
                 <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} style={{ display: 'block', padding: '8px 16px', color: '#222', textDecoration: 'none' }} onClick={onLinkClick}>
                     Contact Form Spam Filter
                 </a>
+                <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE} style={{ display: 'block', padding: '8px 16px', color: '#222', textDecoration: 'none' }} onClick={onLinkClick}>
+                    Email Intent Detection
+                </a>
             </div>
         </div>
         <Link 

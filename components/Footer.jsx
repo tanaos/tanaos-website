@@ -14,6 +14,7 @@ export const Footer = () => {
                     <a href={Config.PLATFORM_BASE_URL} rel='noreferrer' target='_blank'>Platform</a>
                     <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE}>Ticket Classification</a>
                     <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE}>Contact Form Spam Filter</a>
+                    <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE}>Email Intent Detection</a>
                 </div>
                 <div className={styles['footer-social']}>
                     <a href={Config.GITHUB_URL} rel='noreferrer' target='_blank' aria-label='GitHub'>

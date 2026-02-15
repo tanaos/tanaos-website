@@ -1,6 +1,6 @@
 'use client';
 
-import { BsXLg, BsList, BsEnvelopeOpen, BsTag } from 'react-icons/bs';
+import { BsXLg, BsList, BsEnvelopeOpen, BsEnvelopeSlash, BsTag } from 'react-icons/bs';
 import { FaAngleDown } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { Navigation } from './Navigation';
@@ -137,7 +137,7 @@ export const Navbar = () => {
                                 background: 'white',
                                 boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
                                 borderRadius: 8,
-                                minWidth: 'max-content',
+                                minWidth: 220,
                                 zIndex: 1000,
                                 textAlign: 'left',
                             }}
@@ -147,8 +147,12 @@ export const Navbar = () => {
                                 Ticket Classification
                             </a>
                             <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} className={styles['dropdown-link']} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
-                                <BsEnvelopeOpen style={{ fontSize: '1.1em', opacity: 0.8 }} />
+                                <BsEnvelopeSlash style={{ fontSize: '1.1em', opacity: 0.8 }} />
                                 Contact Form Spam Filter
+                            </a>
+                            <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE} className={styles['dropdown-link']} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '0.75rem 1.25rem', color: '#222', textDecoration: 'none', borderRadius: 8 }}>
+                                <BsEnvelopeOpen style={{ fontSize: '1.1em', opacity: 0.8 }} />
+                                Email Intent Detection
                             </a>
                         </div>
                     </div>

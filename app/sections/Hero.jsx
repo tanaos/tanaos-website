@@ -18,7 +18,7 @@ export const Hero = () => {
             </h2>
             <div className='mt-5 d-flex flex-wrap gap-2 gap-md-4'>
                 <a
-                    className='btn btn-white'
+                    className='btn btn-primary'
                     href='#try-it-out'
                 >
                     Create your model <BsArrowRight className='ms-2' />
