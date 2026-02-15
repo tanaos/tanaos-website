@@ -1,4 +1,5 @@
-import { BsGithub } from 'react-icons/bs';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { FaLinkedin } from 'react-icons/fa';
 import { Config } from '../config';
 import styles from './Footer.module.scss';
 import Link from 'next/link';
@@ -30,6 +31,9 @@ export const Footer = () => {
                         </a>
                         <a href={Config.HUGGINGFACE_URL} rel='noreferrer' target='_blank' aria-label='Hugging Face'>
                             <span style={{ fontSize: '1.2em', verticalAlign: 'middle', marginRight: 8 }}>🤗</span> Hugging Face
+                        </a>
+                        <a href={Config.LINKEDIN_URL} rel="noreferrer" target="_blank" aria-label="LinkedIn">
+                            <BsLinkedin style={{ verticalAlign: 'middle', marginRight: 8 }} /> LinkedIn
                         </a>
                     </div>
                 </div>
