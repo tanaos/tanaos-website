@@ -1,4 +1,5 @@
 import styles from './WhyTanaos.module.scss';
+import { BsGear, BsCurrencyDollar, BsShieldLock } from 'react-icons/bs';
 
 export const WhyTanaos = () => {
     return <div className={`mt-5 mb-5 mt-md-0 mb-md-0 ${styles['why-tanaos-section']} global-padding`}>
@@ -8,24 +9,26 @@ export const WhyTanaos = () => {
         <div className='row'>
             <div className='row'>
                 <div className={`col-12 col-md-4 ${styles['feature-box']}`}>
-                    <h3>Models for any use-case</h3>
+                    <h3><BsGear style={{marginRight: '8px'}} />Models for any use-case</h3>
                     <p>
                         We develop custom Small Language Models based on your specific requirements,
-                        ensuring that you get the best performance. No data needed.
+                        ensuring that you get the best performance for your unique use-case.
                     </p>
                 </div>
                 <div className={`col-12 col-md-4 mt-4 mt-md-0 ${styles['feature-box']}`}>
-                    <h3>Use them on your CPU</h3>
+                    <h3><BsCurrencyDollar style={{marginRight: '8px'}} />Cut LLM API costs</h3>
                     <p>
-                        Once we've created a model for you, you can run it on your own CPU for
-                        maximum control, privacy and performance. No API, no latency.
+                        Reduce costs by up to 90% compared to using third-party LLM APIs. By running
+                        your own small models, you can significantly cut down on expenses while 
+                        maintaining high performance.
                     </p>
                 </div>
                 <div className={`col-12 col-md-4 mt-4 mt-md-0 ${styles['feature-box']}`}>
-                    <h3>Only pay if you use it</h3>
+                    <h3><BsShieldLock style={{marginRight: '8px'}} />Get built-in privacy</h3>
                     <p>
-                        Model development is 100% free. You only pay if you end up using the model. 
-                        You don't like it? Don't use it, don't pay. No questions asked.
+                        With Tanaos, your data stays on your own infrastructure, giving you full 
+                        control over your information and ensuring that your sensitive data remains 
+                        private and secure.
                     </p>
                 </div>
             </div>

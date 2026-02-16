@@ -8,8 +8,8 @@ import { RecentBlogPosts } from './sections/RecentBlogPosts';
 import { Config } from '../config';
 
 
-const title = 'Developing custom Small Language Models for all your needs | Tanaos'
-const description = 'At Tanaos we develop task-specific Small Language Models for any text processing task and language. Tell us what you need to do and we will create a model that does it.'
+const title = 'Cut costs, keep data private and get higher performance with Small Language Models | Tanaos'
+const description = 'We develop task-specific Small Language Models for any text processing task and language. Replace calls to LLM APIs with your own SmallLMs to cut costs by up to 90%, get enhanced data privacy, higher performance and lower latency.'
 const applicationName = 'Tanaos Website'
 const url = Config.WEBSITE_BASE_URL
 

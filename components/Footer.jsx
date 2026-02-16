@@ -1,5 +1,4 @@
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
-import { FaLinkedin } from 'react-icons/fa';
 import { Config } from '../config';
 import styles from './Footer.module.scss';
 import Link from 'next/link';

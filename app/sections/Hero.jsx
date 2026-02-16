@@ -9,12 +9,13 @@ export const Hero = () => {
         <div className='row m-0'>
         <div className='col-12 col-md-6 m-0 p-0 pt-md-5'>
             <h1 className={styles['hero-title']}>
-                Developing custom <b>Small Language Models</b> for all your needs.
+                Cut costs, keep data private and get higher performance 
+                with <b>Small Language Models</b>.
             </h1>
             <h2 className={`mt-4 ${styles['hero-subtitle']}`}>
-                At Tanaos we develop task-specific SmallLMs for any text processing task and 
-                language. Tell us what you need to do and we will create a model that does it.
-                We don't need any data from you.
+                We develop task-specific Small Language Models for any text processing 
+                task and language. Replace calls to LLM APIs with your own SmallLMs to <b>cut costs 
+                by up to 90%</b>, get <b>enhanced data privacy, higher performance and lower latency</b>.
             </h2>
             <div className='mt-5 d-flex flex-wrap gap-2 gap-md-4'>
                 <a

@@ -4,7 +4,7 @@ export const Statistics = () => {
     const stats = [
         { number: '7,000', label: 'monthly model downloads' },
         { number: '500 MB', label: 'average model size' },
-        { number: '100ms', label: 'average inference speed' },
+        { number: '0%', label: 'data sent to third-party servers' },
     ];
 
     return (
