@@ -2,7 +2,7 @@
 
 import { 
     BsXLg, BsList, BsEnvelopeOpen, BsEnvelopeSlash, BsTag, BsShieldCheck,
-    BsFileText
+    BsFileText, BsGraphUp, BsWrench
 } from 'react-icons/bs';
 import { FaAngleDown } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
@@ -151,6 +151,14 @@ export const Navbar = () => {
                             <a href={Config.MODELS_BLOG_POSTS_MODERATION_ROUTE} className={styles['dropdown-link']}>
                                 <BsFileText className={styles['dropdown-icon']} />
                                 Blog Posts Moderation
+                            </a>
+                            <a href={Config.MODELS_ANOMALY_FRAUD_DETECTION_ROUTE} className={styles['dropdown-link']}>
+                                <BsGraphUp className={styles['dropdown-icon']} />
+                                Anomaly & Fraud Detection
+                            </a>
+                            <a href={Config.MODELS_PREDICTIVE_MAINTENANCE_ROUTE} className={styles['dropdown-link']}>
+                                <BsWrench className={styles['dropdown-icon']} />
+                                Predictive Maintenance
                             </a>
                         </div>
                     </div>

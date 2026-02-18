@@ -22,6 +22,8 @@ export const Footer = () => {
                         <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE}>Email Intent Detection</a>
                         <a href={Config.MODELS_CHATBOT_SAFETY_MODERATION_ROUTE}>Chatbot Safety & Moderation</a>
                         <a href={Config.MODELS_BLOG_POSTS_MODERATION_ROUTE}>Blog Posts Moderation</a>
+                        <a href={Config.MODELS_ANOMALY_FRAUD_DETECTION_ROUTE}>Anomaly & Fraud Detection</a>
+                        <a href={Config.MODELS_PREDICTIVE_MAINTENANCE_ROUTE}>Predictive Maintenance</a>
                     </div>
                     <div className={styles['footer-nav-column']}>
                         <div className={styles['footer-nav-title']}>Socials</div>

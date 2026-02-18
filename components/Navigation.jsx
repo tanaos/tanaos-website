@@ -26,6 +26,12 @@ export const Navigation = ({ onLinkClick }) => {
                 <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} className={styles['dropdown-mobile-link']} onClick={onLinkClick}>
                     Contact Form Spam Filter
                 </a>
+                <a href={Config.MODELS_ANOMALY_FRAUD_DETECTION_ROUTE} className={styles['dropdown-mobile-link']} onClick={onLinkClick}>
+                    Anomaly & Fraud Detection
+                </a>
+                <a href={Config.MODELS_PREDICTIVE_MAINTENANCE_ROUTE} className={styles['dropdown-mobile-link']} onClick={onLinkClick}>
+                    Predictive Maintenance
+                </a>
                 <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE} className={styles['dropdown-mobile-link']} onClick={onLinkClick}>
                     Email Intent Detection
                 </a>

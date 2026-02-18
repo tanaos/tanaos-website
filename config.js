@@ -69,9 +69,12 @@ export const Config = {
     BLOG_POST_ROUTE: (slug) => `/blog/${slug}/`,
     MODELS_TICKET_CLASSIFICATION_ROUTE: '/models/ticket-classification/',
     MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE: '/models/contact-form-spam-filter/',
+    MODELS_ANOMALY_FRAUD_DETECTION_ROUTE: '/models/anomaly-fraud-detection/',
+    MODELS_PREDICTIVE_MAINTENANCE_ROUTE: '/models/predictive-maintenance/',
     MODELS_EMAIL_INTENT_DETECTION_ROUTE: '/models/email-intent-detection/',
     MODELS_CHATBOT_SAFETY_MODERATION_ROUTE: '/models/chatbot-safety-moderation/',
     MODELS_BLOG_POSTS_MODERATION_ROUTE: '/models/blog-posts-moderation/',
+    MODELS_ANOMALY_FRAUD_DETECTION_ROUTE: '/models/anomaly-fraud-detection/',
 
     // Blog posts
     TASK_SPECIFIC_LLMS_POST: '/blog/task-specific-llms/',
