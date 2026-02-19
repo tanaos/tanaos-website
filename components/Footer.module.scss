@@ -89,13 +89,30 @@
     .footer-top {
         flex-direction: column;
         gap: 1.5rem;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .footer-nav {
-        justify-content: center;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .footer-nav-columns {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .footer-nav-column {
+        align-items: flex-start;
+        text-align: left;
     }
 
     .footer-social {
-        justify-content: center;
+        justify-content: flex-start;
+    }
+
+    .footer-bottom {
+        text-align: left;
     }
 }
