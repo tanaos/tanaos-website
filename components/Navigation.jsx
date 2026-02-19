@@ -18,24 +18,16 @@ export const Navigation = ({ onLinkClick }) => {
             Public models 🤗
         </a>
         <div className={`d-md-none ${styles['dropdown-mobile-container']}`}> 
-            <span className={styles['dropdown-mobile-label']}>Custom Models</span>
-            <div className={styles['dropdown-mobile-menu']}> 
-                <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE} className={styles['dropdown-mobile-link']} onClick={onLinkClick}>
-                    Ticket Classification
-                </a>
-                <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} className={styles['dropdown-mobile-link']} onClick={onLinkClick}>
-                    Contact Form Spam Filter
-                </a>
-                <a href={Config.MODELS_ANOMALY_FRAUD_DETECTION_ROUTE} className={styles['dropdown-mobile-link']} onClick={onLinkClick}>
-                    Anomaly & Fraud Detection
-                </a>
-                <a href={Config.MODELS_PREDICTIVE_MAINTENANCE_ROUTE} className={styles['dropdown-mobile-link']} onClick={onLinkClick}>
-                    Predictive Maintenance
-                </a>
-                <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE} className={styles['dropdown-mobile-link']} onClick={onLinkClick}>
-                    Email Intent Detection
-                </a>
-            </div>
+            <a 
+                href="/models" 
+                className={
+                    styles['dropdown-mobile-label'] +
+                    (url === '/models' ? ' ' + styles['highlighted'] : '')
+                }
+                onClick={onLinkClick}
+            >
+                Custom Models
+            </a>
         </div>
         <Link 
             href={Config.BLOG_ROUTE} 

@@ -36,6 +36,14 @@ const NavbarCollapse = ({ isOpen, setOpen }) => {
 // The actual navbar.
 export const Navbar = () => {
     const router = useRouter();
+    const [currentPath, setCurrentPath] = useState('');
+
+    // Get current path for highlighting
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setCurrentPath(window.location.pathname);
+        }
+    }, []);
     const [ isMenuOpen, setMenuOpen ] = useState(false);
     const [ displayBanner, setDisplayBanner ] = useState(false);
     const [ showDropdown, setShowDropdown ] = useState(false);
@@ -114,54 +122,15 @@ export const Navbar = () => {
                     />
                 </div>
                 <div className={`col m-0 p-0 text-end d-flex align-items-center justify-content-end ${styles['navbar-actions']}`}> 
-                    <div 
-                        className="dropdown"
-                        onMouseEnter={handleDropdownMouseEnter}
-                        onMouseLeave={handleDropdownMouseLeave}
+                    <a
+                        className={
+                            styles['navbar-link'] +
+                            (currentPath === '/models' ? ' ' + styles['highlighted'] : '')
+                        }
+                        href="/models"
                     >
-                        <button
-                            className={styles['navbar-link']}
-                            onClick={handleDropdownClick}
-                            aria-haspopup="true"
-                            aria-expanded={showDropdown}
-                            tabIndex={0}
-                        >
-                            Custom Models <span className={styles['dropdown-arrow']}><FaAngleDown /></span>
-                        </button>
-                        <div
-                            className={styles['models-dropdown']}
-                            style={{ display: showDropdown ? 'block' : 'none' }}
-                        >
-                            <a href={Config.MODELS_TICKET_CLASSIFICATION_ROUTE} className={styles['dropdown-link']}>
-                                <BsTag className={styles['dropdown-icon']} />
-                                Ticket Classification
-                            </a>
-                            <a href={Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE} className={styles['dropdown-link']}>
-                                <BsEnvelopeSlash className={styles['dropdown-icon']} />
-                                Contact Form Spam Filter
-                            </a>
-                            <a href={Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE} className={styles['dropdown-link']}>
-                                <BsEnvelopeOpen className={styles['dropdown-icon']} />
-                                Email Intent Detection
-                            </a>
-                            <a href={Config.MODELS_CHATBOT_SAFETY_MODERATION_ROUTE} className={styles['dropdown-link']}>
-                                <BsShieldCheck className={styles['dropdown-icon']} />
-                                Chatbot Safety & Moderation
-                            </a>
-                            <a href={Config.MODELS_BLOG_POSTS_MODERATION_ROUTE} className={styles['dropdown-link']}>
-                                <BsFileText className={styles['dropdown-icon']} />
-                                Blog Posts Moderation
-                            </a>
-                            <a href={Config.MODELS_ANOMALY_FRAUD_DETECTION_ROUTE} className={styles['dropdown-link']}>
-                                <BsGraphUp className={styles['dropdown-icon']} />
-                                Anomaly & Fraud Detection
-                            </a>
-                            <a href={Config.MODELS_PREDICTIVE_MAINTENANCE_ROUTE} className={styles['dropdown-link']}>
-                                <BsWrench className={styles['dropdown-icon']} />
-                                Predictive Maintenance
-                            </a>
-                        </div>
-                    </div>
+                        Custom Models
+                    </a>
                     <Navigation />
                 </div>
             </div>

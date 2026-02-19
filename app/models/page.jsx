@@ -52,7 +52,7 @@ export default function ModelsOverview() {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Our Models</h1>
-            <p className={styles.subtitle}>Explore our suite of specialized language models for business automation, safety, and efficiency.</p>
+            <p className={styles.subtitle}>Explore our suite of specialized Small Language Models for business automation, safety, and efficiency.</p>
             <div className={`${styles['models-grid']}`}>
                 {models.map((model) => (
                     <Link href={model.href} key={model.name} className={styles['model-card']}>
