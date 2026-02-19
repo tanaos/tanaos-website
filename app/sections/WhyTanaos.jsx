@@ -24,7 +24,7 @@ export const WhyTanaos = () => {
                     </p>
                 </div>
                 <div className={`col-12 col-md-4 mt-4 mt-md-0 ${styles['feature-box']}`}>
-                    <h3><BsShieldLock style={{marginRight: '8px'}} />Get built-in privacy</h3>
+                    <h3><BsShieldLock style={{marginRight: '8px'}} />Protect your data</h3>
                     <p>
                         With Tanaos, your data stays on your own infrastructure, giving you full 
                         control over your information and ensuring that your sensitive data remains 
