@@ -67,6 +67,7 @@ export const Config = {
     HOME_ROUTE: '/',
     BLOG_ROUTE: '/blog/',
     BLOG_POST_ROUTE: (slug) => `/blog/${slug}/`,
+    MODELS_ROUTE: '/models/',
     MODELS_TICKET_CLASSIFICATION_ROUTE: '/models/ticket-classification/',
     MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE: '/models/contact-form-spam-filter/',
     MODELS_ANOMALY_FRAUD_DETECTION_ROUTE: '/models/anomaly-fraud-detection/',

@@ -122,15 +122,6 @@ export const Navbar = () => {
                     />
                 </div>
                 <div className={`col m-0 p-0 text-end d-flex align-items-center justify-content-end ${styles['navbar-actions']}`}> 
-                    <a
-                        className={
-                            styles['navbar-link'] +
-                            (currentPath === '/models' ? ' ' + styles['highlighted'] : '')
-                        }
-                        href="/models"
-                    >
-                        Custom Models
-                    </a>
                     <Navigation />
                 </div>
             </div>
