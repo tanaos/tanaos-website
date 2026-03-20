@@ -62,7 +62,11 @@ export default function ModelsOverview() {
             {!loading && !error && (
                 <div className={styles['models-list']}>
                     {models.map((model) => (
-                        <div key={model.id} className={styles['model-row']}>
+                        <div 
+                            key={model.id} 
+                            className={styles['model-row']}
+                            onClick={() => window.location.href = Config.PLATFORM_BASE_URL}
+                        >
                             <div className={styles['model-thumbnail']}>
                                 <span className={styles['thumbnail-icon']}>{getIcon(model.model_type)}</span>
                                 <span className={styles['thumbnail-name']}>{model.name}</span>
