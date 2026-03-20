@@ -18,12 +18,6 @@ export const Navigation = ({ onLinkClick }) => {
             >
                 Hugging Face 🤗
             </a>
-            <a 
-                href="/models" 
-                onClick={onLinkClick}
-            >
-                Public Models
-            </a>
             <Link 
                 href={Config.BLOG_ROUTE} 
                 onClick={onLinkClick}
