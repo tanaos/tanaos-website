@@ -45,44 +45,42 @@ export default function ModelsOverview() {
             });
     }, []);
 
-    return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>Our Models</h1>
-            <div className={styles.subtitle}>These are some of our publicly available Small Language Models for various tasks and languages.</div>
-            {loading && (
-                <div className={styles['loading-container']}>
-                    <ClipLoader size={50} />
-                </div>
-            )}
-            {error && (
-                <p className={styles['error-text']}>
-                    Could not load models: {error}
-                </p>
-            )}
-            {!loading && !error && (
-                <div className={styles['models-list']}>
-                    {models.map((model) => (
-                        <div 
-                            key={model.id} 
-                            className={styles['model-row']}
-                            onClick={() => window.location.href = Config.PLATFORM_BASE_URL}
-                        >
-                            <div className={styles['model-thumbnail']}>
-                                <span className={styles['thumbnail-icon']}>{getIcon(model.model_type)}</span>
-                                <span className={styles['thumbnail-name']}>{model.name}</span>
-                                {model.size && <span className={styles['thumbnail-size']}>{formatBytes(model.size)}</span>}
-                                <span className={styles['thumbnail-download']}><BsDownload /></span>
-                            </div>
-                            <div className={styles['model-details']}>
-                                <h2 className={styles['detail-name']}>{model.name}</h2>
-                                {model.params && <p className={styles['detail-line']}><strong>Params</strong>: {model.params}</p>}
-                                {model.language && <p className={styles['detail-line']}><strong>Language</strong>: {model.language}</p>}
-                                {model.description && <p className={styles['detail-line']}><strong>Description</strong>: {model.description}</p>}
-                            </div>
+    return <div className={`${styles.container} global-padding`}>
+        <h1 className={styles.title}>Our Models</h1>
+        <div className={styles.subtitle}>These are some of our publicly available Small Language Models for various tasks and languages.</div>
+        {loading && (
+            <div className={styles['loading-container']}>
+                <ClipLoader size={50} />
+            </div>
+        )}
+        {error && (
+            <p className={styles['error-text']}>
+                Could not load models: {error}
+            </p>
+        )}
+        {!loading && !error && (
+            <div className={styles['models-list']}>
+                {models.map((model) => (
+                    <div 
+                        key={model.id} 
+                        className={styles['model-row']}
+                        onClick={() => window.location.href = Config.PLATFORM_BASE_URL}
+                    >
+                        <div className={styles['model-thumbnail']}>
+                            <span className={styles['thumbnail-icon']}>{getIcon(model.model_type)}</span>
+                            <span className={styles['thumbnail-name']}>{model.name}</span>
+                            {model.size && <span className={styles['thumbnail-size']}>{formatBytes(model.size)}</span>}
+                            <span className={styles['thumbnail-download']}><BsDownload /></span>
                         </div>
-                    ))}
-                </div>
-            )}
-        </div>
-    );
+                        <div className={styles['model-details']}>
+                            <h2 className={styles['detail-name']}>{model.name}</h2>
+                            {model.params && <p className={styles['detail-line']}><strong>Params</strong>: {model.params}</p>}
+                            {model.language && <p className={styles['detail-line']}><strong>Language</strong>: {model.language}</p>}
+                            {model.description && <p className={styles['detail-line']}><strong>Description</strong>: {model.description}</p>}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        )}
+    </div>
 }
