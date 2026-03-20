@@ -50,7 +50,7 @@ export const AvailableModels = () => {
             <div className={`d-flex align-items-center justify-content-between ${styles['section-header']} mb-5`}>
                 <h2>Check out some of our models</h2>
             </div>
-            <div className='mb-5'>
+            <div className={`mb-5 ${styles['description']}`}>
                 Below are task-specific Small Language Models for various use cases. You can <b>try 
                 all of them for free for one week</b>. After the trial period, you can subscribe to 
                 our paid plan to maintain access to all models and get access to new ones as they 
