@@ -16,13 +16,13 @@ export const Navigation = ({ onLinkClick }) => {
                 target='_blank'
                 onClick={onLinkClick}
             >
-                Public Models 🤗
+                Hugging Face 🤗
             </a>
             <a 
                 href="/models" 
                 onClick={onLinkClick}
             >
-                Custom Models
+                Public Models
             </a>
             <Link 
                 href={Config.BLOG_ROUTE} 

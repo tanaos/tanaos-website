@@ -48,7 +48,7 @@ export default function ModelsOverview() {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Our Models</h1>
-            <div className={styles.subtitle}>These are some of our publicly available Small Language Models for various tasks and applications.</div>
+            <div className={styles.subtitle}>These are some of our publicly available Small Language Models for various tasks and languages.</div>
             {loading && (
                 <div className={styles['loading-container']}>
                     <ClipLoader size={50} />

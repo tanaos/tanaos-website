@@ -14,6 +14,7 @@
     color: $font-color-light;
     text-align: center;
     font-size: $font-size-h5;
+    margin-bottom: 5rem;
 }
 
 .loading-container {
@@ -45,6 +46,7 @@
 }
 
 .model-thumbnail {
+    cursor: pointer;
     flex-shrink: 0;
     width: 300px;
     display: flex;
@@ -58,6 +60,18 @@
     gap: 0.6rem;
     min-height: 170px;
     box-shadow: $shadow-300;
+    transition: box-shadow 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        box-shadow: $shadow-500;
+
+        .thumbnail-download {
+            color: $font-color-dark;
+        }
+        .thumbnail-name {
+            text-decoration-color: $font-color-dark;
+        }
+    }
 }
 
 .thumbnail-icon {
@@ -70,6 +84,9 @@
     color: $font-color-dark;
     text-align: center;
     word-break: break-word;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.2s ease;
 }
 
 .thumbnail-size {
@@ -78,8 +95,8 @@
 }
 
 .thumbnail-download {
-    font-size: $font-size-h4;
-    color: $font-color-dark;
+    font-size: $font-size-h3;
+    color: $font-color-light;
     margin-top: 0.4rem;
 }
 
