@@ -1,69 +1,84 @@
-import Link from 'next/link';
-import { BsTag, BsEnvelopeSlash, BsEnvelopeOpen, BsShieldCheck, BsFileText, BsGraphUp, BsTools } from 'react-icons/bs';
+'use client';
+
+import { useState, useEffect } from 'react';
+import { BsShieldCheck, BsEnvelopeSlash, BsTag, BsEmojiSmile, BsSearch, BsTools, BsDownload } from 'react-icons/bs';
+import { ClipLoader } from 'react-spinners';
 import styles from './ModelsOverview.module.scss';
 import { Config } from '../../config';
 
-const models = [
-    {
-        name: 'Ticket Classification',
-        description: 'Automatically classify and route support tickets to the right team.',
-        href: Config.MODELS_TICKET_CLASSIFICATION_ROUTE,
-        icon: <BsTag />,
-    },
-    {
-        name: 'Contact Form Spam Filter',
-        description: 'Filter unwanted or spam messages from your website contact form.',
-        href: Config.MODELS_CONTACT_FORM_SPAM_FILTER_ROUTE,
-        icon: <BsEnvelopeSlash />,
-    },
-    {
-        name: 'Email Intent Detection',
-        description: 'Classify inbound sales emails by intent for sales teams.',
-        href: Config.MODELS_EMAIL_INTENT_DETECTION_ROUTE,
-        icon: <BsEnvelopeOpen />,
-    },
-    {
-        name: 'Chatbot Safety & Moderation',
-        description: 'Ensure your chatbot never returns unwanted or dangerous responses.',
-        href: Config.MODELS_CHATBOT_SAFETY_MODERATION_ROUTE,
-        icon: <BsShieldCheck />,
-    },
-    {
-        name: 'Blog Posts Moderation',
-        description: 'Automatically moderate blog posts for safe publishing.',
-        href: Config.MODELS_BLOG_POSTS_MODERATION_ROUTE,
-        icon: <BsFileText />,
-    },
-    {
-        name: 'Anomaly & Fraud Detection',
-        description: 'Detect fraudulent transactions and anomalies in financial and e-commerce data.',
-        href: Config.MODELS_ANOMALY_FRAUD_DETECTION_ROUTE,
-        icon: <BsGraphUp />,
-    },
-    {
-        name: 'Predictive Maintenance',
-        description: 'Predict equipment failures and schedule maintenance before breakdowns.',
-        href: '/models/predictive-maintenance/',
-        icon: <BsTools />,
-    },
-];
+const MODEL_TYPE_ICONS = {
+    'guardrail': <BsShieldCheck />,
+    'spam-detection': <BsEnvelopeSlash />,
+    'intent-classification': <BsTag />,
+    'sentiment-analysis': <BsEmojiSmile />,
+    'reranker': <BsSearch />,
+};
+
+function getIcon(modelType) {
+    return MODEL_TYPE_ICONS[modelType] ?? <BsTools />;
+}
+
+function formatBytes(bytes) {
+    if (!bytes) return null;
+    return `${Math.round(bytes / (1024 * 1024))} MB`;
+}
 
 export default function ModelsOverview() {
+    const [models, setModels] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        fetch(`${Config.API_BASE_URL}/models/public`)
+            .then(res => {
+                if (!res.ok) throw new Error(`Failed to fetch models (${res.status})`);
+                return res.json();
+            })
+            .then(json => {
+                setModels(json.data ?? []);
+            })
+            .catch(err => {
+                setError(err.message);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    }, []);
+
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Our Models</h1>
-            <p className={styles.subtitle}>Explore some of our specialized Small Language Models for business automation, safety, and efficiency.</p>
-            <div className={`${styles['models-grid']}`}>
-                {models.map((model) => (
-                    <Link href={model.href} key={model.name} className={styles['model-card']}>
-                        <span className={styles.icon}>{model.icon}</span>
-                        <div className={styles['model-info']}>
-                            <h2>{model.name}</h2>
-                            <p>{model.description}</p>
+            <div className={styles.subtitle}>These are some of our publicly available Small Language Models for various tasks and applications.</div>
+            {loading && (
+                <div className={styles['loading-container']}>
+                    <ClipLoader size={50} />
+                </div>
+            )}
+            {error && (
+                <p className={styles['error-text']}>
+                    Could not load models: {error}
+                </p>
+            )}
+            {!loading && !error && (
+                <div className={styles['models-list']}>
+                    {models.map((model) => (
+                        <div key={model.id} className={styles['model-row']}>
+                            <div className={styles['model-thumbnail']}>
+                                <span className={styles['thumbnail-icon']}>{getIcon(model.model_type)}</span>
+                                <span className={styles['thumbnail-name']}>{model.name}</span>
+                                {model.size && <span className={styles['thumbnail-size']}>{formatBytes(model.size)}</span>}
+                                <span className={styles['thumbnail-download']}><BsDownload /></span>
+                            </div>
+                            <div className={styles['model-details']}>
+                                <h2 className={styles['detail-name']}>{model.name}</h2>
+                                {model.params && <p className={styles['detail-line']}><strong>Params</strong>: {model.params}</p>}
+                                {model.language && <p className={styles['detail-line']}><strong>Language</strong>: {model.language}</p>}
+                                {model.description && <p className={styles['detail-line']}><strong>Description</strong>: {model.description}</p>}
+                            </div>
                         </div>
-                    </Link>
-                ))}
-            </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
