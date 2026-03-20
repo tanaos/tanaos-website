@@ -2,6 +2,7 @@ import { BsArrowRight } from 'react-icons/bs';
 import Image from 'next/image';
 
 import styles from './Hero.module.scss';
+import { Config } from '../../config';
 
 
 export const Hero = () => {
@@ -26,7 +27,7 @@ export const Hero = () => {
                 </a>
                 <a 
                     className='btn btn-white'
-                    href='#available-tasks'
+                    href={Config.MODELS_ROUTE}
                 >
                     See sample models <BsArrowRight className='ms-2' />
                 </a>
