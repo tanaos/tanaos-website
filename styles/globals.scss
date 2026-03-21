@@ -87,13 +87,31 @@ p {
     }
 }
 
-:not(.code-block) > code {
+:not(pre) > code {
     color: $font-color-dark;
     font-weight: 600;
     font-size: unset;
     background-color: $regular-code-bg;
     padding: 0.5%;
     border-radius: 0.4rem;
+}
+
+pre {
+    background-color: $regular-code-bg;
+    border-radius: $border-radius;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+
+    code {
+        font-size: $font-size-p-500;
+        line-height: $line-height-p-500;
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+        font-weight: 400;
+        color: $font-color-dark;
+    }
 }
 
 span {
