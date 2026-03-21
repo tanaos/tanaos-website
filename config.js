@@ -8,6 +8,8 @@ export const Config = {
     // Platform
     PLATFORM_BASE_URL: 'https://platform.tanaos.com',
     PLATFORM_PLANS_PAGE_URL: 'https://platform.tanaos.com/profile/plans',
+    PLATFORM_API_KEY_PAGE_URL: 'https://platform.tanaos.com/profile/api-keys',
+    PLATFORM_GUARDRAIL_ENGLISH_URL: 'https://platform.tanaos.com/profile/models?id=a0i2vjb0u5mgpaqofnlhyy6qqq7olic5',
 
     // Docs
     DOCS_URL: 'https://docs.tanaos.com/artifex/',
