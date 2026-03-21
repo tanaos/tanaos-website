@@ -1,5 +1,5 @@
 ---
-title: 'Use automated content moderation to flag harmful content locally.'
+title: 'Private automated content moderation for blogs, forums and social media platforms'
 subtitle: 'Automate content moderation and flag harmful content with a Small Language Model that runs locally for enhanced privacy and control.'
 date: 'March 20, 2026'
 tags: ['automated content moderation', 'guardrails', 'safety filters', 'small language models']
@@ -12,16 +12,17 @@ import { BsGithub } from 'react-icons/bs';
 import { Config } from '../../config';
 
 
-Automated Content Moderation refers to the practice of **instantly identifying, flagging and filtering
-harmful or unwanted content**, such as hate speech, harassment or violence, across digital platforms.
-While traditional content moderation relies on human moderators to review and manage user-generated 
-content manually, automated content moderation leverages AI and Machine Learning techniques to 
-analyze and filter content at scale, providing a more efficient and consistent approach to 
-maintaining a safe online environment.
-
 Content moderation is a necessary component of any online platform, such as social media, forums,
 blogs or community platforms, to **ensure that users can interact in a safe and respectful manner**,
-while also protecting the platform's reputation and complying with legal and ethical standards.
+while also protecting the platform's reputation and complying with legal and ethical standards. 
+
+Moderation simply consists in identifying, flagging and **filtering harmful or unwanted content**, 
+such as hate speech, harassment or violence, across the digital platform. Screening can be performed 
+before the content is published (pre-moderation), after the content is published (post-moderation), 
+or through a combination of both approaches (hybrid moderation).
+
+Screening and filtering can be done manually by human moderators or automatically through AI and 
+Machine Learning algorithms.
 
 ## Manual Content Moderation
 
@@ -32,27 +33,34 @@ presents two main issues:
 - It leads to **delays in content review**, which at best can result in a **poor user experience**, 
 and at worst can allow harmful content to remain visible for extended periods of time. 
 
-- It is **costly and time-consuming**, since it requires **hiring and training a team of moderators**, 
-which may not be feasible for smaller platforms or communities.
+- It is **costly and time-consuming**, since it requires one or more human moderators to review each 
+piece of content, which can be particularly challenging for smaller platforms or communities.
 
 ## Automated Content Moderation
 
 Automated content moderation uses AI and Machine Learning algorithms to analyze and filter content
 quickly and efficiently. This approach can be particularly effective for handling large volumes of
-content, and can help to **reduce the workload of human moderators**. 
+content, and can help to reduce the workload of human moderators. 
 
 However, since automated moderation typically relies on user data being sent to **cloud-based AI 
 models** or third-party APIs, it can raise **privacy concerns** as well as **issues 
 with regulatory compliance**.
 
-## Local Content Moderation with Small Language Models
+## The best of both worlds: Local Content Moderation with a Small Language Model
 
 A third approach to content moderation which offers the best of both worlds is to use **Small 
-Language Models that process data locally** without the need to send user data to external servers. 
+Language Models that flags harmful content locally** without the need to send user data to external 
+servers. 
+
+Small Language Models are a scaled-down version of Large Language Models, which are designed to 
+**perform specific tasks**, while being **thousands of times smaller in size** and computational
+requirements compared to their larger counterparts. This makes them ideal for running on local
+servers or even on edge devices, without the need for cloud-based processing.
+
 This approach allows for **instant content analysis**, **enhanced privacy**, and **better control** 
 over the moderation process.
 
-At Tanaos, we have developed a Small Language Model specifically designed for content moderation, 
+At Tanaos we have developed a Small Language Model specifically designed for content moderation, 
 which can be easily integrated into your platform to automatically flag harmful content in real-time.
 **Data processing happens on your own servers**, ensuring that no user data is sent to external servers,
 thus maintaining user privacy and complying with data protection regulations.
@@ -61,8 +69,24 @@ Let's see how to use it.
 
 ### Local Content Moderation with Tanaos' Guardrail Model
 
-To get started with Tanaos' local Guardrail Model, you can follow these simple steps:
+Before we dive in, make sure you have `uv` installed on your machine. `uv` is an easy-to-use and
+modern replacement for `pip` that simplifies package management and virtual environment creation. If
+you don't have `uv` installed, you can follow
+<Link href='https://docs.astral.sh/uv/getting-started/installation/' target='_blank'>these instructions</Link>
+to download and install it.
 
-1. **Create a free account** on <Link href={Config.PLATFORM_BASE_URL} target='_blank'>our platform</Link>.
-2. **Generate an API key** from the <Link href={Config.PLATFORM_API_KEY_PAGE_URL} target='_blank'>API Key page</Link>.
-3. **Download the Guardrail Model** from the <Link href={Config.PLATFORM_GUARDRAIL_ENGLISH_URL} target='_blank'>Models page</Link>.
+Once you have `uv` set up, you can follow these simple steps to get started with Tanaos' Guardrail 
+Model for local content moderation:
+
+1. Create a free account on <Link href={Config.PLATFORM_BASE_URL} target='_blank'>our platform</Link>.
+2. Generate an API key from the <Link href={Config.PLATFORM_API_KEY_PAGE_URL} target='_blank'>API Key page</Link>.
+3. Download the Guardrail Model from the <Link href={Config.PLATFORM_GUARDRAIL_ENGLISH_URL} target='_blank'>Models page</Link>.
+4. From the directory where you downloaded the model, run the following commands:
+    ```bash
+    uv init
+    uv add tanaos_guardrail_english-0.1.0-py3-none-any.whl
+    #--- Linux/MacOS ---
+    source .venv/bin/activate
+    #--- Windows ---
+    .venv\Scripts\activate
+    ```
