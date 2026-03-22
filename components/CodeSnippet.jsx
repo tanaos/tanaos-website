@@ -1,6 +1,6 @@
 'use client';
 
-import { BsCheck2, BsClipboard } from 'react-icons/bs';
+import { BsCheck2, BsCopy } from 'react-icons/bs';
 
 import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -26,7 +26,7 @@ export const CodeSnippet = ({ code, language = 'python' }) => {
         comment: { color: '#aaa' }, // update comment colors, barely visible in dark mode
     };
 
-    return <div className={`${styles['code-snippet-container']} mb-5`}>
+    return <div className={`${styles['code-snippet-container']} mb-4`}>
         <SyntaxHighlighter
             className='code-block'
             language={language}
@@ -47,7 +47,7 @@ export const CodeSnippet = ({ code, language = 'python' }) => {
             className={`${copied ? styles['copied'] : ''}`}
             onClick={copyToClipboard}
         >
-            {copied ? <BsCheck2 /> : <BsClipboard />}
+            {copied ? <BsCheck2 /> : <BsCopy />}
         </button>
     </div>
 }

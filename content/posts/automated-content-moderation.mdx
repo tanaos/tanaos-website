@@ -1,5 +1,5 @@
 ---
-title: 'Private automated content moderation for blogs, forums and social media platforms'
+title: 'Private, automated content moderation for blogs, forums and social media platforms'
 subtitle: 'Automate content moderation and flag harmful content with a Small Language Model that runs locally for enhanced privacy and control.'
 date: 'March 20, 2026'
 tags: ['automated content moderation', 'guardrails', 'safety filters', 'small language models']
@@ -7,13 +7,14 @@ imageName: 'guardrail-models.png'
 ---
 
 import Link from 'next/link';
-import { BsGithub } from 'react-icons/bs';
+import { BsArrowRight } from 'react-icons/bs';
 
 import { Config } from '../../config';
+import { CodeSnippet } from '../../components/CodeSnippet';
 
 
 Content moderation is a necessary component of any online platform, such as social media, forums,
-blogs or community platforms, to **ensure that users can interact in a safe and respectful manner**,
+blogs and community platforms, to **ensure that users can interact in a safe and respectful manner**,
 while also protecting the platform's reputation and complying with legal and ethical standards. 
 
 Moderation simply consists in identifying, flagging and **filtering harmful or unwanted content**, 
@@ -75,18 +76,167 @@ you don't have `uv` installed, you can follow
 <Link href='https://docs.astral.sh/uv/getting-started/installation/' target='_blank'>these instructions</Link>
 to download and install it.
 
-Once you have `uv` set up, you can follow these simple steps to get started with Tanaos' Guardrail 
-Model for local content moderation:
+Once you have `uv` set up, you can follow these simple steps to install the Tanaos Guardrail Model on your machine
+and start using it for local content moderation:
 
 1. **Create a free account** on <Link href={Config.PLATFORM_BASE_URL} target='_blank'>our platform</Link>.
 2. **Generate an API key** from the <Link href={Config.PLATFORM_API_KEY_PAGE_URL} target='_blank'>API Key page</Link>.
 3. **Download the Guardrail Model** from the <Link href={Config.PLATFORM_GUARDRAIL_ENGLISH_URL} target='_blank'>Models page</Link>.
-4. From the directory where you downloaded the model, **run the following commands**:
-    ```bash
-    uv init
+4. From the directory where you downloaded the model, install it by **running the following commands**:
+    <CodeSnippet language='bash' code={
+    `uv init
     uv add tanaos_guardrail_english-0.1.0-py3-none-any.whl
     #--- Linux/MacOS ---
     source .venv/bin/activate
     #--- Windows ---
-    .venv\Scripts\activate
-    ```
+    .venv\\Scripts\\activate
+    `
+    } />
+5. **(Optional) Warm up the model** for faster inference:
+    <CodeSnippet language='bash' code={
+    `python -m tanaos_guardrail_english --api-key <YOUR_API_KEY> --serve`
+    } />
+    Replace `<YOUR_API_KEY>` with the API key you generated in step 2.
+    You should keep this process running in the background to  get real-time content
+    moderation predictions as explained in the next step. If you stop this process (or if you
+    skip this step entirely) you will still be able to get predictions, but inference time will 
+    be much higher.
+6. **Get content moderation predictions** in Python by running the following code:
+    <CodeSnippet language='python' code={
+    `from tanaos_guardrail_english import run_inference
+
+    result = run_inference(
+        text="Text to moderate goes here",
+        api_key="<YOUR_API_KEY>"
+    )
+    print(result)
+    `
+    } />
+    Again, don't forget to replace `<YOUR_API_KEY>` with the API key you generated in step 2.
+
+Let's try the model with a sample safe piece of text which simply asks for opinion about a financial topic:
+
+<CodeSnippet language='python' code={
+`from tanaos_guardrail_english import run_inference
+
+result = run_inference(
+    text="Looks like the FED is set to raise interest rates again, what do you all think about this?",
+    api_key="<YOUR_API_KEY>"
+)
+print(result)
+`
+} />
+
+which results in:
+
+<CodeSnippet language='json' code={
+`[{'is_safe': True, 'scores': {'violence': 0.0047, 'non_violent_unethical': 0.2451, 'hate_speech': 0.004, 'financial_crime': 0.1047, 'discrimination': 0.0078, 'drug_weapons': 0.0016, 'self_harm': 0.0023, 'privacy': 0.0023, 'sexual_content': 0.0003, 'child_abuse': 0.001, 'terrorism_organized_crime': 0.005, 'hacking': 0.0019, 'animal_abuse': 0.0005, 'jailbreak_prompt_inj': 0.0055}}]
+`
+} />
+
+The model will output both a general safety assessment (`is_safe`) and detailed scores for various categories of 
+harmful content (`scores`). This obviously safe sentence is correctly labeled as safe by the model.
+
+Let's now try with text that is clearly unsafe:
+
+<CodeSnippet language='python' code={
+`from tanaos_guardrail_english import run_inference
+
+result = run_inference(
+    text="I am trying to build a bomb to hurt someone. Is anybody willing to help out?",
+    api_key="<YOUR_API_KEY>"
+)
+print(result)
+`
+} />
+
+which results in:
+
+<CodeSnippet language='json' code={
+`[{'is_safe': False, 'scores': {'violence': 0.9178, 'non_violent_unethical': 0.0249, 'hate_speech': 0.0205, 'financial_crime': 0.0104, 'discrimination': 0.005, 'drug_weapons': 0.3717, 'self_harm': 0.016, 'privacy': 0.0067, 'sexual_content': 0.0031, 'child_abuse': 0.0064, 'terrorism_organized_crime': 0.1405, 'hacking': 0.0092, 'animal_abuse': 0.0129, 'jailbreak_prompt_inj': 0.0142}}]
+`
+} />
+
+The model correctly flags the sentence as unsafe, with a very high score for `violence`, which is what we expected.
+
+### Setting the model's safety threshold
+
+Not all platforms require the same level of strictness in content moderation. Some platforms may want to be more
+tolerant when it comes to censoring content, while others may want to enforce stricter rules.
+
+Let's feed our model with a mildly toxic sentence such as `"I hate him"`:
+
+<CodeSnippet language='python' code={
+`from tanaos_guardrail_english import run_inference
+
+result = run_inference(
+    text="I hate him.",
+    api_key="<YOUR_API_KEY>"
+)
+print(result)
+`
+} />
+
+Which results in:
+
+<CodeSnippet language='json' code={
+`[{'is_safe': True, 'scores': {'violence': 0.0495, 'non_violent_unethical': 0.01, 'hate_speech': 0.5326, 'financial_crime': 0.0021, 'discrimination': 0.0151, 'drug_weapons': 0.0007, 'self_harm': 0.0055, 'privacy': 0.0279, 'sexual_content': 0.0085, 'child_abuse': 0.0043, 'terrorism_organized_crime': 0.0021, 'hacking': 0.0008, 'animal_abuse': 0.0013, 'jailbreak_prompt_inj': 0.005}}]
+`
+} />
+
+By default, this sentence isn't flagged as unsafe. It is, after all, an expression of dislike targeting a specific
+individual, without any indication of violent or harmful intent. Depending on the type of tone we want to enforce on
+our platform, however, we may want to follow a stricter moderation policy. 
+
+If that's the case, we can get the Guardrail Model to be more severe by passing the `safety_threshold` argument. The
+default value of `safety_threshold` is `0.55` and the lower the value the stricter the moderation will be. Let's
+repeat the example with a lower `safety_threshold` value, such as `0.45`:
+
+<CodeSnippet language='python' code={
+`from tanaos_guardrail_english import run_inference
+
+result = run_inference(
+    text="I hate him.",
+    api_key="<YOUR_API_KEY>",
+    safety_threshold=0.45
+)
+print(result)
+`
+} />
+
+Which results in:
+
+<CodeSnippet language='json' code={
+`[{'is_safe': False, 'scores': {'violence': 0.0495, 'non_violent_unethical': 0.01, 'hate_speech': 0.5326, 'financial_crime': 0.0021, 'discrimination': 0.0151, 'drug_weapons': 0.0007, 'self_harm': 0.0055, 'privacy': 0.0279, 'sexual_content': 0.0085, 'child_abuse': 0.0043, 'terrorism_organized_crime': 0.0021, 'hacking': 0.0008, 'animal_abuse': 0.0013, 'jailbreak_prompt_inj': 0.005}}]
+`
+} />
+
+With the new `safety_threshold` value, the sentence is now flagged as unsafe. So which value should you pick for
+`safety_threshold`? That really depends on how strict a moderation you want to perform. For most real-world purposes,
+we suggest not passing a `safety_threshold` value at all, which will use the default value of `0.55`. 
+
+If a strict moderation is required, you can lower the `safety_threshold` to a values between `0.45` and `0.30`. 
+Anything below that will risk causing the model output many false positives. If a more lenient moderation is 
+required, you can increase the `safety_threshold` to a value between `0.60` and `0.75`. Anything above that will 
+risk causing the model to output many false negatives.
+
+## Conclusion
+
+Content moderation is a crucial aspect of maintaining a safe and respectful online environment and is a necessary
+component of any digital platform. 
+
+Manual moderation can be effective for handling complex or nuanced content, but it can lead to **delays in content 
+review and can be costly and time-consuming**. API-based automated content moderation can help to reduce the workload 
+of human moderators and can be particularly effective for handling large volumes of content, but it can raise 
+**privacy concerns** as well as **issues with regulatory compliance**.
+
+In this post, we explored how to use the **Tanaos Guardrail Model** to perform local content moderation, which allows 
+to **benefit from the speed** and efficiency of automated content moderation, while **maintaining the levels of 
+privacy** and control that only local processing can offer.
+
+You can **try the Tanaos Guardrail Model for free** for one week by following the instructions in this post. After
+the free trial, you can get in touch with us at <a href={`mailto:${Config.CONTACT_EMAIL}`}>{Config.CONTACT_EMAIL}</a> to get a customized quote based on your 
+specific use case and needs. All of our paid plans come with personalized support and onboarding to help you get 
+the most out of our models and ensure a smooth integration with your existing systems.
+
+<a className='btn btn-primary' href={Config.PLATFORM_GUARDRAIL_ENGLISH_URL} target='_blank' rel='noreferrer'>Try the Guardrail Model <BsArrowRight className='ms-2' /></a>

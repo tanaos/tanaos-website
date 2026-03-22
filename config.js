@@ -94,4 +94,7 @@ export const Config = {
     TEXT_ANONYMIZATION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-text-anonymizer-v1',
     SPAM_DETECTION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-spam-detection-v1',
     TOPIC_CLASSIFICATION_HF_LINK: 'https://huggingface.co/tanaos/tanaos-topic-classification-v1',
+
+    // Email
+    CONTACT_EMAIL: 'info@tanaos.com',
 };
